@@ -13,7 +13,7 @@
 			{{ HTML::style('css/screen.css') }}
 		@stop
 		@yield('styles')
-		<script src='js/vendor/modernizr-2.7.0.min.js'></script>
+		{{ HTML::script('js/modernizr-2.7.0.js') }}
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -47,6 +47,18 @@
 			@yield('main')
 		</div>
 		
+		<footer>
+			<ul>
+				<li>Home</li>
+				<li>Servicios</li>
+				<li>Nosotros</li>
+				<li>Trabajos</li>
+				<li>Contacto</li>
+				<li>Login / Registro</li>
+			</ul>
+			<span>Imprenta pam 2013. info&#64;imprentapam.com.uy</span>
+		</footer>
+
 		@section('scripts')
 			{{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js') }}
 		@stop

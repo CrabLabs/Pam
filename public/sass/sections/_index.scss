@@ -24,4 +24,43 @@
 			}	
 		}
 	}
+	h3{
+		color: darkblue;
+		font-weight: bold;
+		margin: 40px 0 20px 0;
+		text-align: center;
+	}
+	h4{
+		color: #999;
+		text-align: center;
+	}
+	form{
+		margin: 0;
+		padding: 10px;
+		text-align: center;
+	}
+	.index_slider{
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;
+				height: 160px;
+				margin: 0;
+				padding: 10px;
+				vertical-align: top;
+				width: 160px;
+				img{
+					height: 100%;
+					width: 100%;		
+				}
+				span{
+					display: block;
+					font-size: 0.8em;
+					text-align: center;
+					width: 100%;
+				}
+			}	
+		}
+	}
 }

@@ -20,6 +20,11 @@ Route::get('/', function()
 	]);
 });
 
+Route::get('orders', function()
+{
+	return Redirect::to('order');
+});
+
 Route::get('order', 'OrderController@showIndex');
 
 Route::get('order/getDetail', 'OrderController@getDetail');

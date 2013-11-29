@@ -20,7 +20,7 @@
 	</div>
 	<div class='container'>
 		<h3>Elegí tu presupuesto y manda imprimir hoy mismo!</h3>	
-		{{ Form::open() }}
+		{{ Form::open(array('method' => 'get')) }}
 			{{ Form::select('index_product', $list) }}
 			{{ Form::submit() }}
 		{{ Form::close() }}
@@ -35,6 +35,16 @@
 					</li>
 				@endforeach
 			</ul>
+		</div>
+		<h3>Algunos de nuestro clientes</h3>
+		<h4>Estos son algunos de los clientes que han confiado en nosotros.</h4>
+		<div class='clients'>
+			<img src=''>
+			<img src=''>
+			<img src=''>
+			<img src=''>
+			<img src=''>
+			<img src=''>
 		</div>
 	</div>
 </section>
