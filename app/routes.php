@@ -20,6 +20,13 @@ Route::get('/', function()
 	]);
 });
 
+Route::get('register', function()
+{
+	return Redirect::route('user.create');
+});
+
+Route::resource('user', 'UserController');
+
 Route::get('orders', function()
 {
 	return Redirect::to('order');
