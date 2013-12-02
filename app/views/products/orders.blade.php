@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('main')
+<section id='orders'>
 	{{ Form::open() }}
 		<section class='orders_step_1'>
 			@foreach($products as $product)
@@ -27,6 +28,7 @@
 		</section>
 		{{ Form::submit() }}
 	{{ Form::close() }}
+</section>
 @stop
 
 @section('scripts')
