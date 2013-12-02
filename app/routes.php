@@ -20,6 +20,13 @@ Route::get('/', function()
 	]);
 });
 
+Route::get('services', function()
+{
+	return View::make('services.index', [
+		'services' => Service::all()
+	]);
+});
+
 Route::get('register', function()
 {
 	return Redirect::route('user.create');
