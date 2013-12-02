@@ -1,0 +1,14 @@
+#register{
+	.row{
+		@include row();
+		div {
+			@include column(3);
+		}
+	}
+	.row-2{
+		@include row();
+		div {
+			@include column(6);
+		}
+	}
+}

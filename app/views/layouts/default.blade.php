@@ -13,7 +13,7 @@
 			{{ HTML::style('css/screen.css') }}
 		@stop
 		@yield('styles')
-		{{ HTML::script('js/modernizr-2.7.0.js') }}
+		{{ HTML::script('js/vendor/modernizr-2.7.0.js') }}
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -61,6 +61,7 @@
 
 		@section('scripts')
 			{{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js') }}
+			{{ HTML::script('js/vendor/jquery-2.0.3.min.js') }}
 		@stop
 		@yield('scripts')
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
