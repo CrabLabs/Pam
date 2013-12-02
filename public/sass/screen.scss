@@ -1,3 +1,5 @@
+@import "vendor/semantic.gs";
+
 *{
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -14,6 +16,7 @@
 
 #main{
 	@import "sections/index";
+	@import "sections/register";
 }
 
 @import "footer";
