@@ -33,7 +33,6 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 	{
 		Mail::pretend(true);
 		Artisan::call('migrate');
-		Artisan::call('db:seed');
 	}
 
 }
