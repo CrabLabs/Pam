@@ -2,6 +2,11 @@
 
 class OrderController extends BaseController {
 
+	/**
+	 * Display orders form
+	 *
+	 * @return Response
+	 */
 	public function showIndex()
 	{
 		return View::make('products.orders', array(
@@ -9,6 +14,11 @@ class OrderController extends BaseController {
 		));
 	}
 
+	/**
+	 * JSON response for product details
+	 *
+	 * @return Response
+	 */
 	public function getDetail()
 	{
 		$rules = array(
