@@ -20,19 +20,14 @@ Route::get('/', function()
 	]);
 });
 
-Route::get('services', function()
-{
-	return View::make('services.index', [
-		'services' => Service::all()
-	]);
-});
+Route::resource('services', 'ServicesController');
+
+Route::resource('user', 'UserController');
 
 Route::get('register', function()
 {
 	return Redirect::route('user.create');
 });
-
-Route::resource('user', 'UserController');
 
 Route::get('orders', function()
 {
