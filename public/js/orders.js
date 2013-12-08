@@ -1,11 +1,12 @@
 (function ($) {
 	'use strict';
 
-	var data, $self, html, next, currentStep;
+	var data, $self, html, next, currentStep, budgetables;
 
 	$(document).on('ready', function () {
 		$('form select:first').trigger('change');
 		currentStep = 1;
+		budgetables = $('input[name=\'budgetables\'').val().split(',');
 		$('.orders_step_2').hide();
 		$('.orders_step_1').show();
 	});
@@ -29,6 +30,9 @@
 	});
 
 	$('form select').on('change', function () {
+		if ($('input[name=\'product_id\']').val() in budgetables) {
+			return false;
+		}
 		$self = $(this);
 		data = $('form').serialize();
 		data = data.split($(this).next('select').attr('name'))[0];
