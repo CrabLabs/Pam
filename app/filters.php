@@ -19,7 +19,16 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	//
+	if(App::Environment() != 'local'  and $response instanceof Illuminate\Http\Response)
+	{
+		$output = $response->getOriginalContent();
+		$filters = array(
+			'/\s{2,}/'	=> '', // Shorten multiple white spaces
+			'/(\r?\n)/'	=> '', // Collapse new lines
+		);
+		$output = preg_replace(array_keys($filters), array_values($filters), $output);
+		$response->setContent($output);
+	}
 });
 
 /*
