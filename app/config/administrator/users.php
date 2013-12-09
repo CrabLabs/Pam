@@ -11,6 +11,9 @@ return array(
 			'title'  => 'Nombre',
 			'select' => 'CONCAT((:table).name, \' \', (:table).lastname)'
 		),
+		'email' => array(
+			'title' => 'Email',
+		),
 		'role' => array(
 			'title' => 'Rol',
 		),
