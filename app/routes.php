@@ -38,6 +38,13 @@ Route::get('order', 'OrderController@showIndex');
 
 Route::get('order/getDetail', 'OrderController@getDetail');
 
+Route::get('faq', function()
+{
+	return View::make('faq.index', [
+		'faqs' => FAQ::all()
+	]);
+});
+
 Route::get('products', function()
 {
 	return View::make('products', [
