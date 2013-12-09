@@ -54,7 +54,8 @@ return array(
 	'menu' => array(
 		'users',
 		'products',
-		'products_details'
+		'products_details',
+		'services',
 	),
 
 	/**
