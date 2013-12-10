@@ -45,6 +45,13 @@ Route::get('faq', function()
 	]);
 });
 
+Route::get('about-us', function()
+{
+	return View::make('about-us.index', [
+		
+	]);
+});
+
 Route::get('products', function()
 {
 	return View::make('products', [
