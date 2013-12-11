@@ -3,7 +3,7 @@
 @section('main')
 <section id='index'>
 	<div class='index_wrapper'>
-		<div class='container'>
+		<div class='container-small'>
 			<div class='index_highlight'>
 				<img src=''>
 				<span>Cotizá tu trabajo online y solicita la impresión hoy mismo.</span>	

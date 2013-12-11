@@ -48,15 +48,17 @@
 		</div>
 		
 		<footer>
-			<ul>
-				<li>Home</li>
-				<li>Servicios</li>
-				<li>Nosotros</li>
-				<li>Trabajos</li>
-				<li>Contacto</li>
-				<li>Login / Registro</li>
-			</ul>
-			<span>Imprenta pam 2013. info&#64;imprentapam.com.uy</span>
+			<div class='container'>
+				<ul>
+					<li>Home</li>
+					<li>Servicios</li>
+					<li>Nosotros</li>
+					<li>Trabajos</li>
+					<li>Contacto</li>
+					<li>Login / Registro</li>
+				</ul>
+				<span>Imprenta pam 2013. info&#64;imprentapam.com.uy</span>
+			</div>
 		</footer>
 
 		@section('scripts')

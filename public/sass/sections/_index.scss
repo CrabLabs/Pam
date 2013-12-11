@@ -2,26 +2,24 @@
 	.index_wrapper{
 		background: lightblue;
 		border-bottom: 1px solid #333;
+		font-size: 0;
 		padding: 40px 0;
-		.container{
-			font-size: 0;
-			.index_highlight{
-				display: inline-block;
-				margin: 0;
-				padding: 0;
-				width: (100% / 3);
-				img{
-					display: block;
-					height: 250px;
-					margin: 0 auto 10px auto;
-					width: 250px;
-				}
-				span{
-					display: block;
-					font-size: initial;
-					text-align: center;
-				}
-			}	
+		.index_highlight{
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			width: (100% / 3);
+			img{
+				display: block;
+				height: 250px;
+				margin: 0 auto 10px auto;
+				width: 250px;
+			}
+			span{
+				display: block;
+				font-size: initial;
+				text-align: center;
+			}
 		}
 	}
 	h3{

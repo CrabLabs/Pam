@@ -1,10 +1,13 @@
 footer{
+	color: rgb(142, 142, 142);
+	padding-bottom: 40px;
 	ul{
+		border-bottom: rgb(234, 234, 234);
 		margin: 0;
-		padding: 0;
+		padding: 20px 0;
 		li{
 			display: inline-block;
-			padding: 0;
+			padding: 0 22px 0 0;
 		}
 	}
 }
