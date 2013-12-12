@@ -31,7 +31,7 @@ header{
 					padding: 0 22px 0 0;
 					width: 35px;
 				}
-				&:hover{
+				&.active, &:hover{
 					box-shadow: inset 0 2px 0 $blue;
 					color: white;
 				}

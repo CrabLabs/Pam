@@ -1,12 +1,17 @@
 @extends('layouts.default')
 
 @section('main')
-<section id='services'>
+<section id='services' class='container whiteBackground'>
 	@foreach($services as $service)
 		<div class='service'>
-			{{ HTML::image($service->image) }}
-			{{ $service->name }}
-			{{{ $service->description }}}
+			<div>
+				{{ HTML::image($service->image, null, ['height' => 140, 'width' => 220]) }}
+			</div>
+			<div class='text'>
+				<h3>{{ $service->name }}</h3>
+				<p>{{{ $service->description }}}</p>
+				{{ HTML::link(URL::to('/'), 'Presupuestar similar', ['class' => 'similar_link']) }}
+			</div>
 		</div>
 	@endforeach
 

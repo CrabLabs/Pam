@@ -24,12 +24,12 @@
 				<div class='container'>
 					<span class='phone_support'><strong>Atención al cliente:</strong> 02 702 545</span>
 					<ul>
-						<li class='home'><a href='#'></a></li>
-						<li><a href='#'>Sevicios</a></li>
-						<li><a href='#'>Nosotros</a></li>
-						<li><a href='#'>Trabajos</a></li>
-						<li><a href='#'>Contacto</a></li>
-						<li class='login'><a href='#'>Login / Registro</a></li>
+						<li class='home'><a href='{{ URL::to('/') }}'></a></li>
+						{{ HTML::liActive('services', HTML::link('services', 'Servicios')) }}
+						{{ HTML::liActive('us', HTML::link('us', 'Nosotros')) }}
+						{{ HTML::liActive('works', HTML::link('works', 'Trabajos')) }}
+						{{ HTML::liActive('contact', HTML::link('contact', 'Contacto')) }}
+						{{ HTML::liActive('login', HTML::link('login', 'Login / Registro')) }}
 					</ul>
 				</div>
 			</nav>
@@ -66,12 +66,12 @@
 		<footer>
 			<div class='container'>
 				<ul>
-					<li>Home</li>
-					<li>Servicios</li>
-					<li>Nosotros</li>
-					<li>Trabajos</li>
-					<li>Contacto</li>
-					<li>Login / Registro</li>
+					<li>{{ HTML::linkActive('/', 'Home') }}</li>
+					<li>{{ HTML::linkActive('services', 'Servicios') }}</li>
+					<li>{{ HTML::linkActive('us', 'Nosotros') }}</li>
+					<li>{{ HTML::linkActive('works', 'Trabajos') }}</li>
+					<li>{{ HTML::linkActive('contact', 'Contacto') }}</li>
+					<li>{{ HTML::linkActive('login', 'Login / Registro') }}</a></li>
 				</ul>
 				<span>Imprenta pam 2013. info&#64;imprentapam.com.uy</span>
 			</div>

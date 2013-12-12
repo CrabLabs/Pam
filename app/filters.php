@@ -13,6 +13,12 @@
 
 App::before(function($request)
 {
+	HTML::macro('liActive', function($link = '/', $text)
+	{
+		$active = (Request::is($link)) ? 'active' : '';
+		return '<li class=\''.$active.'\'>'.$text.'</li>';
+	});
+
 	HTML::macro('linkActive', function($link = '/', $text = '')
 	{
 		$active = (Request::is($link)) ? 'active' : '';
