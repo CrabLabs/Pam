@@ -1,6 +1,7 @@
 @import "compass";
 @import "vendor/semantic.gs";
 @import "mixins";
+@import "variables";
 
 *{
 	-webkit-box-sizing: border-box;
@@ -10,6 +11,7 @@
 }
 
 .container, .container-small{
+	height: 100%;
 	margin: 0 auto;
 	max-width: 960px;
 	position: relative;

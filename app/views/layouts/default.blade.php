@@ -24,21 +24,37 @@
 				<div class='container'>
 					<span class='phone_support'><strong>Atención al cliente:</strong> 02 702 545</span>
 					<ul>
-						<li class='home'></li>
-						<li>Sevicios</li>
-						<li>Nosotros</li>
-						<li>Trabajos</li>
-						<li>Contacto</li>
-						<li class='login'>Login / Registro</li>
+						<li class='home'><a href='#'></a></li>
+						<li><a href='#'>Sevicios</a></li>
+						<li><a href='#'>Nosotros</a></li>
+						<li><a href='#'>Trabajos</a></li>
+						<li><a href='#'>Contacto</a></li>
+						<li class='login'><a href='#'>Login / Registro</a></li>
 					</ul>
 				</div>
 			</nav>
 			<div class='header_wrapper'>
 				<div class='container'>
-					<div class='section logo'>pam</div>
-					<div class='section print_now'>Imprimir ahora</div>
-					<div class='section create_budget'>Armá tu presupuesto</div>
-					<div class='section faq'>Preguntas frecuentes</div>
+					<div class='section logo'>
+					</div>
+					<div class='section print_now'>
+						<div>
+							<span>Imprimir ahora</span>
+							<span>Hola mndo</span>
+						</div>
+					</div>
+					<div class='section create_budget'>
+						<div>
+							<span>Armá tu presupuesto</span>
+							<span>Hola mndo</span>
+						</div>
+					</div>
+					<div class='section faq'>
+						<div>
+							<span>Preguntas frecuentes</span>
+							<span>Hola mndo</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>

@@ -20,15 +20,23 @@ header{
 			right: 0;
 			li{
 				display: inline-block;
-				padding: 10px 22px 10px 0;
 				vertical-align: top;
 				&.home{
 					border-right: 1px solid rgb(29, 32, 36);
 					box-shadow: 0 1px 0 rgb(45, 50, 55);
 					height: 34px;
-					margin-right: 22px;
 					padding: 0 22px 0 0;
 					width: 35px;
+				}
+				&:hover{
+					box-shadow: inset 0 4px 0 blue;
+				}
+				a{
+					color: inherit;
+					display: block;
+					padding: 10px 15px;
+					text-align: center;
+					text-decoration: none;
 				}
 			}
 		}
@@ -38,12 +46,30 @@ header{
 		border-bottom: 1px solid rgb(207, 208, 211);
 		font-size: 0;
 		height: 90px;
-		padding: 10px;
 		width: 100%;
 		.section{
-			font-size: initial;
+			box-shadow: inset -1px 0 0 rgb(225, 225, 225);
 			display: inline-block;
+			font-size: initial;
+			height: 100%;
+			position: relative;
 			width: 25%;
+			div{
+				display: block;
+				font-size: 0.8em;
+				height: 2em;
+				margin: auto;
+				position: absolute;
+				max-width: 60%;
+				top: 0; right: 0; bottom: 0; left: 0;
+				span{
+					display: block;
+					text-align: left;
+					&:first-of-type{
+						font-weight: bold;
+					}
+				}
+			}
 		}
 	}
 }
