@@ -14,7 +14,7 @@ View::share('title', 'Imprenta PAM');
 
 Route::get('/', function()
 {
-	return View::make('index', [
+	return View::make('home.index', [
 		'list' => Product::lists('name', 'id'),
 		'products' => Product::all()
 	]);
