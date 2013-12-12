@@ -13,7 +13,11 @@
 
 App::before(function($request)
 {
-	//
+	HTML::macro('linkActive', function($link = '/', $text = '')
+	{
+		$active = (Request::is($link)) ? 'active' : '';
+		return HTML::link(URL::to($link), $text, ['class' => $active]);
+	});
 });
 
 
