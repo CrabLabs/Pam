@@ -10,3 +10,10 @@
 	@include filter-gradient(#feffff, #feffff, vertical); // IE6-9
 	@include background-image(linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(255,255,255,1) 53%,rgba(251,251,251,1) 74%,rgba(251,251,253,1) 78%,rgba(250,250,250,1) 80%,rgba(249,249,249,1) 86%,rgba(248,249,251,1) 94%,rgba(247,249,248,1) 98%,rgba(248,250,249,1) 99%,rgba(254,255,255,1) 100%));
 }
+
+@mixin calc($attr, $value){
+	#{$attr}: -webkit-calc(#{$value}); 
+	#{$attr}:    -moz-calc(#{$value});
+	#{$attr}:      -o-calc(#{$value});
+	#{$attr}: 		  calc(#{$value});
+}

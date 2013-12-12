@@ -21,11 +21,18 @@
 	max-width: 900px;
 }
 
+.whiteBackground{
+	background: white;
+	border: 1px solid #999;
+	padding: 42px;
+}
+
 @import "header";
 
 #main{
 	@import "sections/index";
 	@import "sections/register";
+	@import "sections/services";
 }
 
 @import "footer";
