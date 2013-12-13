@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('main')
-<section id='faq'>
+<section id='faq' class='container whiteBackground'>
 	@foreach($faqs as $faq)
 		<div class='faq'>
 			<h4 class='question'>{{ $faq->question }}</h4>
