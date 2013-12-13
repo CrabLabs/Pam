@@ -56,6 +56,7 @@ return array(
 		'products',
 		'products_details',
 		'services',
+		'faq',
 	),
 
 	/**
@@ -126,6 +127,6 @@ return array(
 	 *
 	 * @type array
 	 */
-	'locales' => array('es'),
+	'locales' => array(),
 
 );
