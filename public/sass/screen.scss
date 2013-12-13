@@ -21,12 +21,26 @@
 	max-width: 900px;
 }
 
+.upper{
+	margin: 20px auto;
+	h3{
+		margin: 15 auto;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	p{
+		font-size: $fontSizeXSmall;
+		margin: 0 auto 10px 0;
+		text-align: center;
+	}
+}
+
 .whiteBackground{
 	background: white;
 	border: 1px solid rgb(208, 208, 208);
 	border-radius: 4px 4px 0 0;
 	// Aplicar al primer hijo
-	// padding: 42px;
+	padding: 42px;
 }
 
 .greyBackground{
@@ -59,6 +73,58 @@
 // 	margin: 2px 0;
 // 	text-transform: uppercase;
 // }
+
+/**
+ * UI
+ */
+ .btn{
+	background: $blue;
+	border: none;
+	border-radius: 2px;
+	color: white;
+	cursor: pointer;
+	font-size: $fontSizeXSmall;
+	margin: 15px 15px 15px 0;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: auto;
+	&.grey{
+		background: $grey;
+	}
+	&.green{
+		background: $green;
+	}
+}
+label, input{
+	font-size: $fontSizeXSmall;
+}
+label{
+	font-weight: 600;
+	margin-bottom: 10px;
+	line-height: $fontSizeXSmall + 10px;
+}
+input{
+	background: rgb(249, 249, 249);
+	border: 1px solid rgb(213, 213, 213);
+	border-radius: 2px;
+	padding: 14px 22px;
+	&[type='checkbox']{
+		display: inline;
+	}
+	&[type='submit']{
+		@extend .btn;
+		@extend .green;
+	}
+}
+select{
+	background: rgb(249, 249, 249);
+	border: 1px solid rgb(213, 213, 213);
+	border-radius: 2px;
+	display: inline-block;
+	font-size: $fontSizeXSmall;
+	padding: 14px 22px;
+}
 
 @import "header";
 

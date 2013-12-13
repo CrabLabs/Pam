@@ -35,13 +35,31 @@ body:after {
 }
 
 /* line 24, ../sass/screen.scss */
+.upper {
+  margin: 20px auto;
+}
+/* line 26, ../sass/screen.scss */
+.upper h3 {
+  margin: 15 auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 31, ../sass/screen.scss */
+.upper p {
+  font-size: 12px;
+  margin: 0 auto 10px 0;
+  text-align: center;
+}
+
+/* line 38, ../sass/screen.scss */
 .whiteBackground {
   background: white;
   border: 1px solid #d0d0d0;
   border-radius: 4px 4px 0 0;
+  padding: 42px;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .greyBackground {
   background: whitesmoke;
   border: 1px solid #d0d0d0;
@@ -49,7 +67,7 @@ body:after {
   box-shadow: inset 0 1px 2px #d1d1d1;
   padding: 42px;
 }
-/* line 38, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .greyBackground h3 {
   color: #2f66b5;
   font-weight: 300;
@@ -57,16 +75,76 @@ body:after {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 45, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .greyBackground p {
   color: #191919;
   font-size: 12px;
   text-align: center;
 }
-/* line 49, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .greyBackground p a {
   color: #487fcf;
   text-decoration: none;
+}
+
+/**
+ * UI
+ */
+/* line 80, ../sass/screen.scss */
+.btn, input[type='submit'] {
+  background: #2f66b5;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 15px 15px 15px 0;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: auto;
+}
+/* line 92, ../sass/screen.scss */
+.btn.grey, input.grey[type='submit'] {
+  background: #c0c4c8;
+}
+/* line 95, ../sass/screen.scss */
+.btn.green, input[type='submit'] {
+  background: #34ad65;
+}
+
+/* line 99, ../sass/screen.scss */
+label, input {
+  font-size: 12px;
+}
+
+/* line 102, ../sass/screen.scss */
+label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 22px;
+}
+
+/* line 107, ../sass/screen.scss */
+input {
+  background: #f9f9f9;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px;
+  padding: 14px 22px;
+}
+/* line 112, ../sass/screen.scss */
+input[type='checkbox'] {
+  display: inline;
+}
+
+/* line 120, ../sass/screen.scss */
+select {
+  background: #f9f9f9;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 14px 22px;
 }
 
 /* line 1, ../sass/_header.scss */
@@ -253,92 +331,95 @@ header .header_wrapper .section div span:first-of-type {
   width: 100%;
 }
 /* line 2, ../sass/sections/_register.scss */
-#main #register .row {
-  display: block;
-  width: 980.0px;
-  margin: 0 -10px;
-  *zoom: 1;
+#main #register .title {
+  color: #2f66b5;
+  font-weight: 300;
+  margin: 15px 0;
 }
-/* line 26, ../sass/vendor/_semantic.gs.scss */
-#main #register .row:before, #main #register .row:after {
-  content: "";
-  display: table;
-}
-/* line 31, ../sass/vendor/_semantic.gs.scss */
-#main #register .row:after {
-  clear: both;
-}
-/* line 4, ../sass/sections/_register.scss */
-#main #register .row div {
-  display: inline;
-  float: left;
-  width: 220px;
-  margin: 0 10px;
-}
-/* line 8, ../sass/sections/_register.scss */
-#main #register .row-2 {
-  display: block;
-  width: 980.0px;
-  margin: 0 -10px;
-  *zoom: 1;
-}
-/* line 26, ../sass/vendor/_semantic.gs.scss */
-#main #register .row-2:before, #main #register .row-2:after {
-  content: "";
-  display: table;
-}
-/* line 31, ../sass/vendor/_semantic.gs.scss */
-#main #register .row-2:after {
-  clear: both;
+/* line 7, ../sass/sections/_register.scss */
+#main #register .section {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 25px 0 30px 0;
 }
 /* line 10, ../sass/sections/_register.scss */
-#main #register .row-2 div {
+#main #register .section h3 {
+  color: #2f66b5;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+/* line 17, ../sass/sections/_register.scss */
+#main #register .section .account_type label {
+  padding: 0 15px 0 10px;
+}
+/* line 20, ../sass/sections/_register.scss */
+#main #register .section .row, #main #register .section .row-2 {
+  padding-bottom: 20px;
+}
+/* line 22, ../sass/sections/_register.scss */
+#main #register .section .row div, #main #register .section .row-2 div {
+  display: inline-block;
+  padding-right: 30px;
+  vertical-align: top;
+  width: 25%;
+}
+/* line 26, ../sass/sections/_register.scss */
+#main #register .section .row div label, #main #register .section .row div input, #main #register .section .row-2 div label, #main #register .section .row-2 div input {
+  width: 100%;
+}
+/* line 28, ../sass/sections/_register.scss */
+#main #register .section .row div label[type='checkbox'], #main #register .section .row div input[type='checkbox'], #main #register .section .row-2 div label[type='checkbox'], #main #register .section .row-2 div input[type='checkbox'] {
   display: inline;
-  float: left;
-  width: 460px;
-  margin: 0 10px;
+  margin-right: 10px;
+  width: auto;
 }
-/* line 1, ../sass/sections/_services.scss */
-#main #services {
-  padding: 42px;
+/* line 34, ../sass/sections/_register.scss */
+#main #register .section .row div span, #main #register .section .row-2 div span {
+  font-size: 12px;
+  padding: 0 10px;
 }
-/* line 3, ../sass/sections/_services.scss */
+/* line 42, ../sass/sections/_register.scss */
+#main #register .section .row-2 div {
+  width: 50%;
+}
+/* line 2, ../sass/sections/_services.scss */
 #main #services .service {
   border-bottom: 1px solid #999;
   margin: 0 0 30px 0;
 }
-/* line 6, ../sass/sections/_services.scss */
+/* line 5, ../sass/sections/_services.scss */
 #main #services .service:last-of-type {
   margin: 0;
 }
-/* line 9, ../sass/sections/_services.scss */
+/* line 8, ../sass/sections/_services.scss */
 #main #services .service div {
   display: inline-block;
   vertical-align: top;
 }
-/* line 12, ../sass/sections/_services.scss */
+/* line 11, ../sass/sections/_services.scss */
 #main #services .service div:nth-of-type(1) {
   padding-right: 30px;
 }
-/* line 15, ../sass/sections/_services.scss */
+/* line 14, ../sass/sections/_services.scss */
 #main #services .service div:nth-of-type(2) {
   width: -webkit-calc(100% - 250px);
   width: -moz-calc(100% - 250px);
   width: -o-calc(100% - 250px);
   width: calc(100% - 250px);
 }
-/* line 18, ../sass/sections/_services.scss */
+/* line 17, ../sass/sections/_services.scss */
 #main #services .service div h3 {
   color: #2f66b5;
   font-weight: 300;
   margin: 2px 0;
   text-transform: uppercase;
 }
-/* line 24, ../sass/sections/_services.scss */
+/* line 23, ../sass/sections/_services.scss */
 #main #services .service div p {
   font-size: 14px;
 }
-/* line 27, ../sass/sections/_services.scss */
+/* line 26, ../sass/sections/_services.scss */
 #main #services .service div .similar_link {
   background: #2f66b5;
   border-radius: 2px;
