@@ -95,7 +95,7 @@ body {
 }
 
 /* line 1, ../sass/_ui.scss */
-.btn, input[type='submit'] {
+.btn, input[type='submit'], textarea[type='submit'], input[type='file']:after, textarea[type='file']:after {
   background: #2f66b5;
   border: none;
   border-radius: 2px;
@@ -109,11 +109,11 @@ body {
   width: auto;
 }
 /* line 13, ../sass/_ui.scss */
-.btn.grey, input.grey[type='submit'] {
+.btn.grey, input.grey[type='submit'], textarea.grey[type='submit'], input.grey[type='file']:after, textarea.grey[type='file']:after {
   background: #c0c4c8;
 }
 /* line 16, ../sass/_ui.scss */
-.btn.green, input[type='submit'] {
+.btn.green, input[type='submit'], textarea[type='submit'], input.green[type='file']:after, textarea.green[type='file']:after {
   background: #34ad65;
 }
 
@@ -130,18 +130,38 @@ label {
 }
 
 /* line 28, ../sass/_ui.scss */
-input {
+input, textarea {
   background: #f9f9f9;
   border: 1px solid #d5d5d5;
   border-radius: 2px;
   padding: 14px 22px;
 }
 /* line 33, ../sass/_ui.scss */
-input[type='checkbox'] {
+input[type='checkbox'], textarea[type='checkbox'] {
   display: inline;
 }
+/* line 40, ../sass/_ui.scss */
+input[type='file'], textarea[type='file'] {
+  background: none;
+  border: none;
+  font-size: 0;
+  height: 44px;
+  padding: 0;
+  width: 103px;
+}
+/* line 47, ../sass/_ui.scss */
+input[type='file']:after, textarea[type='file']:after {
+  content: 'Examinar';
+  font-size: 12px;
+  height: 44px;
+  margin: 0;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 103px;
+}
 
-/* line 41, ../sass/_ui.scss */
+/* line 60, ../sass/_ui.scss */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;

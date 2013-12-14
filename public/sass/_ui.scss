@@ -25,7 +25,7 @@ label{
 	margin-bottom: 10px;
 	line-height: $fontSizeXSmall + 10px;
 }
-input{
+input, textarea{
 	background: rgb(249, 249, 249);
 	border: 1px solid rgb(213, 213, 213);
 	border-radius: 2px;
@@ -36,6 +36,25 @@ input{
 	&[type='submit']{
 		@extend .btn;
 		@extend .green;
+	}
+	&[type='file']{
+		background: none;
+		border: none;
+		font-size: 0;
+		height: 44px;
+		padding: 0;
+		width: 103px;
+		&:after{
+			@extend .btn;
+			content: 'Examinar';
+			font-size: $fontSizeXSmall;
+			height: 44px;
+			margin: 0;
+			left: 0;
+			position: relative;
+			top: 0;
+			width: 103px;
+		}
 	}
 }
 select{
