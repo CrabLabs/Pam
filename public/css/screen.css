@@ -444,18 +444,18 @@ header .header_wrapper .section a span:first-of-type {
   padding: 0;
 }
 /* line 3, ../sass/sections/_orders.scss */
-#main #orders nav {
+#main #orders nav.steps {
   display: block;
   width: 100%;
 }
 /* line 6, ../sass/sections/_orders.scss */
-#main #orders nav ul {
+#main #orders nav.steps ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 /* line 10, ../sass/sections/_orders.scss */
-#main #orders nav ul li {
+#main #orders nav.steps ul li {
   background: #f6f7fa;
   display: inline-block;
   font-size: 12px;
@@ -467,17 +467,17 @@ header .header_wrapper .section a span:first-of-type {
   width: 33.33333%;
 }
 /* line 20, ../sass/sections/_orders.scss */
-#main #orders nav ul li.active {
+#main #orders nav.steps ul li.active {
   background: white;
 }
 /* line 22, ../sass/sections/_orders.scss */
-#main #orders nav ul li.active span {
+#main #orders nav.steps ul li.active span {
   background: #215aaa;
   border: 1px solid #f6f7fa;
   color: white;
 }
 /* line 28, ../sass/sections/_orders.scss */
-#main #orders nav ul li span {
+#main #orders nav.steps ul li span {
   border: 1px solid #818284;
   border-radius: 50%;
   color: #818284;

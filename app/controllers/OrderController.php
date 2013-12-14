@@ -23,8 +23,8 @@ class OrderController extends BaseController {
 	{
 		$rules = array(
 			'product_id' => 'numeric',
-			// 'amount' 	 => 'numeric',
-			// 'size' 		 => 'string',
+			'amount' 	 => 'numeric',
+			'size' 		 => 'string',
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
@@ -32,7 +32,7 @@ class OrderController extends BaseController {
 		{
 			$query = DB::table('products_details')->select(Input::get('select'));
 			
-			foreach(Input::except('_token', 'select') as $column => $value)
+			foreach(Input::except('_token', 'select', 'budgetables') as $column => $value)
 			{
 				$query->where($column, '=', $value);
 			}

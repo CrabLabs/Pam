@@ -4,9 +4,9 @@
 	var data, $self, html, next, currentStep, budgetables;
 
 	$(document).on('ready', function () {
-		$('form select:first').trigger('change');
 		currentStep = 1;
-		budgetables = $('input[name=\'budgetables\'').val().split(',');
+		budgetables = $('input[name=budgetables').val().split(',');
+		$('form select:first').trigger('change');
 		$('.orders_step_2').hide();
 		$('.orders_step_1').show();
 	});
@@ -14,9 +14,10 @@
 	$('.product_photo').on('click', function (event) {
 		event.preventDefault();
 
-		$('select[name=\'product_id\']').val($(this).data('id')).trigger('change');
+		$('select[name=product_id]').val($(this).data('id')).trigger('change');
 		$('.orders_step_1').hide();
 		$('.orders_step_2').show();
+		$('nav.steps .active').removeClass('active').next('li').addClass('active');
 	});
 
 	$('form').on('submit', function (event) {
@@ -30,8 +31,11 @@
 	});
 
 	$('form select').on('change', function () {
-		if ($('input[name=\'product_id\']').val() in budgetables) {
+		if (!($('select[name=product_id]').val() in budgetables)) {
+			$('.budgetable').hide();
 			return false;
+		} else {
+			$('.budgetable').show();
 		}
 		$self = $(this);
 		data = $('form').serialize();
