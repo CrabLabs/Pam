@@ -1,0 +1,53 @@
+.btn{
+	background: $blue;
+	border: none;
+	border-radius: 2px;
+	color: white;
+	cursor: pointer;
+	font-size: $fontSizeXSmall;
+	margin: 15px 15px 15px 0;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: auto;
+	&.grey{
+		background: $grey;
+	}
+	&.green{
+		background: $green;
+	}
+}
+label, input{
+	font-size: $fontSizeXSmall;
+}
+label{
+	font-weight: 600;
+	margin-bottom: 10px;
+	line-height: $fontSizeXSmall + 10px;
+}
+input{
+	background: rgb(249, 249, 249);
+	border: 1px solid rgb(213, 213, 213);
+	border-radius: 2px;
+	padding: 14px 22px;
+	&[type='checkbox']{
+		display: inline;
+	}
+	&[type='submit']{
+		@extend .btn;
+		@extend .green;
+	}
+}
+select{
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	    	appearance: none;
+	background: rgb(249, 249, 249);
+	border: 1px solid rgb(213, 213, 213);
+	border-radius: 2px;
+	display: inline-block;
+	font-size: $fontSizeXSmall;
+	margin: 0 10px 0 0;
+	outline: none;
+	padding: 14px 62px 14px 22px;
+}

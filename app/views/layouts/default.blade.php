@@ -39,19 +39,19 @@
 					<div class='section print_now'>
 						<a>
 							<span>Imprimir ahora</span>
-							<span>Hola mndo</span>
+							<span>Lorem ipsum dolor sit</span>
 						</a>
 					</div>
 					<div class='section create_budget'>
-						<a>
+						<a href='{{ URL::to('order') }}'>
 							<span>Armá tu presupuesto</span>
-							<span>Hola mndo</span>
+							<span>Lorem ipsum dolor sit</span>
 						</a>
 					</div>
 					<div class='section faq'>
 						<a href='{{ URL::to('faq') }}'>
 							<span>Preguntas frecuentes</span>
-							<span>Hola mndo</span>
+							<span>Lorem ipsum dolor sit</span>
 						</a>
 					</div>
 				</div>
