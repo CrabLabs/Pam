@@ -5,15 +5,15 @@
 	<div class='index_wrapper'>
 		<div class='container-small'>
 			<div class='index_highlight'>
-				<img src=''>
+				<img src='img/img_06.png'>
 				<span>Cotizá tu trabajo online y solicita la impresión hoy mismo.</span>	
 			</div>
 			<div class='index_highlight'>
-				<img src=''>
+				<img src='img/img_07.png'>
 				<span>Adjuntanos tu trabajo o solicitá nuestro servicio de diseño.</span>	
 			</div>
 			<div class='index_highlight'>
-				<img src=''>
+				<img src='img/img_08.png'>
 				<span>Recibí tu trabajo impreso en el horario que indíques.</span>	
 			</div>
 		</div>

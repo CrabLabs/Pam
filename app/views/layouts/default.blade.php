@@ -35,8 +35,7 @@
 			</nav>
 			<div class='header_wrapper'>
 				<div class='container'>
-					<div class='section logo'>
-					</div>
+					<div class='section logo'></div>
 					<div class='section print_now'>
 						<a>
 							<span>Imprimir ahora</span>

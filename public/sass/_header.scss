@@ -7,9 +7,11 @@ header{
 		text-transform: uppercase;
 		width: 100%;
 		.phone_support{
+			background: image-url("img_01.png") no-repeat;
+			background-position: 0 6px;
 			color: rgb(255, 255, 255);
 			display: inline-block;
-			padding: 10px 0;
+			padding: 10px 25px;
 		}
 		ul{
 			display: inline-block;
@@ -25,6 +27,8 @@ header{
 						transition: all 250ms;
 				vertical-align: top;
 				&.home{
+					background: image-url("img_02.png") no-repeat;
+					background-position: 6px 6px;
 					border-right: 1px solid rgb(29, 32, 36);
 					box-shadow: 0 1px 0 rgb(45, 50, 55);
 					height: 34px;
@@ -60,6 +64,22 @@ header{
 			width: 25%;
 			&:hover{
 				
+			}
+			&.logo{
+				background: image-url("logo.png") no-repeat;
+				background-position: center center;
+			}
+			&.print_now{
+				background: image-url("img_05.png") no-repeat;
+				background-position: 4px center;
+			}
+			&.create_budget{
+				background: image-url("img_03.png") no-repeat;
+				background-position: 4px center;
+			}
+			&.faq{
+				background: image-url("img_04.png") no-repeat;
+				background-position: 4px center;
 			}
 			a{
 				color: inherit;
