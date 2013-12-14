@@ -79,14 +79,14 @@
 				</div>
 				<div>
 					<h3>Dirección de facturación</h3>
-					{{ Form::checkbox('same_billing_address') }}
+					{{ Form::checkbox('same_billing_address', null, true) }}
 					{{ Form::label('same_billing_address', 'Igual que la dirección de envio') }}
-					{{ Form::text('billing_address') }}
+					{{ Form::text('billing_address', null, array('placeholder' => 'Dirección de facturación')) }}
 				</div>
 			</div>
 		</div>
 
-		{{ Form::button('Cancelar', array('class' => 'btn grey')) }}
+		{{ Form::button('Cancelar', array('class' => 'btn grey cancel')) }}
 		{{ Form::submit('Registrarme') }}
 	{{ Form::close() }}
 </section>
