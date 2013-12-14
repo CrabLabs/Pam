@@ -33,9 +33,11 @@
 	$('form select').on('change', function () {
 		if (!($('select[name=product_id]').val() in budgetables)) {
 			$('.budgetable').hide();
+			$('.no-budgetable').show();
 			return false;
 		} else {
 			$('.budgetable').show();
+			$('.no-budgetable').hide();
 		}
 		$self = $(this);
 		data = $('form').serialize();
