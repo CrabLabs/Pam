@@ -28,11 +28,13 @@ class OrderController extends BaseController {
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
+		// $input = Input::only('product_id', 'amount', 'size', 'inks', 'cost');
+
 		if ($validator->passes() and Request::ajax())
 		{
 			$query = DB::table('products_details')->select(Input::get('select'));
 			
-			foreach(Input::except('_token', 'select', 'budgetables') as $column => $value)
+			foreach(Input::except('_token', 'select', 'budgetables', 'detail', 'email') as $column => $value)
 			{
 				$query->where($column, '=', $value);
 			}

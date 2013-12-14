@@ -41,7 +41,11 @@
 		}
 		$self = $(this);
 		data = $('form').serialize();
-		data = data.split($(this).next('select').attr('name'))[0];
+		if ($(this).next('select')[0] === []) {
+			data = data.split($(this).attr('name'))[0];
+		} else {
+			data = data.split($(this).next('select').attr('name'))[0];
+		}
 		data+= '&select=' + ($(this).next('select').attr('name') || 'cost');
 		
 		$.getJSON('order/getDetail', data, function (res) {
