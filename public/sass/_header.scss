@@ -58,13 +58,18 @@ header{
 			height: 100%;
 			position: relative;
 			width: 25%;
-			div{
+			&:hover{
+				
+			}
+			a{
+				color: inherit;
 				display: block;
 				font-size: 0.8em;
 				height: 2em;
 				margin: auto;
 				position: absolute;
 				max-width: 60%;
+				text-decoration: none;
 				top: 0; right: 0; bottom: 0; left: 0;
 				span{
 					display: block;

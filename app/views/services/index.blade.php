@@ -1,6 +1,10 @@
 @extends('layouts.default')
 
 @section('main')
+<section class='upper'>
+	<h3>Servicios</h3>
+	<p>Estas son algunas muestras de los trabajos realizados</p>
+</section>
 <section id='services' class='container whiteBackground'>
 	@foreach($services as $service)
 		<div class='service'>

@@ -234,26 +234,28 @@ header .header_wrapper .section {
   position: relative;
   width: 25%;
 }
-/* line 61, ../sass/_header.scss */
-header .header_wrapper .section div {
+/* line 64, ../sass/_header.scss */
+header .header_wrapper .section a {
+  color: inherit;
   display: block;
   font-size: 0.8em;
   height: 2em;
   margin: auto;
   position: absolute;
   max-width: 60%;
+  text-decoration: none;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-/* line 69, ../sass/_header.scss */
-header .header_wrapper .section div span {
+/* line 74, ../sass/_header.scss */
+header .header_wrapper .section a span {
   display: block;
   text-align: left;
 }
-/* line 72, ../sass/_header.scss */
-header .header_wrapper .section div span:first-of-type {
+/* line 77, ../sass/_header.scss */
+header .header_wrapper .section a span:first-of-type {
   font-weight: bold;
 }
 

@@ -38,22 +38,22 @@
 					<div class='section logo'>
 					</div>
 					<div class='section print_now'>
-						<div>
+						<a>
 							<span>Imprimir ahora</span>
 							<span>Hola mndo</span>
-						</div>
+						</a>
 					</div>
 					<div class='section create_budget'>
-						<div>
+						<a>
 							<span>Armá tu presupuesto</span>
 							<span>Hola mndo</span>
-						</div>
+						</a>
 					</div>
 					<div class='section faq'>
-						<div>
+						<a href='{{ URL::to('faq') }}'>
 							<span>Preguntas frecuentes</span>
 							<span>Hola mndo</span>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
