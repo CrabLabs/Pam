@@ -118,12 +118,17 @@ input{
 	}
 }
 select{
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	    	appearance: none;
 	background: rgb(249, 249, 249);
 	border: 1px solid rgb(213, 213, 213);
 	border-radius: 2px;
 	display: inline-block;
 	font-size: $fontSizeXSmall;
-	padding: 14px 22px;
+	margin: 0 10px 0 0;
+	outline: none;
+	padding: 14px 62px 14px 22px;
 }
 
 @import "header";
@@ -132,6 +137,7 @@ select{
 	@import "sections/index";
 	@import "sections/register";
 	@import "sections/services";
+	@import "sections/orders";
 }
 
 @import "footer";

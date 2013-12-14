@@ -139,12 +139,17 @@ input[type='checkbox'] {
 
 /* line 120, ../sass/screen.scss */
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: #f9f9f9;
   border: 1px solid #d5d5d5;
   border-radius: 2px;
   display: inline-block;
   font-size: 12px;
-  padding: 14px 22px;
+  margin: 0 10px 0 0;
+  outline: none;
+  padding: 14px 62px 14px 22px;
 }
 
 /* line 1, ../sass/_header.scss */
@@ -433,6 +438,59 @@ header .header_wrapper .section a span:first-of-type {
   text-decoration: none;
   text-transform: uppercase;
   width: 190px;
+}
+/* line 1, ../sass/sections/_orders.scss */
+#main #orders {
+  padding: 0;
+}
+/* line 3, ../sass/sections/_orders.scss */
+#main #orders nav {
+  display: block;
+  width: 100%;
+}
+/* line 6, ../sass/sections/_orders.scss */
+#main #orders nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 10, ../sass/sections/_orders.scss */
+#main #orders nav ul li {
+  background: #f6f7fa;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 33.33333%;
+}
+/* line 20, ../sass/sections/_orders.scss */
+#main #orders nav ul li.active {
+  background: white;
+}
+/* line 22, ../sass/sections/_orders.scss */
+#main #orders nav ul li.active span {
+  background: #215aaa;
+  border: 1px solid #f6f7fa;
+  color: white;
+}
+/* line 28, ../sass/sections/_orders.scss */
+#main #orders nav ul li span {
+  border: 1px solid #818284;
+  border-radius: 50%;
+  color: #818284;
+  display: inline-block;
+  height: 20px;
+  margin-right: 15px;
+  padding: 1px 5px;
+  vertical-align: top;
+  width: 20px;
+}
+/* line 42, ../sass/sections/_orders.scss */
+#main #orders form {
+  padding: 42px;
 }
 
 /* line 1, ../sass/_footer.scss */
