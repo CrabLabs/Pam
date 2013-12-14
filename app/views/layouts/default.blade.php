@@ -26,7 +26,7 @@
 					<ul>
 						<li class='home'><a href='{{ URL::to('/') }}'></a></li>
 						{{ HTML::liActive('services', HTML::link('services', 'Servicios')) }}
-						{{ HTML::liActive('us', HTML::link('us', 'Nosotros')) }}
+						{{ HTML::liActive('about-us', HTML::link('about-us', 'Nosotros')) }}
 						{{ HTML::liActive('works', HTML::link('works', 'Trabajos')) }}
 						{{ HTML::liActive('contact', HTML::link('contact', 'Contacto')) }}
 						{{ HTML::liActive('login', HTML::link('login', 'Login / Registro')) }}

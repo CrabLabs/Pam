@@ -1,0 +1,17 @@
+#about-us{
+	h2{
+		color: $blue;
+		font-weight: 300;
+		margin: 2px 0;
+	}
+	h3{
+		color: $blue;
+		font-size: $fontSizeSmall;
+		font-weight: 300;
+		margin: 2px 0;
+		text-transform: uppercase;
+	}
+	p{
+		font-size: $fontSizeXSmall;
+	}
+}

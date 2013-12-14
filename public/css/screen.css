@@ -539,6 +539,24 @@ header .header_wrapper .section a span:first-of-type {
 #main #orders form {
   padding: 42px;
 }
+/* line 2, ../sass/sections/_about-us.scss */
+#main #about-us h2 {
+  color: #2f66b5;
+  font-weight: 300;
+  margin: 2px 0;
+}
+/* line 7, ../sass/sections/_about-us.scss */
+#main #about-us h3 {
+  color: #2f66b5;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 2px 0;
+  text-transform: uppercase;
+}
+/* line 14, ../sass/sections/_about-us.scss */
+#main #about-us p {
+  font-size: 12px;
+}
 
 /* line 1, ../sass/_footer.scss */
 footer {
