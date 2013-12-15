@@ -62,4 +62,47 @@
 			}	
 		}
 	}
+	.clients{
+		text-align: center;
+	}
+	.contact{
+		section{
+			background: image-url("img_18.png") no-repeat;
+			background-position: center bottom;
+			display: inline-block;
+			min-height: 480px;
+			vertical-align: top;
+			width: (200% / 3);
+		}
+		form{
+			display: inline-block;
+			vertical-align: top;
+			width: (100% / 3);
+			div{
+				margin-bottom: 10px;
+				input, textarea{
+					width: 100%;
+				}
+			}
+		}
+		.info{
+			display: inline-block;
+			min-height: 60px;
+			padding-left: 80px;
+			vertical-align: top;
+			width: 50%;
+			&.home{ background: image-url("img_15.png") no-repeat; }
+			&.phone{ background: image-url("img_16.png") no-repeat; }
+			&.digital{ background: image-url("img_17.png") no-repeat; width: 100%; }
+			span{
+				display: block;
+				font-size: $fontSizeSmall;
+				&:first-of-type{
+					color: $blue;
+					text-transform: uppercase;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
 }

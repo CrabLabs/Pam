@@ -39,12 +39,42 @@
 		<h3>Algunos de nuestro clientes</h3>
 		<h4>Estos son algunos de los clientes que han confiado en nosotros.</h4>
 		<div class='clients'>
-			<img src=''>
-			<img src=''>
-			<img src=''>
-			<img src=''>
-			<img src=''>
-			<img src=''>
+			<img src='img/img_09.png'>
+			<img src='img/img_10.png'>
+			<img src='img/img_11.png'>
+			<img src='img/img_12.png'>
+			<img src='img/img_13.png'>
+			<img src='img/img_14.png'>
+		</div>
+		<div class='contact'>
+			<h3>Contactenos</h3>
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<section>
+				<div class='info home'>
+					<span>Personalmente</span>
+					<span>Imprenta Pam</span>
+					<span>CP 12.200</span>
+					<span>Montevideo, Uruguay</span>
+				</div>
+				<div class='info phone'>
+					<span>Telefónicamente</span>
+					<span>Tel: (598) 2 208 50 92</span>
+					<span><a href='#'>DESCARGAR VCARD</a></span>
+				</div>
+			</section>
+			{{ Form::open() }}
+				<div class='info digital'>
+					<span>Digitalmente</span>
+					<span>info&#64;pam.com.uy</span>
+				</div>
+				<div>{{ Form::text('name', null, ['placeholder' => 'Nombre']) }}</div>
+				<div>{{ Form::text('company', null, ['placeholder' => 'Empresa']) }}</div>
+				<div>{{ Form::text('subject', null, ['placeholder' => 'Asunto']) }}</div>
+				<div>{{ Form::text('phone', null, ['placeholder' => 'Teléfono']) }}</div>
+				<div>{{ Form::email('email', null, ['placeholder' => 'Email']) }}</div>
+				<div>{{ Form::textarea('message', null, ['placeholder' => 'Mensaje']) }}</div>
+				{{ Form::submit('Enviar mensaje') }}
+			{{ Form::close() }}
 		</div>
 	</div>
 </section>

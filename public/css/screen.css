@@ -118,7 +118,7 @@ body {
 }
 
 /* line 20, ../sass/_ui.scss */
-label, input {
+label, input, textarea, select {
   font-size: 12px;
 }
 
@@ -383,6 +383,65 @@ header .header_wrapper .section a span:first-of-type {
   font-size: 0.8em;
   text-align: center;
   width: 100%;
+}
+/* line 65, ../sass/sections/_index.scss */
+#main #index .clients {
+  text-align: center;
+}
+/* line 69, ../sass/sections/_index.scss */
+#main #index .contact section {
+  background: url('/img/img_18.png?1387050070') no-repeat;
+  background-position: center bottom;
+  display: inline-block;
+  min-height: 480px;
+  vertical-align: top;
+  width: 66.66667%;
+}
+/* line 77, ../sass/sections/_index.scss */
+#main #index .contact form {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.33333%;
+}
+/* line 81, ../sass/sections/_index.scss */
+#main #index .contact form div {
+  margin-bottom: 10px;
+}
+/* line 83, ../sass/sections/_index.scss */
+#main #index .contact form div input, #main #index .contact form div textarea {
+  width: 100%;
+}
+/* line 88, ../sass/sections/_index.scss */
+#main #index .contact .info {
+  display: inline-block;
+  min-height: 60px;
+  padding-left: 80px;
+  vertical-align: top;
+  width: 50%;
+}
+/* line 94, ../sass/sections/_index.scss */
+#main #index .contact .info.home {
+  background: url('/img/img_15.png?1387050070') no-repeat;
+}
+/* line 95, ../sass/sections/_index.scss */
+#main #index .contact .info.phone {
+  background: url('/img/img_16.png?1387050070') no-repeat;
+}
+/* line 96, ../sass/sections/_index.scss */
+#main #index .contact .info.digital {
+  background: url('/img/img_17.png?1387050070') no-repeat;
+  width: 100%;
+}
+/* line 97, ../sass/sections/_index.scss */
+#main #index .contact .info span {
+  display: block;
+  font-size: 14px;
+}
+/* line 100, ../sass/sections/_index.scss */
+#main #index .contact .info span:first-of-type {
+  color: #2f66b5;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 /* line 2, ../sass/sections/_register.scss */
 #main #register .title {
