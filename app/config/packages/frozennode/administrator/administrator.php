@@ -56,6 +56,7 @@ return array(
 		'products',
 		'products_details',
 		'services',
+		'works',
 		'faq',
 	),
 

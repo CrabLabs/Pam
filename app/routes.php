@@ -22,6 +22,8 @@ Route::get('/', function()
 
 Route::resource('services', 'ServicesController');
 
+Route::resource('works', 'WorksController');
+
 Route::resource('user', 'UserController');
 
 Route::get('register', function()
