@@ -74,9 +74,9 @@
 						<h3>Dirección de envio</h3>
 						{{ Form::label('shiping_address', 'Dirección') }}
 						{{ Form::text('shiping_address') }}
-						{{ Form::label('shipping_time_from', 'Horario preferencial') }}
+						{{ Form::label('shipping_time_from', 'Horario preferencial') }}<br>
 						{{ Form::select('shipping_time_from', $times) }}
-						<span>a</span>
+						<!-- <span>a</span> -->
 						{{ Form::select('shipping_time_to', $times) }}
 					</div>
 					<div>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 
-			{{ Form::button('Cancelar') }}
+			{{ Form::button('Cancelar', array('class' => 'btn grey cancel')) }}
 			{{ Form::submit('Registrarme') }}
 		{{ Form::close() }}
 	</div>
