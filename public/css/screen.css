@@ -496,58 +496,106 @@ header .header_wrapper .section a span:first-of-type {
 #main #register .section .row-2 div {
   width: 50%;
 }
-/* line 2, ../sass/sections/_edit.scss */
-#main #edit .title {
+/* line 1, ../sass/sections/_edit.scss */
+#main #edit {
+  background: whitesmoke;
+  padding: 0;
+}
+/* line 4, ../sass/sections/_edit.scss */
+#main #edit .edit-main {
+  background: white;
+  border-right: 1px solid #cccecc;
+  display: inline-block;
+  padding: 42px;
+  vertical-align: top;
+  width: -webkit-calc(100% - 250px);
+}
+/* line 11, ../sass/sections/_edit.scss */
+#main #edit .edit-main .title {
   color: #2f66b5;
   font-weight: 300;
   margin: 15px 0;
 }
-/* line 7, ../sass/sections/_edit.scss */
-#main #edit .section {
+/* line 16, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section {
   border-bottom: 1px solid #e1e1e1;
   margin: 25px 0 30px 0;
 }
-/* line 10, ../sass/sections/_edit.scss */
-#main #edit .section h3 {
+/* line 19, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section h3 {
   color: #2f66b5;
   font-size: 12px;
   font-weight: 600;
   margin: 15px 0;
   text-transform: uppercase;
 }
-/* line 17, ../sass/sections/_edit.scss */
-#main #edit .section .account_type label {
+/* line 26, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .account_type label {
   padding: 0 15px 0 10px;
 }
-/* line 20, ../sass/sections/_edit.scss */
-#main #edit .section .row, #main #edit .section .row-2 {
+/* line 29, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row, #main #edit .edit-main .section .row-2 {
   padding-bottom: 20px;
 }
-/* line 22, ../sass/sections/_edit.scss */
-#main #edit .section .row div, #main #edit .section .row-2 div {
+/* line 31, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row div, #main #edit .edit-main .section .row-2 div {
   display: inline-block;
   padding-right: 30px;
   vertical-align: top;
-  width: 25%;
+  width: 33.33333%;
 }
-/* line 26, ../sass/sections/_edit.scss */
-#main #edit .section .row div label, #main #edit .section .row div input, #main #edit .section .row-2 div label, #main #edit .section .row-2 div input {
+/* line 35, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row div label, #main #edit .edit-main .section .row div input, #main #edit .edit-main .section .row-2 div label, #main #edit .edit-main .section .row-2 div input {
   width: 100%;
 }
-/* line 28, ../sass/sections/_edit.scss */
-#main #edit .section .row div label[type='checkbox'], #main #edit .section .row div input[type='checkbox'], #main #edit .section .row-2 div label[type='checkbox'], #main #edit .section .row-2 div input[type='checkbox'] {
+/* line 37, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row div label[type='checkbox'], #main #edit .edit-main .section .row div input[type='checkbox'], #main #edit .edit-main .section .row-2 div label[type='checkbox'], #main #edit .edit-main .section .row-2 div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
-/* line 34, ../sass/sections/_edit.scss */
-#main #edit .section .row div span, #main #edit .section .row-2 div span {
+/* line 43, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row div span, #main #edit .edit-main .section .row-2 div span {
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 42, ../sass/sections/_edit.scss */
-#main #edit .section .row-2 div {
+/* line 51, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row-2 div {
   width: 50%;
+}
+/* line 57, ../sass/sections/_edit.scss */
+#main #edit aside {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  width: 250px;
+}
+/* line 62, ../sass/sections/_edit.scss */
+#main #edit aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 66, ../sass/sections/_edit.scss */
+#main #edit aside ul li {
+  border-bottom: 1px solid #e1e1e1;
+  display: block;
+  padding: 20px 15px;
+}
+/* line 70, ../sass/sections/_edit.scss */
+#main #edit aside ul li a {
+  color: #7d878e;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 76, ../sass/sections/_edit.scss */
+#main #edit aside ul li.active {
+  background: #ecf0f7;
+}
+/* line 78, ../sass/sections/_edit.scss */
+#main #edit aside ul li.active a {
+  color: #2259a6;
 }
 /* line 2, ../sass/sections/_services.scss */
 #main #services .service {
