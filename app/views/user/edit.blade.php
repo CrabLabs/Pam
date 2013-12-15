@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('main')
-<section id='register' class='container whiteBackground'>
+<section id='edit' class='container whiteBackground'>
 	<h3 class='title'>Datos personales</h3>
 	@if(isset($messages))
 		<h3>Hay errores en el formulario</h3>

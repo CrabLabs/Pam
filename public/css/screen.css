@@ -496,6 +496,59 @@ header .header_wrapper .section a span:first-of-type {
 #main #register .section .row-2 div {
   width: 50%;
 }
+/* line 2, ../sass/sections/_edit.scss */
+#main #edit .title {
+  color: #2f66b5;
+  font-weight: 300;
+  margin: 15px 0;
+}
+/* line 7, ../sass/sections/_edit.scss */
+#main #edit .section {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 25px 0 30px 0;
+}
+/* line 10, ../sass/sections/_edit.scss */
+#main #edit .section h3 {
+  color: #2f66b5;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+/* line 17, ../sass/sections/_edit.scss */
+#main #edit .section .account_type label {
+  padding: 0 15px 0 10px;
+}
+/* line 20, ../sass/sections/_edit.scss */
+#main #edit .section .row, #main #edit .section .row-2 {
+  padding-bottom: 20px;
+}
+/* line 22, ../sass/sections/_edit.scss */
+#main #edit .section .row div, #main #edit .section .row-2 div {
+  display: inline-block;
+  padding-right: 30px;
+  vertical-align: top;
+  width: 25%;
+}
+/* line 26, ../sass/sections/_edit.scss */
+#main #edit .section .row div label, #main #edit .section .row div input, #main #edit .section .row-2 div label, #main #edit .section .row-2 div input {
+  width: 100%;
+}
+/* line 28, ../sass/sections/_edit.scss */
+#main #edit .section .row div label[type='checkbox'], #main #edit .section .row div input[type='checkbox'], #main #edit .section .row-2 div label[type='checkbox'], #main #edit .section .row-2 div input[type='checkbox'] {
+  display: inline;
+  margin-right: 10px;
+  width: auto;
+}
+/* line 34, ../sass/sections/_edit.scss */
+#main #edit .section .row div span, #main #edit .section .row-2 div span {
+  font-size: 12px;
+  padding: 0 10px;
+}
+/* line 42, ../sass/sections/_edit.scss */
+#main #edit .section .row-2 div {
+  width: 50%;
+}
 /* line 2, ../sass/sections/_services.scss */
 #main #services .service {
   border-bottom: 1px solid #999;
