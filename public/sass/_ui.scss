@@ -1,3 +1,8 @@
+/*
+ *	INPUTS
+ */
+
+// BUTTONS
 .btn{
 	background: $blue;
 	border: none;
@@ -69,4 +74,43 @@ select{
 	margin: 0 10px 0 0;
 	outline: none;
 	padding: 14px 62px 14px 22px;
+}
+
+/*
+ * TABLES
+ */
+table{
+	font-size: $fontSizeXSmall;
+	width: 100%;
+	thead tr{
+		background: white;
+		border: 1px solid rgb(232, 233, 232);
+		border-radius: 2px 2px 0 0;
+		font-weight: bold;
+		td{
+			padding: 20px 20px 15px 20px;	
+		}
+	}
+	tbody tr{
+		background: rgb(249, 249, 249);
+		border: 1px solid rgb(232, 233, 232);
+		td{
+			padding: 20px 20px 15px 20px;	
+		}
+	}
+}
+
+/*
+ * SPANS
+ */
+span{
+	&.grey{
+		color: rgb(190, 191, 193);
+	}
+	&.red{
+		color: rgb(233, 69, 62);
+	}
+	&.green{
+		color: rgb(32, 140, 70);
+	}
 }
