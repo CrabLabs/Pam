@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder {
 			$lastname = $lastnames[array_rand($lastnames, 1)];
 
 			DB::table('users')->insert(array(
-				'email'		=> strtolower(str_random(20).'@architectuniverse.com'),
+				'email'		=> strtolower(str_random(20).'@pam.com.uy'),
 				'password' 	=> Hash::make($name),
 				'name'		=> $name,
 				'lastname'	=> $lastname,

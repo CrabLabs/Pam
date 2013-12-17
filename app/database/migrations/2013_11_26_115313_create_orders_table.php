@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration {
 			$table->integer('product_id')->unsigned()->nullable()->default(NULL);
 			$table->integer('product_detail_id')->unsigned()->nullable()->default(NULL);
 			$table->text('description')->nullable()->default(NULL);
+			$table->integer('cost')->unsigned();
 			$table->string('file')->nullable()->default(NULL);
 			$table->boolean('graphic_design')->default(false);
 			$table->boolean('collect_personally')->default(false);
