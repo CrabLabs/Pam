@@ -124,6 +124,11 @@
 		</ul>
 	</aside>
 </section>
+<section class='container greyBackground'>
+	<h3>¿Tienes preguntas?</h3>
+	<p>Puede utilizar nuestra sección {{ HTML::link(URL::to('faq'), 'Preguntas Frecuentes') }} para informarte. También puede comunicarte telefónicamente con nosotros para que podamos ayudarte.<br><br>
+	Tel: 2208 50 92 o por mail a <a href='mailto:info@pam.com.uy'>info&#64;pam.com.uy</a></p>
+</section>
 @stop
 
 @section('scripts')
