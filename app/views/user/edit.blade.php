@@ -92,6 +92,31 @@
 			{{ Form::submit('Registrarme') }}
 		{{ Form::close() }}
 	</div>
+	<div class='edit-main'>
+		<h3 class='title'>Mis pedidos</h3>
+		<h4>Pedidos realizados</h4>
+		<table>
+			<thead>
+				<tr>
+					<td>Fecha</td>
+					<td>Datos del trabajo</td>
+					<td>Costo</td>
+					<td>Estado</td>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($user->orders as $order)
+				<tr>
+					<td>{{ $order->created_at->format('d/m/y h:m') }} hs</td>
+					<td>{{ $order->getDescription() }}</td>
+					<td><span class='grey'>$ {{ $order->getCost() }}</span></td>
+					<?php $class = ($order->status == 'Activo') ? 'grey' : (($order->status == 'Rechazado') ? 'red' : 'green'); ?>
+					<td><span class='{{ $class }}'>{{ $order->status }}</span></td>
+				</tr>
+				@endforeach
+			</tbody>
+		</table>
+	</div>
 	<aside>
 		<ul>
 			<li class='active'><a href='#'>Datos personales</a></li>
@@ -99,4 +124,10 @@
 		</ul>
 	</aside>
 </section>
+@stop
+
+@section('scripts')
+	@parent
+
+	{{ HTML::script('js/edit.js') }}
 @stop

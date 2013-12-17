@@ -7,11 +7,18 @@
 		display: inline-block;
 		padding: 42px;
 		vertical-align: top;
-		width: -webkit-calc(100% - 250px);
+		width: -webkit-calc(100% - 180px);
 		.title{
 			color: $blue;
 			font-weight: 300;
 			margin: 15px 0;
+		}
+		h4{
+			color: $blue;
+			font-size: $fontSizeXSmall;
+			font-weight: 600;
+			margin: 15px 0;
+			text-transform: uppercase;
 		}
 		.section{
 			border-bottom: 1px solid rgb(225, 225, 225);
@@ -58,7 +65,7 @@
 		display: inline-block;
 		height: 100%;
 		vertical-align: top;
-		width: 250px;
+		width: 180px;
 		ul{
 			list-style: none;
 			margin: 0;
