@@ -1,5 +1,4 @@
 @import "compass";
-@import "vendor/semantic.gs";
 @import "mixins";
 @import "variables";
 
@@ -27,6 +26,7 @@ body{
 	@import "sections/services";
 	@import "sections/orders";
 	@import "sections/about-us";
+	@import "sections/faq";
 }
 
 @import "footer";

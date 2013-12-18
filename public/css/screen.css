@@ -1,19 +1,4 @@
-/* line 41, ../sass/vendor/_semantic.gs.scss */
-body {
-  width: 100%;
-  *zoom: 1;
-}
-/* line 26, ../sass/vendor/_semantic.gs.scss */
-body:before, body:after {
-  content: "";
-  display: table;
-}
-/* line 31, ../sass/vendor/_semantic.gs.scss */
-body:after {
-  clear: both;
-}
-
-/* line 6, ../sass/screen.scss */
+/* line 5, ../sass/screen.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -21,7 +6,7 @@ body:after {
   box-sizing: border-box;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 body {
   background-image: url('/img/banner.jpg?1387050070');
   background-repeat: no-repeat;
@@ -64,6 +49,14 @@ body {
   border: 1px solid #d0d0d0;
   border-radius: 4px 4px 0 0;
   padding: 42px;
+}
+
+/* line 33, ../sass/_containers.scss */
+.bigBlue, #main #orders form h3 {
+  color: #2f66b5;
+  font-weight: 300;
+  margin: 2px 0;
+  text-transform: uppercase;
 }
 
 /* line 40, ../sass/_containers.scss */
@@ -752,8 +745,62 @@ header .header_wrapper .section a span:first-of-type {
   width: 20px;
 }
 /* line 42, ../sass/sections/_orders.scss */
+#main #orders .product_photo {
+  color: inherit;
+  display: inline-block;
+  padding: 20px 20px 20px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 170px;
+}
+/* line 51, ../sass/sections/_orders.scss */
+#main #orders .product_photo img, #main #orders .product_photo span {
+  display: block;
+}
+/* line 54, ../sass/sections/_orders.scss */
+#main #orders .product_photo span {
+  font-size: 12px;
+}
+/* line 57, ../sass/sections/_orders.scss */
+#main #orders .product_photo img {
+  min-height: 120px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 63, ../sass/sections/_orders.scss */
 #main #orders form {
   padding: 42px;
+}
+/* line 65, ../sass/sections/_orders.scss */
+#main #orders form h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 71, ../sass/sections/_orders.scss */
+#main #orders form .graphic_design {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+/* line 75, ../sass/sections/_orders.scss */
+#main #orders form .graphic_design div {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+/* line 82, ../sass/sections/_orders.scss */
+#main #orders form .details div {
+  display: inline-block;
+  padding-right: 25px;
+  width: 33.33333%;
+}
+/* line 86, ../sass/sections/_orders.scss */
+#main #orders form .details div select, #main #orders form .details div label {
+  display: block;
+  width: 100%;
 }
 /* line 2, ../sass/sections/_about-us.scss */
 #main #about-us h2 {
@@ -772,6 +819,26 @@ header .header_wrapper .section a span:first-of-type {
 /* line 14, ../sass/sections/_about-us.scss */
 #main #about-us p {
   font-size: 12px;
+}
+/* line 2, ../sass/sections/_faq.scss */
+#main #faq .faq {
+  border-bottom: 1px solid #e2e2e2;
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+}
+/* line 6, ../sass/sections/_faq.scss */
+#main #faq .faq .question {
+  color: #1a57a7;
+  font-size: 14px;
+  margin: 0 0 25px 0;
+  padding: 0 0 0 40px;
+  text-transform: uppercase;
+}
+/* line 13, ../sass/sections/_faq.scss */
+#main #faq .faq .answer {
+  font-size: 14px;
+  margin: 0 0 0 40px;
+  padding: 0 0 0 20px;
 }
 
 /* line 1, ../sass/_footer.scss */

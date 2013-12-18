@@ -1,0 +1,19 @@
+#faq{
+	.faq{
+		border-bottom: 1px solid rgb(226, 226, 226);
+		margin: 0 0 20px 0;
+		padding: 0 0 20px 0;
+		.question{
+			color: rgb(26, 87, 167);
+			font-size: $fontSizeSmall;
+			margin: 0 0 25px 0;
+			padding: 0 0 0 40px;
+			text-transform: uppercase;
+		}
+		.answer{
+			font-size: $fontSizeSmall;
+			margin: 0 0 0 40px;
+			padding: 0 0 0 20px;
+		}
+	}
+}
