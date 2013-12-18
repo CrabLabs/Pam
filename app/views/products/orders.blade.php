@@ -17,7 +17,7 @@
 		<section class='orders_step_1'>
 			@foreach($products as $product)
 				<a href='#' data-id='{{ $product->id }}' class='product_photo'>
-					{{ HTML::image($product->image) }}
+					{{ HTML::image($product->getThumb()) }}
 					<span>{{ $product->name }}</span>
 				</a>
 			@endforeach
@@ -31,32 +31,75 @@
 				}
 				echo Form::hidden('budgetables', implode(',', $budgetables));
 			?>
-			<select name='product_id'>
-				@foreach($products as $product)
-					<option value='{{ $product->id }}'>{{ $product->name }}</option>
-				@endforeach
-			</select>
-			
-			<select name='amount' class='budgetable'></select>
-			<select name='size' class='budgetable'></select>
-			<select name='inks' class='budgetable'></select>
-			<span id='cost' class='budgetable'></span>
-
-			<div class='no-budgetable'>
+			<div class='graphic_design'>
+				<div>
+					<h3>Servicio de diseño gráfico</h3>
+					{{ Form::checkbox('graphic_design') }}
+					{{ Form::label('graphic_design', 'Deseo cotizar el gráfico de este material') }}
+				</div>
+				<div>
+					<h3>Detalles del envio</h3>
+				</div>
+			</div>
+			<div class='file'>
 				<h3>Adjuntar archivo de tu trabajo</h3>
-				<p>Para realizar un presupuesto más certero puede adjuntar tu tamaño. Tamaño máximo XX Mb</p>
+				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo. Tamaño máximo XXXmb.</p>
 				{{ Form::file('file') }}
 			</div>
-			<div class='no-budgetable'>
+			<div class='details'>
 				<h3>Detalles de la impresión</h3>
-				{{ Form::label('detail', 'Describa el trabajo:') }}
-				{{ Form::textarea('detail') }}
+				<div>
+					{{ Form::label('product_id', 'Producto:') }}
+					<select name='product_id'>
+						@foreach($products as $product)
+							<option value='{{ $product->id }}'>{{ $product->name }}</option>
+						@endforeach
+					</select>
+				</div>
+				<div>
+					{{ Form::label('amount', 'Cantidad:') }}
+					<select name='amount' class='budgetable'></select>
+				</div>
+				<div>
+					{{ Form::label('size', 'Tamaño:') }}
+					<select name='size' class='budgetable'></select>
+				</div>
+				<div>
+					{{ Form::label('inks', 'Tintas:') }}
+					<select name='inks' class='budgetable'></select>
+				</div>
+				<div>
+					{{ Form::label('paper', 'Papel:') }}
+					<select name='paper' class='budgetable'></select>
+				</div>
+				<div>
+					{{ Form::label('weight', 'Gramaje:') }}
+					<select name='weight' class='budgetable'></select>
+				</div>
+				<div>
+					{{ Form::label('laminate', 'Laminado:') }}
+					<select name='laminate' class='budgetable'></select>
+				</div>
+
+				<div class='no-budgetable'>
+					<h3>Adjuntar archivo de tu trabajo</h3>
+					<p>Para realizar un presupuesto más certero puede adjuntar tu tamaño. Tamaño máximo XX Mb</p>
+					{{ Form::file('file') }}
+				</div>
+				<div class='no-budgetable'>
+					<h3>Detalles de la impresión</h3>
+					{{ Form::label('detail', 'Describa el trabajo:') }}
+					{{ Form::textarea('detail') }}
+				</div>
+				<div class='no-budgetable'>
+					<h3>Detalles de la impresión</h3>
+					{{ Form::label('email', 'Ingrese su mail donde le enviaremos su presupuesto:') }}
+					{{ Form::email('email') }}
+				</div>
 			</div>
-			<div class='no-budgetable'>
-				<h3>Detalles de la impresión</h3>
-				{{ Form::label('email', 'Ingrese su mail donde le enviaremos su presupuesto:') }}
-				{{ Form::email('email') }}
-			</div>
+		</section>
+		<section class='orders_step_3'>
+			<!--<span id='cost' class='budgetable'></span>-->
 		</section>
 		{{ Form::submit() }}
 	{{ Form::close() }}

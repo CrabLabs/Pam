@@ -1,7 +1,7 @@
 (function ($) {
 	'use strict';
 
-	var data, $self, html, next, currentStep, budgetables;
+	var data, $self, html, next, currentStep, budgetables, nextSelect;
 
 	$(document).on('ready', function () {
 		currentStep = 1;
@@ -30,7 +30,7 @@
 		currentStep += 1;
 	});
 
-	$('form select').on('change', function () {
+	$('.details select').on('change', function () {
 		if (!($('select[name=product_id]').val() in budgetables)) {
 			$('.budgetable').hide();
 			$('.no-budgetable').show();
@@ -39,25 +39,28 @@
 			$('.budgetable').show();
 			$('.no-budgetable').hide();
 		}
-		$self = $(this);
+		
+		// $self = $(this);
 		data = $('form').serialize();
-		if ($(this).next('select')[0] === []) {
+		nextSelect = $(this).parent('div').next('div').children('select');
+		
+		if (nextSelect[0] === []) {
 			data = data.split($(this).attr('name'))[0];
 		} else {
-			data = data.split($(this).next('select').attr('name'))[0];
+			data = data.split(nextSelect.attr('name'))[0];
 		}
-		data+= '&select=' + ($(this).next('select').attr('name') || 'cost');
+		data+= '&select=' + (nextSelect.attr('name') || 'cost');
 		
 		$.getJSON('order/getDetail', data, function (res) {
 			html = '';
-			next = $self.next('select').attr('name');
+			next = nextSelect.attr('name');
 			if (res.cost !== undefined) {
 				$('#cost').text(res.cost);
 			} else {
 				$.each(res, function (index, value) {
 					html += '<option>' + value[next] + '</option>';
 				});
-				$self.next('select').html('').append(html).trigger('change');
+				nextSelect.html('').append(html).trigger('change');
 			}
 		});
 	});

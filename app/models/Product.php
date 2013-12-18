@@ -11,6 +11,11 @@ class Product extends Eloquent {
 		return $this->hasMany('ProductDetail');
 	}
 
+	public function getThumb()
+	{
+		return URL::to('img/uploads/products/thumbs/'.$this->image);
+	}
+
 	static function boot()
 	{
 		parent::boot();

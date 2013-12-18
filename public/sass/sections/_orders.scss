@@ -39,7 +39,55 @@
 			}
 		}
 	}
+	.product_photo{
+		color: inherit;
+		display: inline-block;
+		padding: 20px 20px 20px 0;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		vertical-align: top;
+		width: 170px;
+		img, span{
+			display: block;
+		}
+		span{
+			font-size: $fontSizeXSmall;	
+		}
+		img {
+			min-height: 120px;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+	}
 	form{
 		padding: 42px;
+		h3{
+			@extend .bigBlue;
+			font-size: $fontSizeSmall;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		.graphic_design{
+			border-bottom: 1px solid rgb(236, 236, 236);
+			margin-bottom: 25px;
+			padding-bottom: 25px;
+			div{
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+			}
+		}
+		.details{
+			div{
+				display: inline-block;
+				padding-right: 25px;
+				width: (100% / 3);
+				select, label{
+					display: block;
+					width: 100%;
+				}
+			}
+		}
 	}
 }

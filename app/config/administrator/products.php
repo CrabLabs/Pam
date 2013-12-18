@@ -15,7 +15,7 @@ return array(
 		),
 		'image' => array(
 			'title' => 'Imagen',
-			'output' => HTML::image('(:value)', '', array('height' => 100)),
+			'output' => HTML::image('img/uploads/products/thumbs/(:value)', '', array('height' => 100)),
 		),
 	),
 
@@ -41,9 +41,9 @@ return array(
 			'type' 	 => 'image',
 			'naming' => 'random',
 			'length' => 14,
-			'location' => public_path().'/img/uploads/products/originals',
+			'location' => public_path().'/img/uploads/products/originals/',
 			'sizes' => array(
-				array(150, 150, 'crop', public_path().'/img/uploads/products/thumbs', 100)
+				array(170, 120, 'crop', public_path().'/img/uploads/products/thumbs/', 100)
 			),
 		),
 	),
