@@ -780,24 +780,34 @@ header .header_wrapper .section a span:first-of-type {
   margin-bottom: 20px;
 }
 /* line 71, ../sass/sections/_orders.scss */
-#main #orders form .graphic_design {
+#main #orders form .graphic_design, #main #orders form .attach_file {
   border-bottom: 1px solid #ececec;
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
 /* line 75, ../sass/sections/_orders.scss */
-#main #orders form .graphic_design div {
+#main #orders form .graphic_design div, #main #orders form .attach_file div {
   display: inline-block;
   vertical-align: top;
   width: 50%;
 }
-/* line 82, ../sass/sections/_orders.scss */
+/* line 79, ../sass/sections/_orders.scss */
+#main #orders form .graphic_design div label, #main #orders form .attach_file div label {
+  padding: 0 20px 0 10px;
+}
+/* line 85, ../sass/sections/_orders.scss */
+#main #orders form .attach_file p {
+  display: inline;
+  font-size: 12px;
+  padding-right: 20px;
+}
+/* line 92, ../sass/sections/_orders.scss */
 #main #orders form .details div {
   display: inline-block;
   padding-right: 25px;
   width: 33.33333%;
 }
-/* line 86, ../sass/sections/_orders.scss */
+/* line 96, ../sass/sections/_orders.scss */
 #main #orders form .details div select, #main #orders form .details div label {
   display: block;
   width: 100%;

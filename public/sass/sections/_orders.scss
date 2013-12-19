@@ -68,7 +68,7 @@
 			font-weight: bold;
 			margin-bottom: 20px;
 		}
-		.graphic_design{
+		.graphic_design, .attach_file{
 			border-bottom: 1px solid rgb(236, 236, 236);
 			margin-bottom: 25px;
 			padding-bottom: 25px;
@@ -76,6 +76,16 @@
 				display: inline-block;
 				vertical-align: top;
 				width: 50%;
+				label{
+					padding: 0 20px 0 10px;
+				}
+			}
+		}
+		.attach_file{
+			p{
+				display: inline;
+				font-size: $fontSizeXSmall;
+				padding-right: 20px;
 			}
 		}
 		.details{

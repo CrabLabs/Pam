@@ -34,14 +34,18 @@
 			<div class='graphic_design'>
 				<div>
 					<h3>Servicio de diseño gráfico</h3>
-					{{ Form::checkbox('graphic_design') }}
+					{{ Form::checkbox('graphic_design', null, false, array('id' => 'graphic_design')) }}
 					{{ Form::label('graphic_design', 'Deseo cotizar el gráfico de este material') }}
 				</div>
 				<div>
 					<h3>Detalles del envio</h3>
+					{{ Form::radio('collect_personally', 'false', true, array('id' => 'collect_personally_false')) }}
+					{{ Form::label('collect_personally_false', 'Enviar en 48hs') }}
+					{{ Form::radio('collect_personally', 'true', false, array('id' => 'collect_personally_true')) }}
+					{{ Form::label('collect_personally_true', 'Lo retiro personalmente') }}
 				</div>
 			</div>
-			<div class='file'>
+			<div class='attach_file'>
 				<h3>Adjuntar archivo de tu trabajo</h3>
 				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo. Tamaño máximo XXXmb.</p>
 				{{ Form::file('file') }}
