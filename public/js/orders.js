@@ -41,7 +41,7 @@
 		}
 		
 		// $self = $(this);
-		data = $('form').serialize();
+		data = $('.details').serialize();
 		nextSelect = $(this).parent('div').next('div').children('select');
 		
 		if (nextSelect[0] === []) {
