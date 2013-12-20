@@ -29,7 +29,7 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	if(App::Environment() != 'local'  and $response instanceof Illuminate\Http\Response)
+	if(/*App::Environment() != 'local'  and*/ $response instanceof Illuminate\Http\Response)
 	{
 		$output = $response->getOriginalContent();
 		$filters = array(

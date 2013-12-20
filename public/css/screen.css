@@ -8,7 +8,7 @@
 
 /* line 12, ../sass/screen.scss */
 body {
-  background-image: url('/img/banner.jpg?1387050070');
+  background-image: url('/img/banner.jpg');
   background-repeat: no-repeat;
   background-size: container;
 }
@@ -238,7 +238,7 @@ header nav {
 }
 /* line 9, ../sass/_header.scss */
 header nav .phone_support {
-  background: url('/img/img_01.png?1387050070') no-repeat;
+  background: url('/img/img_01.png') no-repeat;
   background-position: 0 6px;
   color: white;
   display: inline-block;
@@ -263,7 +263,7 @@ header nav ul li {
 }
 /* line 29, ../sass/_header.scss */
 header nav ul li.home {
-  background: url('/img/img_02.png?1387050070') no-repeat;
+  background: url('/img/img_02.png') no-repeat;
   background-position: 6px 6px;
   border-right: 1px solid #1d2024;
   box-shadow: 0 1px 0 #2d3237;
@@ -310,22 +310,22 @@ header .header_wrapper .section {
 }
 /* line 65, ../sass/_header.scss */
 header .header_wrapper .section.logo {
-  background: url('/img/logo.png?1387050070') no-repeat;
+  background: url('/img/logo.png') no-repeat;
   background-position: center center;
 }
 /* line 69, ../sass/_header.scss */
 header .header_wrapper .section.print_now {
-  background: url('/img/img_05.png?1387050070') no-repeat;
+  background: url('/img/img_05.png') no-repeat;
   background-position: 4px center;
 }
 /* line 73, ../sass/_header.scss */
 header .header_wrapper .section.create_budget {
-  background: url('/img/img_03.png?1387050070') no-repeat;
+  background: url('/img/img_03.png') no-repeat;
   background-position: 4px center;
 }
 /* line 77, ../sass/_header.scss */
 header .header_wrapper .section.faq {
-  background: url('/img/img_04.png?1387050070') no-repeat;
+  background: url('/img/img_04.png') no-repeat;
   background-position: 4px center;
 }
 /* line 81, ../sass/_header.scss */
@@ -431,7 +431,7 @@ header .header_wrapper .section a span:first-of-type {
 }
 /* line 69, ../sass/sections/_index.scss */
 #main #index .contact section {
-  background: url('/img/img_18.png?1387050070') no-repeat;
+  background: url('/img/img_18.png') no-repeat;
   background-position: center bottom;
   display: inline-block;
   min-height: 480px;
@@ -462,15 +462,15 @@ header .header_wrapper .section a span:first-of-type {
 }
 /* line 94, ../sass/sections/_index.scss */
 #main #index .contact .info.home {
-  background: url('/img/img_15.png?1387050070') no-repeat;
+  background: url('/img/img_15.png') no-repeat;
 }
 /* line 95, ../sass/sections/_index.scss */
 #main #index .contact .info.phone {
-  background: url('/img/img_16.png?1387050070') no-repeat;
+  background: url('/img/img_16.png') no-repeat;
 }
 /* line 96, ../sass/sections/_index.scss */
 #main #index .contact .info.digital {
-  background: url('/img/img_17.png?1387050070') no-repeat;
+  background: url('/img/img_17.png') no-repeat;
   width: 100%;
 }
 /* line 97, ../sass/sections/_index.scss */
@@ -879,5 +879,3 @@ footer ul li a {
 footer ul li a.active, footer ul li a:hover {
   color: #2f66b5;
 }
-
-/*@ sourceMappingURL=screen.css.map */
