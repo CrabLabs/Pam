@@ -812,6 +812,16 @@ header .header_wrapper .section a span:first-of-type {
   display: block;
   width: 100%;
 }
+/* line 101, ../sass/sections/_orders.scss */
+#main #orders form .details .no-budgetable {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+}
+/* line 105, ../sass/sections/_orders.scss */
+#main #orders form .details .no-budgetable input, #main #orders form .details .no-budgetable textarea {
+  width: 100%;
+}
 /* line 2, ../sass/sections/_about-us.scss */
 #main #about-us h2 {
   color: #2f66b5;
