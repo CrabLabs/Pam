@@ -61,6 +61,9 @@ Route::get('products', function()
 	]);
 });
 
+Route::get('contact', 'ContactController@showContact');
+Route::post('contact', 'ContactController@sendContact');
+
 Route::get('we-use-laravel', function()
 {
 	return View::make('hello');
