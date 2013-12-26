@@ -35,7 +35,7 @@
 			{{ Form::label('message', 'Mensage: *') }}
 			{{ Form::textarea('message', null, array('required' => true)) }}
 		</div>
-		<div>
+		<div class='submit'>
 			{{ Form::submit('Enviar mensaje') }}
 		</div>
 	{{ Form::close() }}

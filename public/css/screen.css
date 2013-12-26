@@ -860,6 +860,21 @@ header .header_wrapper .section a span:first-of-type {
   margin: 0 0 0 40px;
   padding: 0 0 0 20px;
 }
+/* line 2, ../sass/sections/_contact.scss */
+#main #contact div {
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+}
+/* line 6, ../sass/sections/_contact.scss */
+#main #contact div.submit {
+  display: block;
+}
+/* line 9, ../sass/sections/_contact.scss */
+#main #contact div label, #main #contact div input, #main #contact div textarea, #main #contact div select {
+  display: block;
+  margin: 10px 0;
+}
 
 /* line 1, ../sass/_footer.scss */
 footer {
