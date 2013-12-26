@@ -108,4 +108,48 @@
 			}
 		}
 	}
+	.orders_step_3{
+		.details_list{
+			display: inline-block;
+			padding-right: 40px;
+			vertical-align: top;
+			width: (100% / 3);
+			dl{
+				font-size: $fontSizeXSmall;
+				dt{
+					display: inline-block;
+					font-weight: bold;
+					padding-bottom: 14px;
+					width: 80px;
+				}
+				dd{
+					display: inline-block;
+					padding-bottom: 14px;
+					margin: 0;
+					@include calc(width, '100% - 80px');
+				}
+			}
+			.modify{
+				border-bottom: 1px dotted $green;
+				color: $green;
+				font-size: $fontSizeXSmall;
+				margin: 6px 0 0 0;
+				text-decoration: none;
+			}
+		}
+		.budget{
+			display: inline-block;
+			vertical-align: top;
+			width: (200% / 3);
+			p{
+				font-size: $fontSizeXSmall;
+			}
+			#cost{
+				color: $blue;
+				display: block;
+				font-size: 3em;
+				margin: 15px 0;
+			}
+		}
+	}
 }
