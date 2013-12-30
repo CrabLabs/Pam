@@ -31,6 +31,33 @@ Route::get('register', function()
 	return Redirect::route('user.create');
 });
 
+Route::get('login', function()
+{
+	return View::make('user.login');
+});
+
+Route::post('login', function()
+{
+	$validator = Validator::make(Input::all(), [
+		'email' => 'required|email',
+		'password' => 'required'
+	]);
+
+	if ($validator->passes()) {
+		$data = array(
+			'email' => Input::get('email'),
+			'password' => Input::get('password'),
+		);
+		if (Auth::attempt($data, true)) {
+			return Redirect::to('/');
+		} else {
+			return View::make('user.login')->with('incorrect', true);
+		}
+	} else {
+		return View::make('user.login')->withErrors($validator);
+	}
+});
+
 Route::get('orders', function()
 {
 	return Redirect::to('order');
