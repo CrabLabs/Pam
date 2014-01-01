@@ -20,17 +20,16 @@
 	});
 
 	$('.next_step').on('click', function () {
-		if (!($('select[name=product_id]').val() in budgetables)) {
-			alert('Mensaje');
-		} else {
-			$('.orders_step_2').hide();
-			$('.orders_step_3').show();
-			$('nav.steps .active').removeClass('active').next('li').addClass('active');	
-		}
+		var selection = ($('select[name=product_id]').val() in budgetables) ? 'budgetable' : 'no-budgetable';
+
+		$('.orders_step_2').hide();
+		$('.orders_step_3').show();
+		$('nav.steps .active').removeClass('active').next('li').addClass('active');
+
 		$('.details_list dl').html('<dt>Producto:</dt><dd>' + $('select[name=product_id] :selected').text() + '</dd>');
-		$('.details .budgetable').each(function () {
+		$('.details .' + selection).each(function () {
 			var html = '<dt>' + $(this).children('label').text() + '</dt>';
-			html += '<dd>' + $(this).children('select').val() + '</dd>';
+			html += '<dd>' + $(this).children('select, input, textarea').val() + '</dd>';
 			$('.details_list dl').append(html);
 		});
 	});
@@ -41,12 +40,6 @@
 		$('.orders_step_3').hide();
 		$('.orders_step_2').show();
 		$('nav.steps .active').removeClass('active').prev('li').addClass('active');	
-	});
-
-	$('form').on('submit', function (event) {
-		event.preventDefault();
-
-		$(this).submit();
 	});
 
 	$('.details select').on('change', function () {

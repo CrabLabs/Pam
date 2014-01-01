@@ -64,7 +64,7 @@ Route::get('orders', function()
 });
 
 Route::get('order', 'OrderController@showIndex');
-
+Route::post('order', 'OrderController@sendOrder');
 Route::get('order/getDetail', 'OrderController@getDetail');
 
 Route::get('faq', function()

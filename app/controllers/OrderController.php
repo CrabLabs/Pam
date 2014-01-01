@@ -14,6 +14,31 @@ class OrderController extends BaseController {
 		));
 	}
 
+	public function sendOrder()
+	{
+		$rules = array(
+			'product_id' => 'required|numeric',
+		);
+		$validator = Validator::make(Input::all(), $rules);
+
+		if ($validator->passes()) {
+			if (Product::find(Input::get('product_id'))->budgetable) {
+				return 'Budgetable';
+			} else {
+				$order = new Order;
+				$order->description = Input::get('detail');
+				$order->graphic_design = Input::has('graphic_design');
+				$order->collect_personally = Input::get('collect_personally');
+				$order->email = Input::get('email');
+				$order->save();
+
+				return Response::json($order);
+			}
+		} else {
+			return Response::json(Input::all());
+		}
+	}
+
 	/**
 	 * JSON response for product details
 	 *
