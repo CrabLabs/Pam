@@ -9,6 +9,9 @@
 	<h3>Login</h3>
 	{{ HTML::link(URL::route('user.create'), 'Registro') }}
 	{{ Form::open() }}
+		@if (isset($incorrect))
+			<p class='error'>El email y/o contraseña no es correcto.</p>
+		@endif
 		{{ Form::label('email', 'Email: ') }}
 		{{ Form::email('email') }}
 		{{ Form::label('password', 'Contraseña: ') }}
