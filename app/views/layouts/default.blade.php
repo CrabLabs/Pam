@@ -71,7 +71,7 @@
 				<ul>
 					<li>{{ HTML::linkActive('/', 'Home') }}</li>
 					<li>{{ HTML::linkActive('services', 'Servicios') }}</li>
-					<li>{{ HTML::linkActive('us', 'Nosotros') }}</li>
+					<li>{{ HTML::linkActive('about-us', 'Nosotros') }}</li>
 					<li>{{ HTML::linkActive('works', 'Trabajos') }}</li>
 					<li>{{ HTML::linkActive('contact', 'Contacto') }}</li>
 					<li>{{ HTML::linkActive('login', 'Login / Registro') }}</a></li>
