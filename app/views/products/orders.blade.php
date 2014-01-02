@@ -91,7 +91,7 @@
 				</div>
 				<div class='no-budgetable'>
 					{{ Form::label('email', 'Ingrese su mail donde le enviaremos su presupuesto:') }}
-					{{ Form::email('email') }}
+					{{ Form::email('email', (Auth::user()) ? Auth::user()->email : '') }}
 				</div>
 			</div>
 			<div>
