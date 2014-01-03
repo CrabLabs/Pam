@@ -67,6 +67,10 @@ Route::get('order', 'OrderController@showIndex');
 Route::post('order', 'OrderController@sendOrder');
 Route::get('order/getDetail', 'OrderController@getDetail');
 
+Route::get('budget', 'BudgetController@showIndex');
+Route::post('budget', 'BudgetController@sendBudget');
+Route::get('budget/getDetail', 'BudgetController@getDetail');
+
 Route::get('faq', function()
 {
 	return View::make('faq.index', [
