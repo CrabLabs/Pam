@@ -22,19 +22,33 @@ class BudgetController extends BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->passes()) {
-			$order = new Budget;
-			$order->user_id = (Auth::user()) ? Auth::user()->id : 0;
+			$budget = new Budget;
+			$budget->product_id = Input::get('product_id');
+			$budget->user_id = (Auth::user()) ? Auth::user()->id : 0;
 
 			if (Product::find(Input::get('product_id'))->budgetable) {
-				return 'Budgetable';
-			} else {
-				$order->description = Input::get('detail');
-				$order->graphic_design = Input::has('graphic_design');
-				$order->collect_personally = Input::get('collect_personally');
-				$order->email = Input::get('email');
-				$order->save();
+				$specifications = [
+					'amount' 	=> Input::get('amount'),
+					'size' 		=> Input::get('size'),
+					'inks' 		=> Input::get('inks'),
+					'paper' 	=> Input::get('paper'),
+					'weight' 	=> Input::get('weight'),
+					'laminate' 	=> Input::get('laminate'),
+				];
 
-				return Response::json($order);
+				$query = DB::table('products_details')->select('id');
+				foreach($specifications as $column => $value) {
+					$query->where($column, '=', $value);
+				}
+				$budget->product_detail_id = $query->first()->id;
+			} else {
+				$budget->description = Input::get('detail');
+				$budget->graphic_design = Input::has('graphic_design');
+				$budget->collect_personally = Input::get('collect_personally');
+				$budget->email = Input::get('email');
+				$budget->save();
+
+				return Response::json($budget);
 			}
 		} else {
 			return Response::json(Input::all());

@@ -42,12 +42,13 @@ class UserController extends \BaseController {
 	public function store()
 	{
 		$rules = array(
+			'role' => 'required',
 			'name' => 'required|min:2',
 			'lastname' => 'required|min:3',
 			'password' => 'required|confirmed|min:8',
 			'email' => 'required|email|unique:users',
 			'rut' => 'required_if:role,Empresa|numeric',
-			'billing_address' => 'required_if:same_billing_address,false'
+			'billing_address' => 'required_if:same_billing_address,false',
 		);
 		
 		$validator = Validator::make(Input::all(), $rules);
