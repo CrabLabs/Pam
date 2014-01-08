@@ -41,13 +41,13 @@
 				<div class='container'>
 					<div class='section logo'></div>
 					<div class='section print_now'>
-						<a>
+						<a href='{{ URL::to('order') }}'>
 							<span>Imprimir ahora</span>
 							<span>Lorem ipsum dolor sit</span>
 						</a>
 					</div>
 					<div class='section create_budget'>
-						<a href='{{ URL::to('order') }}'>
+						<a href='{{ URL::to('budget') }}'>
 							<span>Armá tu presupuesto</span>
 							<span>Lorem ipsum dolor sit</span>
 						</a>
