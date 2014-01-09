@@ -58,6 +58,7 @@ return array(
 		'services',
 		'works',
 		'faq',
+		'settings.site',
 	),
 
 	/**
