@@ -2,15 +2,15 @@
 
 @section('main')
 <section class='upper'>
-	<h3>Arma tu presupuesto</h3>
-	<p>Personaliza tu trabajo, seleccioná las opciones en el formulario según tus requerimientos de impresión.</p>
+	<h3>Imprimir ahora</h3>
+	<p>Primero selecciona el producto que deseas enviar a imprimir.</p>
 </section>
 <section id='orders' class='container whiteBackground'>
 	<nav class='steps'>
 		<ul>
 			<li class='active'><span>1</span>Selecciona tu producto</li>
 			<li><span>2</span>Caracteristicas del trabajo</li>
-			<li><span>3</span>Costo aproximado</li>
+			<li><span>3</span>Envío del trabajo</li>
 		</ul>
 	</nav>
 	{{ Form::open() }}
@@ -31,20 +31,6 @@
 				}
 				echo Form::hidden('budgetables', implode(',', $budgetables));
 			?>
-			<div class='graphic_design'>
-				<div>
-					<h3>Servicio de diseño gráfico</h3>
-					{{ Form::checkbox('graphic_design', null, false, array('id' => 'graphic_design')) }}
-					{{ Form::label('graphic_design', 'Deseo cotizar el gráfico de este material') }}
-				</div>
-				<div>
-					<h3>Detalles del envio</h3>
-					{{ Form::radio('collect_personally', 'false', true, array('id' => 'collect_personally_false')) }}
-					{{ Form::label('collect_personally_false', 'Enviar en 48hs') }}
-					{{ Form::radio('collect_personally', 'true', false, array('id' => 'collect_personally_true')) }}
-					{{ Form::label('collect_personally_true', 'Lo retiro personalmente') }}
-				</div>
-			</div>
 			<div class='attach_file'>
 				<h3>Adjuntar archivo de tu trabajo</h3>
 				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo. Tamaño máximo XXXmb.</p>

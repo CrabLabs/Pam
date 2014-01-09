@@ -14,8 +14,14 @@ class OrderController extends BaseController {
 		));
 	}
 
+	/**
+	 * Send an Order
+	 *
+	 * @return Response
+	 */
 	public function sendOrder()
 	{
+		$filePath = public_path() . '/img/uploads/orders/';
 		$rules = array(
 			'product_id' => 'required|numeric',
 		);
@@ -30,6 +36,11 @@ class OrderController extends BaseController {
 				$order->graphic_design = Input::has('graphic_design');
 				$order->collect_personally = Input::get('collect_personally');
 				$order->email = Input::get('email');
+				if (Input::hasFile('file')) {
+					$file = Input::file('file');
+					$order->file = Str::random($length, $type).'.'.$file->getClientOriginalExtension();
+					$file->move($filePath.$order->file);
+				}
 				$order->save();
 
 				return Response::json($order);
