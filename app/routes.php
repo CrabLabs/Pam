@@ -19,6 +19,7 @@ Route::get('/', function()
 		'products' => Product::all()
 	]);
 });
+Route::post('/', 'ContactController@sendContact');
 
 Route::resource('services', 'ServicesController');
 
