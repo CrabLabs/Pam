@@ -38,7 +38,8 @@ class ContactController extends BaseController {
 			Mail::send('emails.contact', array('msg' => $msg), function($message)
 			{
 				$message->from(Input::get('email'), Input::get('name'));
-				$message->to('espinosacurbelo@gmail.com');
+				$settings = json_decode(File::get(storage_path().'/administrator_settings/site.json'));
+				$message->to($settings->contact_email);
 			});
 			return View::make('contact.thanks');
 		} else {
