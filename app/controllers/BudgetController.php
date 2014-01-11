@@ -25,6 +25,13 @@ class BudgetController extends BaseController {
 			$budget = new Budget;
 			$budget->product_id = Input::get('product_id');
 			$budget->user_id = (Auth::user()) ? Auth::user()->id : 0;
+			$budget->graphic_design = Input::has('graphic_design');
+			$budget->collect_personally = Input::get('collect_personally');
+			if (Input::hasFile('file')) {
+				$file = Input::file('file');
+				$budget->file = Str::random($length, $type).'.'.$file->getClientOriginalExtension();
+				$file->move($filePath.$budget->file);
+			}
 
 			if (Product::find(Input::get('product_id'))->budgetable) {
 				$specifications = [
@@ -43,13 +50,11 @@ class BudgetController extends BaseController {
 				$budget->product_detail_id = $query->first()->id;
 			} else {
 				$budget->description = Input::get('detail');
-				$budget->graphic_design = Input::has('graphic_design');
-				$budget->collect_personally = Input::get('collect_personally');
 				$budget->email = Input::get('email');
-				$budget->save();
-
-				return Response::json($budget);
 			}
+
+			$budget->save();
+			return Response::json($budget);
 		} else {
 			return Response::json(Input::all());
 		}
