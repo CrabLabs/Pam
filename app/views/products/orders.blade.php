@@ -14,7 +14,7 @@
 		</ul>
 	</nav>
 	{{ Form::open() }}
-		<section class='orders_step_1'>
+		<section class='orders_step orders_step_1'>
 			@foreach($products as $product)
 				<a href='#' data-id='{{ $product->id }}' class='product_photo'>
 					{{ HTML::image($product->getThumb()) }}
@@ -22,7 +22,7 @@
 				</a>
 			@endforeach
 		</section>
-		<section class='orders_step_2'>
+		<section class='orders_step orders_step_2'>
 			<?php
 				$budgetables = [];
 				foreach($products as $product) {
@@ -84,7 +84,7 @@
 				{{ Form::button('Siguiente', array('class' => 'btn green next_step')) }}
 			</div>
 		</section>
-		<section class='orders_step_3'>
+		<section class='orders_step orders_step_3'>
 			<div class='payment_options'>
 				<div>
 					<h3>Detalles del envio</h3>
@@ -138,7 +138,6 @@
 					{{ Form::label('shiping_address', 'Dirección:') }}
 					{{ Form::text('shiping_address') }}
 					{{ Form::label('shipping_time_from', 'Horario preferencial:') }}
-					<br>
 					{{ Form::select('shipping_time_from', $times) }}
 					<span>a</span>
 					{{ Form::select('shipping_time_to', $times) }}
@@ -150,25 +149,39 @@
 					{{ Form::text('billing_address', null, array('placeholder' => 'Dirección de facturación')) }}
 				</div>
 			</div>
-		</section>
-		<!--<section class='orders_step_3'>
-			<div class='details_list'>
-				<h3>Producto</h3>
-				<dl></dl>
-				<a href='#' class='modify'>Modificar</a>
+			<div>
+				{{ Form::button('Siguiente', array('class' => 'btn green next_step')) }}
 			</div>
-			<div class='budget'>
-				<h3>Presupuesto</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<span id='cost' class='budgetable'>$ 2873</span>
+		</section>
+		<section class='orders_step orders_step_4'>
+			<div>
+				<h4>Por favor verifica los datos antes de realizar el pedido:</h4>
+			</div>
+			<div class='summary'>
+				<div>
+					<h3>Producto</h3>
+					<dl id='product_summary'></dl>
+				</div>
+				<div>
+					<h3>Envio</h3>
+					<dl>
+						<dt>Dirección:</dt><dd class='address'></dd>
+						<dt>Horario:</dt><dd class='time'></dd>
+						<dt>Entrega:</dt><dd class='collect'></dd>
+						<dt>Pago:</dt><dd class='payment_option'></dd>
+					</dl>
+					<h3>Facturación</h3>
+					<dl>
+						<dd class='billing_address'>Igual a la dirección de envío</dd>
+					</dl>
+				</div>
+				<div>
+					<h3>Persona responsable</h3>
+					<dl id='user_summary'></dl>
+				</div>
 			</div>
 			{{ Form::submit() }}
-		</section>-->
+		</section>
 	{{ Form::close() }}
 </section>
 @stop

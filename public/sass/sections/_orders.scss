@@ -1,7 +1,7 @@
 #orders{
 	padding: 0;
 	nav.steps{
-		@extend .tabSteps;
+		@extend .tabSteps; // _ui.scss
 	}
 	.product_photo{
 		color: inherit;
@@ -53,10 +53,13 @@
 			}
 		}
 		.details{
+			h3{
+				margin-bottom: 16px;
+			}
 			div{
 				display: inline-block;
-				padding-right: 25px;
-				width: (100% / 3);
+				padding: 4px 25px 0 0;
+				width: (100% / 4);
 				select, label{
 					display: block;
 					width: 100%;
@@ -71,9 +74,42 @@
 				}
 			}
 		}
+		.shipping{
+			padding: 20px 0;
+			div {
+				display: inline-block;
+				padding-right: 30px;
+				vertical-align: top;
+				width: 50%;
+				label, input{
+					width: 100%;
+					&[type='checkbox']{
+						display: inline;
+						margin-right: 10px;
+						width: auto;
+					}
+				}
+				input[name=billing_address]{
+					margin-top: 10px;
+				}
+				label{
+					display: block;
+					&[for=shipping_time_from]{
+						margin-bottom: 10px;
+					}
+					&[for=same_billing_address]{
+						display: inline;
+					}
+				}
+				span{
+					font-size: $fontSizeXSmall;
+					padding: 0 10px;
+				}
+			}
+		}
 	}
-	.orders_step_3{
-		.details_list{
+	.orders_step_4{
+		.summary div{
 			display: inline-block;
 			padding-right: 40px;
 			vertical-align: top;
@@ -99,41 +135,6 @@
 				font-size: $fontSizeXSmall;
 				margin: 6px 0 0 0;
 				text-decoration: none;
-			}
-		}
-		.budget{
-			display: inline-block;
-			vertical-align: top;
-			width: (200% / 3);
-			p{
-				font-size: $fontSizeXSmall;
-			}
-			#cost{
-				color: $blue;
-				display: block;
-				font-size: 3em;
-				margin: 15px 0;
-			}
-		}
-		.shipping{
-			padding: 20px 0;
-			div {
-				display: inline-block;
-				padding-right: 30px;
-				vertical-align: top;
-				width: 50%;
-				label, input{
-					width: 100%;
-					&[type='checkbox']{
-						display: inline;
-						margin-right: 10px;
-						width: auto;
-					}
-				}
-				span{
-					font-size: $fontSizeXSmall;
-					padding: 0 10px;
-				}
 			}
 		}
 	}

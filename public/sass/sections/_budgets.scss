@@ -1,7 +1,7 @@
 #budgets{
 	padding: 0;
 	nav.steps{
-		@extend .tabSteps;
+		@extend .tabSteps; // _ui.scss
 	}
 	.product_photo{
 		color: inherit;

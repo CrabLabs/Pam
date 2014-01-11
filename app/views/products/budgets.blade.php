@@ -123,5 +123,5 @@
 @section('scripts')
 	@parent
 
-	{{ HTML::script('js/orders.js') }}
+	{{ HTML::script('js/budgets.js') }}
 @stop

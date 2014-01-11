@@ -1,61 +1,37 @@
 (function ($) {
 	'use strict';
 
-	var data, $self, html, next, budgetables, nextSelect, currentStep;
+	var data, $self, html, next, budgetables, nextSelect;
 
 	$(document).on('ready', function () {
 		budgetables = $('input[name=budgetables').val().split(',');
 		$('form select:first').trigger('change');
-		$('.orders_step').hide();
+		$('.orders_step_2, .orders_step_3').hide();
 		$('.orders_step_1').show();
-
-		currentStep = 1;
 	});
 
 	$('.product_photo').on('click', function (event) {
 		event.preventDefault();
 
 		$('select[name=product_id]').val($(this).data('id')).trigger('change');
-		currentStep = 2;
-		$('.orders_step').hide();
-		$('.orders_step_' + currentStep).show();
+		$('.orders_step_1').hide();
+		$('.orders_step_2').show();
 		$('nav.steps .active').removeClass('active').next('li').addClass('active');
 	});
 
 	$('.next_step').on('click', function () {
 		var selection = ($('select[name=product_id]').val() in budgetables) ? 'budgetable' : 'no-budgetable';
 
-		currentStep += 1;
-		$('.orders_step').hide();
-		$('.orders_step_' + currentStep).show();
-		
-		if (currentStep < 4) {
-			$('nav.steps .active').removeClass('active').next('li').addClass('active');
-		}
-		console.log(currentStep);
-		if (currentStep === 4) {
-			// PRODUCT SUMMARY
-			$('#product_summary').html('<dt>Producto:</dt><dd>' + $('select[name=product_id] :selected').text() + '</dd>');
-			$('.details .' + selection).each(function () {
-				var html = '<dt>' + $(this).children('label').text() + '</dt>';
-				html += '<dd>' + $(this).children('select, input, textarea').val() + '</dd>';
-				$('#product_summary').append(html);
-			});
-			// SHIPPING SUMMARY
-			$('.summary .address').text($('input[name=shiping_address]').val());
-			$('.summary .time').text('De ' + $('select[name=shipping_time_from] :selected').text() + ' a ' + $('select[name=shipping_time_to] :selected').text());
-			$('.summary .collect').text(($('#collect_personally_true').is(':checked')) ? 'Personalmente' : 'Enviar en 48hs');
-			$('.payment_option').text($('input[name=payment_option]').val());
-			// BILLING ADDRESS
+		$('.orders_step_2').hide();
+		$('.orders_step_3').show();
+		$('nav.steps .active').removeClass('active').next('li').addClass('active');
 
-			// USER SUMMARY
-			$('#user_summary').html('');
-			$('.orders_step_3 .details div').each(function () {
-				var html = '<dt>' + $(this).children('label').text() + '</dt>';
-				html += '<dd>' + $(this).children('input').val() + '</dd>';
-				$('#user_summary').append(html);
-			});
-		}
+		$('.details_list dl').html('<dt>Producto:</dt><dd>' + $('select[name=product_id] :selected').text() + '</dd>');
+		$('.details .' + selection).each(function () {
+			var html = '<dt>' + $(this).children('label').text() + '</dt>';
+			html += '<dd>' + $(this).children('select, input, textarea').val() + '</dd>';
+			$('.details_list dl').append(html);
+		});
 	});
 
 	$('.modify').on('click', function (event) {
