@@ -5,7 +5,7 @@
 	<h3>Imprimir ahora</h3>
 	<p>¡Gracias!</p>
 </section>
-	<h3>Su númer de referencia es <span>{{ $ref }}</span></h3>
+	<h3>Su númer de referencia es <span>{{ $order->reference }}</span></h3>
 
 <section class='container whiteBackground'>
 

@@ -3,6 +3,16 @@
 class OrderController extends BaseController {
 
 	/**
+	 * Requires to be authenticated
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->beforeFilter('auth');
+	}
+
+	/**
 	 * Display orders form
 	 *
 	 * @return Response
@@ -28,25 +38,50 @@ class OrderController extends BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->passes()) {
-			if (Product::find(Input::get('product_id'))->budgetable) {
-				return 'Budgetable';
-			} else {
-				$order = new Order;
-				$order->description = Input::get('detail');
-				$order->graphic_design = Input::has('graphic_design');
-				$order->collect_personally = Input::get('collect_personally');
-				$order->email = Input::get('email');
-				if (Input::hasFile('file')) {
-					$file = Input::file('file');
-					$order->file = Str::random($length, $type).'.'.$file->getClientOriginalExtension();
-					$file->move($filePath.$order->file);
-				}
-				$order->save();
-
-				return Response::json($order);
+			$order = new Order;
+			$order->product_id = Input::get('product_id');
+			$order->graphic_design = Input::has('graphic_design');
+			$order->user_id = (Auth::user()) ? Auth::user()->id : 0;
+			$order->collect_personally = Input::get('collect_personally');
+			$order->email = Input::get('email');
+			$order->shipping_address = Input::get('shipping_address');
+			$order->shipping_time_from = Input::get('shipping_time_from');
+			$order->shipping_time_to = Input::get('shipping_time_to');
+			$order->payment_option = Input::get('payment_option');
+			if (Input::hasFile('file')) {
+				$file = Input::file('file');
+				$order->file = Str::random($length, $type).'.'.$file->getClientOriginalExtension();
+				$file->move($filePath.$order->file);
 			}
+
+			if (Product::find(Input::get('product_id'))->budgetable) {
+				$specifications = [
+					'amount' 	=> Input::get('amount'),
+					'size' 		=> Input::get('size'),
+					'inks' 		=> Input::get('inks'),
+					'paper' 	=> Input::get('paper'),
+					'weight' 	=> Input::get('weight'),
+					'laminate' 	=> Input::get('laminate'),
+				];
+
+				$query = DB::table('products_details')->select('id');
+				foreach($specifications as $column => $value) {
+					$query->where($column, '=', $value);
+				}
+				if ($query->count() > 0) {
+					$order->product_detail_id = $query->first()->id;
+				} else {
+					$order->description = serialize($specifications);
+				}
+			} else {
+				$order->description = Input::get('detail');
+			}
+
+			$order->save();
+			
+			return View::make('products.reference')->with('order', $order);
 		} else {
-			return Response::json(Input::all());
+			return View::make('products.order')->withErrors($validator);
 		}
 	}
 

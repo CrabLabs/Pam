@@ -109,34 +109,34 @@
 				<h3>Persona responsable</h3>
 				<div>
 					{{ Form::label('name', 'Nombre:') }}
-					{{ Form::text('name') }}
+					{{ Form::text('name', Auth::user()->name) }}
 				</div>
 				<div>
 					{{ Form::label('lastname', 'Apellido:') }}
-					{{ Form::text('lastname') }}
+					{{ Form::text('lastname', Auth::user()->lastname) }}
 				</div>
 				<div>
 					{{ Form::label('email', 'Email:') }}
-					{{ Form::email('email') }}
+					{{ Form::email('email', Auth::user()->email) }}
 				</div>
 				<div>
 					{{ Form::label('phone', 'Teléfono:') }}
-					{{ Form::text('phone') }}
+					{{ Form::text('phone', Auth::user()->phone) }}
 				</div>
 				<div>
 					{{ Form::label('company_name', 'Razón social:') }}
-					{{ Form::text('company_name') }}
+					{{ Form::text('company_name', Auth::user()->company_name) }}
 				</div>
 				<div>
 					{{ Form::label('rut', 'RUT:') }}
-					{{ Form::text('rut') }}
+					{{ Form::text('rut', Auth::user()->rut) }}
 				</div>
 			</div>
 			<div class='shipping'>
 				<div>
 					<h3>Dirección de envio</h3>
 					{{ Form::label('shiping_address', 'Dirección:') }}
-					{{ Form::text('shiping_address') }}
+					{{ Form::text('shiping_address', Auth::user()->address) }}
 					{{ Form::label('shipping_time_from', 'Horario preferencial:') }}
 					{{ Form::select('shipping_time_from', $times) }}
 					<span>a</span>
