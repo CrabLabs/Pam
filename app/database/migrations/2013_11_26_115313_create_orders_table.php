@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration {
 			$table->integer('user_id')->unsigned();
 			$table->integer('product_id')->unsigned()->nullable()->default(NULL);
 			$table->integer('product_detail_id')->unsigned()->nullable()->default(NULL);
+			$table->string('reference', 5)->unique();
 			$table->text('description')->nullable()->default(NULL);
 			$table->integer('cost')->unsigned();
 			$table->string('email')->nullable()->default(NULL);
@@ -26,7 +27,7 @@ class CreateOrdersTable extends Migration {
 			$table->string('shipping_address')->nullable()->default(NULL);
 			$table->integer('shipping_time_from')->nullable()->default(NULL);
 			$table->integer('shipping_time_to')->nullable()->default(NULL);
-			$table->enum('payment_option', array('En persona', 'Tarjeta de crédito'));
+			$table->enum('payment_option', array('Efectivo', 'Cheque', 'Tarjeta de crédito'));
 			$table->enum('status', array('Activo', 'Enviado', 'Rechazado'))->default('Activo');
 			$table->timestamps();
 			$table->softDeletes();

@@ -85,6 +85,73 @@
 			</div>
 		</section>
 		<section class='orders_step_3'>
+			<div class='payment_options'>
+				<div>
+					<h3>Detalles del envio</h3>
+					{{ Form::radio('collect_personally', 'false', true, array('id' => 'collect_personally_false')) }}
+					{{ Form::label('collect_personally_false', 'Enviar en 48hs') }}
+					{{ Form::radio('collect_personally', 'true', false, array('id' => 'collect_personally_true')) }}
+					{{ Form::label('collect_personally_true', 'Lo retiro personalmente') }}
+				</div>
+				<div>
+					<h3>Forma de pago</h3>
+					{{ Form::radio('payment_option', 'Efectivo', true, array('id' => 'payment_option_money')) }}
+					{{ Form::label('payment_option_money', 'Efectivo')}}
+
+					{{ Form::radio('payment_option', 'Cheque', false, array('id' => 'payment_option_check')) }}
+					{{ Form::label('payment_option_check', 'Cheque')}}
+					
+					{{ Form::radio('payment_option', 'Tarjeta de crédito', false, array('id' => 'payment_option_credit_card')) }}
+					{{ Form::label('payment_option_credit_card', 'Tarjeta de crédito')}}
+				</div>
+			</div>
+			<div class='details'>
+				<h3>Persona responsable</h3>
+				<div>
+					{{ Form::label('name', 'Nombre:') }}
+					{{ Form::text('name') }}
+				</div>
+				<div>
+					{{ Form::label('lastname', 'Apellido:') }}
+					{{ Form::text('lastname') }}
+				</div>
+				<div>
+					{{ Form::label('email', 'Email:') }}
+					{{ Form::email('email') }}
+				</div>
+				<div>
+					{{ Form::label('phone', 'Teléfono:') }}
+					{{ Form::text('phone') }}
+				</div>
+				<div>
+					{{ Form::label('company_name', 'Razón social:') }}
+					{{ Form::text('company_name') }}
+				</div>
+				<div>
+					{{ Form::label('rut', 'RUT:') }}
+					{{ Form::text('rut') }}
+				</div>
+			</div>
+			<div class='shipping'>
+				<div>
+					<h3>Dirección de envio</h3>
+					{{ Form::label('shiping_address', 'Dirección:') }}
+					{{ Form::text('shiping_address') }}
+					{{ Form::label('shipping_time_from', 'Horario preferencial:') }}
+					<br>
+					{{ Form::select('shipping_time_from', $times) }}
+					<span>a</span>
+					{{ Form::select('shipping_time_to', $times) }}
+				</div>
+				<div>
+					<h3>Dirección de facturación</h3>
+					{{ Form::checkbox('same_billing_address', null, true) }}
+					{{ Form::label('same_billing_address', 'Igual que la dirección de envio') }}
+					{{ Form::text('billing_address', null, array('placeholder' => 'Dirección de facturación')) }}
+				</div>
+			</div>
+		</section>
+		<!--<section class='orders_step_3'>
 			<div class='details_list'>
 				<h3>Producto</h3>
 				<dl></dl>
@@ -101,7 +168,7 @@
 				<span id='cost' class='budgetable'>$ 2873</span>
 			</div>
 			{{ Form::submit() }}
-		</section>
+		</section>-->
 	{{ Form::close() }}
 </section>
 @stop

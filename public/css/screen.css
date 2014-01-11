@@ -780,19 +780,19 @@ header .header_wrapper .section a span:first-of-type {
   margin-bottom: 20px;
 }
 /* line 71, ../sass/sections/_orders.scss */
-#main #orders form .graphic_design, #main #orders form .attach_file {
+#main #orders form .payment_options, #main #orders form .graphic_design, #main #orders form .attach_file {
   border-bottom: 1px solid #ececec;
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
 /* line 75, ../sass/sections/_orders.scss */
-#main #orders form .graphic_design div, #main #orders form .attach_file div {
+#main #orders form .payment_options div, #main #orders form .graphic_design div, #main #orders form .attach_file div {
   display: inline-block;
   vertical-align: top;
   width: 50%;
 }
 /* line 79, ../sass/sections/_orders.scss */
-#main #orders form .graphic_design div label, #main #orders form .attach_file div label {
+#main #orders form .payment_options div label, #main #orders form .graphic_design div label, #main #orders form .attach_file div label {
   padding: 0 20px 0 10px;
 }
 /* line 85, ../sass/sections/_orders.scss */
@@ -874,6 +874,32 @@ header .header_wrapper .section a span:first-of-type {
   display: block;
   font-size: 3em;
   margin: 15px 0;
+}
+/* line 154, ../sass/sections/_orders.scss */
+#main #orders .orders_step_3 .shipping {
+  padding: 20px 0;
+}
+/* line 156, ../sass/sections/_orders.scss */
+#main #orders .orders_step_3 .shipping div {
+  display: inline-block;
+  padding-right: 30px;
+  vertical-align: top;
+  width: 50%;
+}
+/* line 161, ../sass/sections/_orders.scss */
+#main #orders .orders_step_3 .shipping div label, #main #orders .orders_step_3 .shipping div input {
+  width: 100%;
+}
+/* line 163, ../sass/sections/_orders.scss */
+#main #orders .orders_step_3 .shipping div label[type='checkbox'], #main #orders .orders_step_3 .shipping div input[type='checkbox'] {
+  display: inline;
+  margin-right: 10px;
+  width: auto;
+}
+/* line 169, ../sass/sections/_orders.scss */
+#main #orders .orders_step_3 .shipping div span {
+  font-size: 12px;
+  padding: 0 10px;
 }
 /* line 2, ../sass/sections/_about-us.scss */
 #main #about-us h2 {

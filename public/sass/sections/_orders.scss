@@ -68,7 +68,7 @@
 			font-weight: bold;
 			margin-bottom: 20px;
 		}
-		.graphic_design, .attach_file{
+		.payment_options, .graphic_design, .attach_file{
 			border-bottom: 1px solid rgb(236, 236, 236);
 			margin-bottom: 25px;
 			padding-bottom: 25px;
@@ -149,6 +149,27 @@
 				display: block;
 				font-size: 3em;
 				margin: 15px 0;
+			}
+		}
+		.shipping{
+			padding: 20px 0;
+			div {
+				display: inline-block;
+				padding-right: 30px;
+				vertical-align: top;
+				width: 50%;
+				label, input{
+					width: 100%;
+					&[type='checkbox']{
+						display: inline;
+						margin-right: 10px;
+						width: auto;
+					}
+				}
+				span{
+					font-size: $fontSizeXSmall;
+					padding: 0 10px;
+				}
 			}
 		}
 	}

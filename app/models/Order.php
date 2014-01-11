@@ -29,4 +29,24 @@ class Order extends Eloquent {
 		return ($this->description != null || $this->product == null) ? $this->description : $this->product->name;
 	}
 
+	public static function createReference()
+	{
+		$ref = strtoupper(Str::random(5));
+
+		while (Order::where('reference', '=', $ref)->count() > 0)
+			$ref = strtoupper(Str::random(5));
+
+		return $ref;
+	}
+
+	static function boot()
+	{
+		parent::boot();
+
+		Order::creating(function($order)
+		{
+			$order->reference = Order::createReference();
+		});
+	}
+
 }
