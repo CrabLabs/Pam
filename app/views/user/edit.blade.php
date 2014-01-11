@@ -21,10 +21,11 @@
 			<div class='section'>
 				<h3>Tipo de cuenta</h3>
 				<div class='row account_type'>
-					{{ Form::radio('role', 'Persona', true, array('id' => 'role_persona')) }}
-					{{ Form::label('role_persona', 'Personal') }}
-					{{ Form::radio('role', 'Empresa', false, array('id' => 'role_empresa')) }}
-					{{ Form::label('role_empresa', 'Empresarial') }}
+				<h4>{{ $user->role }}</h4>
+					{{ Form::radio('role', 'Persona', $user->role == 'Persona', array('id' => 'role_persona')) }}
+					{{ Form::label('role_persona', 'Persona') }}
+					{{ Form::radio('role', 'Empresa', $user->role == 'Empresa', array('id' => 'role_empresa')) }}
+					{{ Form::label('role_empresa', 'Empresa') }}
 				</div>
 			</div>
 			<div class='section'>
@@ -32,29 +33,29 @@
 				<div class='row'>
 					<div>
 						{{ Form::label('name', 'Nombre') }}
-						{{ Form::text('name') }}
+						{{ Form::text('name', $user->name) }}
 					</div>
 					<div>
 						{{ Form::label('lastname', 'Apellido') }}
-						{{ Form::text('lastname') }}
+						{{ Form::text('lastname', $user->lastname) }}
 					</div>
 					<div>
 						{{ Form::label('email', 'Email') }}
-						{{ Form::email('email') }}
+						{{ Form::email('email', $user->email) }}
 					</div>
 				</div>
 				<div class='row'>
 					<div>
 						{{ Form::label('phone', 'Phone') }}
-						{{ Form::text('phone') }}
+						{{ Form::text('phone', $user->phone) }}
 					</div>
 					<div>
 						{{ Form::label('company_name', 'Razón social') }}
-						{{ Form::text('company_name') }}
+						{{ Form::text('company_name', $user->company_name) }}
 					</div>
 					<div>
 						{{ Form::label('rut', 'RUT') }}
-						{{ Form::text('rut') }}
+						{{ Form::text('rut', $user->rut) }}
 					</div>
 				</div>
 				<div class='row'>
@@ -73,7 +74,7 @@
 					<div>
 						<h3>Dirección de envio</h3>
 						{{ Form::label('shiping_address', 'Dirección') }}
-						{{ Form::text('shiping_address') }}
+						{{ Form::text('shiping_address', $user->shiping_address) }}
 						{{ Form::label('shipping_time_from', 'Horario preferencial') }}<br>
 						{{ Form::select('shipping_time_from', $times) }}
 						<!-- <span>a</span> -->
@@ -81,9 +82,9 @@
 					</div>
 					<div>
 						<h3>Dirección de facturación</h3>
-						{{ Form::checkbox('same_billing_address') }}
+						{{ Form::checkbox('same_billing_address', null, ($user->billing_address == $user->shiping_address) ? true : false) }}
 						{{ Form::label('same_billing_address', 'Igual que la dirección de envio') }}
-						{{ Form::text('billing_address') }}
+						{{ Form::text('billing_address', $user->billing_address) }}
 					</div>
 				</div>
 			</div>

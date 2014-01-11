@@ -19,12 +19,11 @@ class CreateUsersTable extends Migration {
 			$table->string('email')->unique();
 			$table->string('password');
 			$table->boolean('confirmed')->default(false);
-			$table->enum('role', array('Personal', 'Empresarial', 'Admin'))->default('Personal');
-			$table->string('address')->nullable();
-			$table->string('phone')->nullable();
-			$table->string('company_name')->nullable();
-			$table->integer('rut')->unsigned()->default(0);
-			$table->string('shiping_address')->nullable();
+			$table->enum('role', array('Persona', 'Empresa', 'Admin'))->default('Persona');
+			$table->string('phone')->nullable()->default(NULL);
+			$table->string('company_name')->nullable()->default(NULL);
+			$table->integer('rut')->unsigned()->nullable()->default(NULL);
+			$table->string('shipping_address')->nullable();
 			$table->integer('shipping_time_from')->default(0);
 			$table->integer('shipping_time_to')->default(0);
 			$table->string('billing_address')->nullable()->default(NULL);

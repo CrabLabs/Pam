@@ -21,9 +21,9 @@
 			<h3>Tipo de cuenta</h3>
 			<div class='row account_type'>
 				{{ Form::radio('role', 'Persona', true, array('id' => 'role_persona')) }}
-				{{ Form::label('role_persona', 'Personal') }}
+				{{ Form::label('role_persona', 'Persona') }}
 				{{ Form::radio('role', 'Empresa', false, array('id' => 'role_empresa')) }}
-				{{ Form::label('role_empresa', 'Empresarial') }}
+				{{ Form::label('role_empresa', 'Empresa') }}
 			</div>
 		</div>
 		<div class='section'>

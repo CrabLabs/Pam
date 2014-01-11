@@ -98,10 +98,7 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('user.edit', [
-			'times' => ['1600' => '16:00hs', '1630' => '16:30hs', '1900' => '19:00hs'],
-			'user' => $this->user->find($id),
-		]);
+		return View::make('user.edit')->with('user', $this->user->find($id));
 	}
 
 	/**
