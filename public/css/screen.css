@@ -52,7 +52,7 @@ body {
 }
 
 /* line 33, ../sass/_containers.scss */
-.bigBlue, #main #orders form h3 {
+.bigBlue, #main #orders form h3, #main #budgets form h3 {
   color: #2f66b5;
   font-weight: 300;
   margin: 2px 0;
@@ -215,6 +215,55 @@ span.red {
 /* line 113, ../sass/_ui.scss */
 span.green {
   color: #208c46;
+}
+
+/*
+ * STEPS (Tabs)
+ */
+/* line 121, ../sass/_ui.scss */
+.tabSteps, #main #orders nav.steps, #main #budgets nav.steps {
+  display: block;
+  width: 100%;
+}
+/* line 124, ../sass/_ui.scss */
+.tabSteps ul, #main #orders nav.steps ul, #main #budgets nav.steps ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 128, ../sass/_ui.scss */
+.tabSteps ul li, #main #orders nav.steps ul li, #main #budgets nav.steps ul li {
+  background: #f6f7fa;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 33.33333%;
+}
+/* line 138, ../sass/_ui.scss */
+.tabSteps ul li.active, #main #orders nav.steps ul li.active, #main #budgets nav.steps ul li.active {
+  background: white;
+}
+/* line 140, ../sass/_ui.scss */
+.tabSteps ul li.active span, #main #orders nav.steps ul li.active span, #main #budgets nav.steps ul li.active span {
+  background: #215aaa;
+  border: 1px solid #f6f7fa;
+  color: white;
+}
+/* line 146, ../sass/_ui.scss */
+.tabSteps ul li span, #main #orders nav.steps ul li span, #main #budgets nav.steps ul li span {
+  border: 1px solid #818284;
+  border-radius: 50%;
+  color: #818284;
+  display: inline-block;
+  height: 20px;
+  margin-right: 15px;
+  padding: 1px 5px;
+  vertical-align: top;
+  width: 20px;
 }
 
 /* line 1, ../sass/_header.scss */
@@ -699,52 +748,7 @@ header .header_wrapper .section a span:first-of-type {
 #main #orders {
   padding: 0;
 }
-/* line 3, ../sass/sections/_orders.scss */
-#main #orders nav.steps {
-  display: block;
-  width: 100%;
-}
 /* line 6, ../sass/sections/_orders.scss */
-#main #orders nav.steps ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/* line 10, ../sass/sections/_orders.scss */
-#main #orders nav.steps ul li {
-  background: #f6f7fa;
-  display: inline-block;
-  font-size: 12px;
-  margin: 0;
-  padding: 20px 0;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: top;
-  width: 33.33333%;
-}
-/* line 20, ../sass/sections/_orders.scss */
-#main #orders nav.steps ul li.active {
-  background: white;
-}
-/* line 22, ../sass/sections/_orders.scss */
-#main #orders nav.steps ul li.active span {
-  background: #215aaa;
-  border: 1px solid #f6f7fa;
-  color: white;
-}
-/* line 28, ../sass/sections/_orders.scss */
-#main #orders nav.steps ul li span {
-  border: 1px solid #818284;
-  border-radius: 50%;
-  color: #818284;
-  display: inline-block;
-  height: 20px;
-  margin-right: 15px;
-  padding: 1px 5px;
-  vertical-align: top;
-  width: 20px;
-}
-/* line 42, ../sass/sections/_orders.scss */
 #main #orders .product_photo {
   color: inherit;
   display: inline-block;
@@ -755,92 +759,92 @@ header .header_wrapper .section a span:first-of-type {
   vertical-align: top;
   width: 170px;
 }
-/* line 51, ../sass/sections/_orders.scss */
+/* line 15, ../sass/sections/_orders.scss */
 #main #orders .product_photo img, #main #orders .product_photo span {
   display: block;
 }
-/* line 54, ../sass/sections/_orders.scss */
+/* line 18, ../sass/sections/_orders.scss */
 #main #orders .product_photo span {
   font-size: 12px;
 }
-/* line 57, ../sass/sections/_orders.scss */
+/* line 21, ../sass/sections/_orders.scss */
 #main #orders .product_photo img {
   min-height: 120px;
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 63, ../sass/sections/_orders.scss */
+/* line 27, ../sass/sections/_orders.scss */
 #main #orders form {
   padding: 42px;
 }
-/* line 65, ../sass/sections/_orders.scss */
+/* line 29, ../sass/sections/_orders.scss */
 #main #orders form h3 {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 71, ../sass/sections/_orders.scss */
+/* line 35, ../sass/sections/_orders.scss */
 #main #orders form .payment_options, #main #orders form .graphic_design, #main #orders form .attach_file {
   border-bottom: 1px solid #ececec;
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
-/* line 75, ../sass/sections/_orders.scss */
+/* line 39, ../sass/sections/_orders.scss */
 #main #orders form .payment_options div, #main #orders form .graphic_design div, #main #orders form .attach_file div {
   display: inline-block;
   vertical-align: top;
   width: 50%;
 }
-/* line 79, ../sass/sections/_orders.scss */
+/* line 43, ../sass/sections/_orders.scss */
 #main #orders form .payment_options div label, #main #orders form .graphic_design div label, #main #orders form .attach_file div label {
   padding: 0 20px 0 10px;
 }
-/* line 85, ../sass/sections/_orders.scss */
+/* line 49, ../sass/sections/_orders.scss */
 #main #orders form .attach_file p {
   display: inline;
   font-size: 12px;
   padding-right: 20px;
 }
-/* line 92, ../sass/sections/_orders.scss */
+/* line 56, ../sass/sections/_orders.scss */
 #main #orders form .details div {
   display: inline-block;
   padding-right: 25px;
   width: 33.33333%;
 }
-/* line 96, ../sass/sections/_orders.scss */
+/* line 60, ../sass/sections/_orders.scss */
 #main #orders form .details div select, #main #orders form .details div label {
   display: block;
   width: 100%;
 }
-/* line 101, ../sass/sections/_orders.scss */
+/* line 65, ../sass/sections/_orders.scss */
 #main #orders form .details .no-budgetable {
   display: block;
   padding: 10px 0;
   width: 100%;
 }
-/* line 105, ../sass/sections/_orders.scss */
+/* line 69, ../sass/sections/_orders.scss */
 #main #orders form .details .no-budgetable input, #main #orders form .details .no-budgetable textarea {
   width: 100%;
 }
-/* line 112, ../sass/sections/_orders.scss */
+/* line 76, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .details_list {
   display: inline-block;
   padding-right: 40px;
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 117, ../sass/sections/_orders.scss */
+/* line 81, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .details_list dl {
   font-size: 12px;
 }
-/* line 119, ../sass/sections/_orders.scss */
+/* line 83, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .details_list dl dt {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 14px;
   width: 80px;
 }
-/* line 125, ../sass/sections/_orders.scss */
+/* line 89, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .details_list dl dd {
   display: inline-block;
   padding-bottom: 14px;
@@ -850,7 +854,7 @@ header .header_wrapper .section a span:first-of-type {
   width: -o-calc(100% - 80px);
   width: calc(100% - 80px);
 }
-/* line 132, ../sass/sections/_orders.scss */
+/* line 96, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .details_list .modify {
   border-bottom: 1px dotted #34ad65;
   color: #34ad65;
@@ -858,48 +862,183 @@ header .header_wrapper .section a span:first-of-type {
   margin: 6px 0 0 0;
   text-decoration: none;
 }
-/* line 140, ../sass/sections/_orders.scss */
+/* line 104, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .budget {
   display: inline-block;
   vertical-align: top;
   width: 66.66667%;
 }
-/* line 144, ../sass/sections/_orders.scss */
+/* line 108, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .budget p {
   font-size: 12px;
 }
-/* line 147, ../sass/sections/_orders.scss */
+/* line 111, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .budget #cost {
   color: #2f66b5;
   display: block;
   font-size: 3em;
   margin: 15px 0;
 }
-/* line 154, ../sass/sections/_orders.scss */
+/* line 118, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .shipping {
   padding: 20px 0;
 }
-/* line 156, ../sass/sections/_orders.scss */
+/* line 120, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .shipping div {
   display: inline-block;
   padding-right: 30px;
   vertical-align: top;
   width: 50%;
 }
-/* line 161, ../sass/sections/_orders.scss */
+/* line 125, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .shipping div label, #main #orders .orders_step_3 .shipping div input {
   width: 100%;
 }
-/* line 163, ../sass/sections/_orders.scss */
+/* line 127, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .shipping div label[type='checkbox'], #main #orders .orders_step_3 .shipping div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
-/* line 169, ../sass/sections/_orders.scss */
+/* line 133, ../sass/sections/_orders.scss */
 #main #orders .orders_step_3 .shipping div span {
   font-size: 12px;
   padding: 0 10px;
+}
+/* line 1, ../sass/sections/_budgets.scss */
+#main #budgets {
+  padding: 0;
+}
+/* line 6, ../sass/sections/_budgets.scss */
+#main #budgets .product_photo {
+  color: inherit;
+  display: inline-block;
+  padding: 20px 20px 20px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 170px;
+}
+/* line 15, ../sass/sections/_budgets.scss */
+#main #budgets .product_photo img, #main #budgets .product_photo span {
+  display: block;
+}
+/* line 18, ../sass/sections/_budgets.scss */
+#main #budgets .product_photo span {
+  font-size: 12px;
+}
+/* line 21, ../sass/sections/_budgets.scss */
+#main #budgets .product_photo img {
+  min-height: 120px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 27, ../sass/sections/_budgets.scss */
+#main #budgets form {
+  padding: 42px;
+}
+/* line 29, ../sass/sections/_budgets.scss */
+#main #budgets form h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 35, ../sass/sections/_budgets.scss */
+#main #budgets form .graphic_design, #main #budgets form .attach_file {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+/* line 39, ../sass/sections/_budgets.scss */
+#main #budgets form .graphic_design div, #main #budgets form .attach_file div {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+/* line 43, ../sass/sections/_budgets.scss */
+#main #budgets form .graphic_design div label, #main #budgets form .attach_file div label {
+  padding: 0 20px 0 10px;
+}
+/* line 49, ../sass/sections/_budgets.scss */
+#main #budgets form .attach_file p {
+  display: inline;
+  font-size: 12px;
+  padding-right: 20px;
+}
+/* line 56, ../sass/sections/_budgets.scss */
+#main #budgets form .details div {
+  display: inline-block;
+  padding-right: 25px;
+  width: 33.33333%;
+}
+/* line 60, ../sass/sections/_budgets.scss */
+#main #budgets form .details div select, #main #budgets form .details div label {
+  display: block;
+  width: 100%;
+}
+/* line 65, ../sass/sections/_budgets.scss */
+#main #budgets form .details .no-budgetable {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+}
+/* line 69, ../sass/sections/_budgets.scss */
+#main #budgets form .details .no-budgetable input, #main #budgets form .details .no-budgetable textarea {
+  width: 100%;
+}
+/* line 76, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .details_list {
+  display: inline-block;
+  padding-right: 40px;
+  vertical-align: top;
+  width: 33.33333%;
+}
+/* line 81, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .details_list dl {
+  font-size: 12px;
+}
+/* line 83, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .details_list dl dt {
+  display: inline-block;
+  font-weight: bold;
+  padding-bottom: 14px;
+  width: 80px;
+}
+/* line 89, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .details_list dl dd {
+  display: inline-block;
+  padding-bottom: 14px;
+  margin: 0;
+  width: -webkit-calc(100% - 80px);
+  width: -moz-calc(100% - 80px);
+  width: -o-calc(100% - 80px);
+  width: calc(100% - 80px);
+}
+/* line 96, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .details_list .modify {
+  border-bottom: 1px dotted #34ad65;
+  color: #34ad65;
+  font-size: 12px;
+  margin: 6px 0 0 0;
+  text-decoration: none;
+}
+/* line 104, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .budget {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.66667%;
+}
+/* line 108, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .budget p {
+  font-size: 12px;
+}
+/* line 111, ../sass/sections/_budgets.scss */
+#main #budgets .orders_step_3 .budget #cost {
+  color: #2f66b5;
+  display: block;
+  font-size: 3em;
+  margin: 15px 0;
 }
 /* line 2, ../sass/sections/_about-us.scss */
 #main #about-us h2 {

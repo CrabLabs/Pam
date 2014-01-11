@@ -5,7 +5,7 @@
 	<h3>Arma tu presupuesto</h3>
 	<p>Personaliza tu trabajo, seleccioná las opciones en el formulario según tus requerimientos de impresión.</p>
 </section>
-<section id='orders' class='container whiteBackground'>
+<section id='budgets' class='container whiteBackground'>
 	<nav class='steps'>
 		<ul>
 			<li class='active'><span>1</span>Selecciona tu producto</li>
