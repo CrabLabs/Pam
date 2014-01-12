@@ -99,6 +99,7 @@
 		<table>
 			<thead>
 				<tr>
+					<td># REF</td>
 					<td>Fecha</td>
 					<td>Datos del trabajo</td>
 					<td>Costo</td>
@@ -108,11 +109,34 @@
 			<tbody>
 				@foreach($user->orders as $order)
 				<tr>
+					<td><strong>{{ $order->reference }}</strong></td>
 					<td>{{ $order->created_at->format('d/m/y h:m') }} hs</td>
-					<td>{{ $order->getDescription() }}</td>
+					<td>{{ Str::limit($order->getDescription(), 50) }}</td>
 					<td><span class='grey'>$ {{ $order->getCost() }}</span></td>
 					<?php $class = ($order->status == 'Activo') ? 'grey' : (($order->status == 'Rechazado') ? 'red' : 'green'); ?>
 					<td><span class='{{ $class }}'>{{ $order->status }}</span></td>
+				</tr>
+				@endforeach
+			</tbody>
+		</table>
+		<h4 style='margin-top: 20px;'>Presupuestos realizados</h4>
+		<table>
+			<thead>
+				<tr>
+					<td>Fecha</td>
+					<td>Datos del trabajo</td>
+					<td>Costo</td>
+					<td>Estado</td>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($user->budgets as $budget)
+				<tr>
+					<td>{{ $budget->created_at->format('d/m/y h:m') }} hs</td>
+					<td>{{ Str::limit($budget->getDescription(), 50) }}</td>
+					<td><span class='grey'>$ {{ $budget->getCost() }}</span></td>
+					<?php $class = ($budget->status == 'Activo') ? 'grey' : (($budget->status == 'Rechazado') ? 'red' : 'green'); ?>
+					<td><span class='{{ $class }}'>{{ $budget->status }}</span></td>
 				</tr>
 				@endforeach
 			</tbody>

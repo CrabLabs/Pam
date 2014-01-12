@@ -136,7 +136,7 @@
 				<div>
 					<h3>Dirección de envio</h3>
 					{{ Form::label('shiping_address', 'Dirección:') }}
-					{{ Form::text('shiping_address', Auth::user()->address) }}
+					{{ Form::text('shiping_address', Auth::user()->shipping_address) }}
 					{{ Form::label('shipping_time_from', 'Horario preferencial:') }}
 					{{ Form::select('shipping_time_from', $times) }}
 					<span>a</span>

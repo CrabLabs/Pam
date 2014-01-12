@@ -47,7 +47,11 @@ class BudgetController extends BaseController {
 				foreach($specifications as $column => $value) {
 					$query->where($column, '=', $value);
 				}
-				$budget->product_detail_id = $query->first()->id;
+				if ($query->count() > 0) {
+					$budget->product_detail_id = $query->first()->id;
+				} else {
+					$budget->description = json_encode($specifications);
+				}
 			} else {
 				$budget->description = Input::get('detail');
 				$budget->email = Input::get('email');

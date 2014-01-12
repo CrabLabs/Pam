@@ -66,4 +66,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->hasMany('Order');
 	}
 
+	/**
+	 * Get the user budgets.
+	 *
+	 * @return array
+	 */
+	public function budgets()
+	{
+		return $this->hasMany('Budget');
+	}
+
 }
