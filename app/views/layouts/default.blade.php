@@ -30,7 +30,13 @@
 						{{ HTML::liActive('works', HTML::link('works', 'Trabajos')) }}
 						{{ HTML::liActive('contact', HTML::link('contact', 'Contacto')) }}
 						@if (Auth::user())
-							<li><a href='#'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a></li>
+							<li class='user'>
+								<a href='#'><img src='' width='25' height='25'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a>
+								<div>
+									<a href='edit'>Mi cuenta</a>
+									<a href='logout'>Cerrar sesión</a>
+								</div>
+							</li>
 						@else
 							{{ HTML::liActive('login', HTML::link('login', 'Login / Registro')) }}
 						@endif
@@ -92,6 +98,14 @@
 			e.src='//www.google-analytics.com/analytics.js';
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X');ga('send','pageview');
+
+			(function ($) {
+				'use strict';
+
+				$('header nav .user').on('click', function () {
+					$(this).toggleClass('active');
+				});
+			}(jQuery));
 		</script>
 		@if (App::Environment() == 'local')
 			<script src='http://localhost:35729/livereload.js'></script>
