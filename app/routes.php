@@ -69,6 +69,12 @@ Route::get('edit', function()
 	return View::make('user.edit')->with('user', Auth::user());
 });
 
+Route::get('logout', function()
+{
+	Auth::logout();
+	return Redirect::to('/');
+});
+
 Route::get('orders', function()
 {
 	return Redirect::to('order');

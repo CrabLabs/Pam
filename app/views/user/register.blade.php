@@ -69,8 +69,8 @@
 			<div class='row-2'>
 				<div>
 					<h3>Dirección de envio</h3>
-					{{ Form::label('shiping_address', 'Dirección:') }}
-					{{ Form::text('shiping_address') }}
+					{{ Form::label('shipping_address', 'Dirección:') }}
+					{{ Form::text('shipping_address') }}
 					{{ Form::label('shipping_time_from', 'Horario preferencial:') }}
 					<br>
 					{{ Form::select('shipping_time_from', $times) }}

@@ -45,6 +45,7 @@ class UserController extends \BaseController {
 			'role' => 'required',
 			'name' => 'required|min:2',
 			'lastname' => 'required|min:3',
+			'shipping_address' => 'required|min:2',
 			'password' => 'required|confirmed|min:8',
 			'email' => 'required|email|unique:users',
 			'rut' => 'required_if:role,Empresa|numeric',
@@ -61,21 +62,17 @@ class UserController extends \BaseController {
 			$user->password = Hash::make(Input::get('password'));
 			$user->confirmed = false;
 			$user->role = Input::get('role');
-			$user->address = Input::get('address');
 			$user->phone = Input::get('phone');
 			$user->company_name = Input::get('company_name');
 			$user->rut = Input::get('rut');
-			$user->shiping_address = Input::get('shiping_address');
+			$user->shipping_address = Input::get('shipping_address');
 			$user->shipping_time_from = Input::get('shipping_time_from');
 			$user->shipping_time_to = Input::get('shipping_time_to');
 			$user->billing_address = (Input::get('same_billing_address')) ? Input::get('shiping_address') : Input::get('billing_address');
 			
 			$user->save();
 		} else {
-			return View::make('user.register', array(
-				'times' => ['1600' => '16:00hs', '1630' => '16:30hs', '1900' => '19:00hs'],
-				'messages' => $validator->messages()
-			))->withErrors($validator);
+			return View::make('user.register')->withErrors($validator);
 		}
 	}
 
