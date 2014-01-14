@@ -114,24 +114,32 @@
 		
 		// Check if there is not a next select box
 		if (nextSelect[0] !== undefined) {
+			// Get the name attribute of the next select
+			nextName = nextSelect.attr('name');
+			
+			// Disable next until the operation is ready
+			nextSelect.attr('disabled', true);
+			
 			// Split the form and get the first until the next select box name
-			data = data.split(nextSelect.attr('name'))[0];
+			data = data.split(nextName)[0];
+			
 			// Check if the data dosn't ends with '&' and append it
 			if (data[data.length - 1] !== '&')
 				data+= '&';
-			
+
 			// Append the required select name for the query, if it's the last
 			// query the price
-			data+= 'select=' + (nextSelect.attr('name') || 'price');
+			data+= 'select=' + (nextName || 'price');
 			
 			// Request the json response with ajax of the matching data
 			$.getJSON('budget/getDetail', data, function (res) {
 				html = '';
-				nextName = nextSelect.attr('name');
+				// Create an HTML <option> for each result
 				$.each(res, function (index, value) {
 					html += '<option>' + value[nextName] + '</option>';
 				});
-				nextSelect.html('').append(html).trigger('change');
+				// Append the HTML to the next select box
+				nextSelect.html('').append(html).attr('disabled', false).trigger('change');
 			});
 		}
 	});
