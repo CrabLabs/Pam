@@ -21,7 +21,7 @@ class Budget extends Eloquent {
 
 	public function getCost()
 	{
-		return ($this->product_detail != null) ? $this->productDetail->cost : $this->cost;
+		return $this->cost;
 	}
 
 	public function getDescription()

@@ -35,6 +35,7 @@ class BudgetController extends BaseController {
 
 			if (Product::find(Input::get('product_id'))->budgetable) {
 				$specifications = [
+					'product_id'=> Input::get('product_id'),
 					'amount' 	=> Input::get('amount'),
 					'size' 		=> Input::get('size'),
 					'inks' 		=> Input::get('inks'),
@@ -43,12 +44,14 @@ class BudgetController extends BaseController {
 					'laminate' 	=> Input::get('laminate'),
 				];
 
-				$query = DB::table('products_details')->select('id');
+				$query = DB::table('products_details')->select('id, price');
 				foreach($specifications as $column => $value) {
 					$query->where($column, '=', $value);
 				}
 				if ($query->count() > 0) {
-					$budget->product_detail_id = $query->first()->id;
+					$response = $query->first();
+					$budget->product_detail_id = $response->id;
+					$budget->cost = $response->price;
 				} else {
 					$budget->description = json_encode($specifications);
 				}
