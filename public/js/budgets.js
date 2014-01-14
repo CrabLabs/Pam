@@ -1,26 +1,47 @@
 (function ($) {
 	'use strict';
 
-	var data, $self, html, next, budgetables, nextSelect;
+	var data,
+		html,
+		$self,
+		nextName,
+		nextSelect,
+		budgetables;
 
+	/**
+	 * EVENT: Trigger when document is ready.
+	 *
+	 * @return void
+	 */
 	$(document).on('ready', function () {
 		budgetables = $('input[name=budgetables').val().split(',');
-		$('form select:first').trigger('change');
 		$('.orders_step_2, .orders_step_3').hide();
 		$('.orders_step_1').show();
 	});
 
+	/**
+	 * EVENT: Trigger when clicks on .product_photo link.
+	 *
+	 * @return void
+	 */
 	$('.product_photo').on('click', function (event) {
 		event.preventDefault();
 
-		$('select[name=product_id]').val($(this).data('id')).trigger('change');
 		$('.orders_step_1').hide();
 		$('.orders_step_2').show();
+		$('select[name=product_id]').val($(this).data('id')).trigger('change');
 		$('nav.steps .active').removeClass('active').next('li').addClass('active');
 	});
 
+	/**
+	 * EVENT: Trigger when clicks on .next_step link.
+	 * Produce a JSON request with AJAX that returns the price of match selection.
+	 * Also generates a summary with the specifications of the product.
+	 *
+	 * @return void
+	 */
 	$('.next_step').on('click', function () {
-		var selection = ($('select[name=product_id]').val() in budgetables) ? 'budgetable' : 'no-budgetable';
+		var selection = ($.inArray($('select[name=product_id]').val(), budgetables) > -1) ? 'budgetable' : 'no-budgetable';
 
 		$('.orders_step_2').hide();
 		$('.orders_step_3').show();
@@ -32,8 +53,26 @@
 			html += '<dd>' + $(this).children('select, input, textarea').val() + '</dd>';
 			$('.details_list dl').append(html);
 		});
+		
+		// Check if the selection is budgetable
+		if (selection === 'budgetable') {
+			// Serialize the form data
+			data = $('form select').serialize() + '&select=price';
+			console.log(data);
+			// Request the price with AJAX
+			$.getJSON('budget/getDetail', data, function (res) {
+				$('#cost').text('$' + res['price']);
+			});
+		} else {
+			console.log('No budgetable');
+		}
 	});
 
+	/**
+	 * EVENT: Trigger when clicks on .modify link.
+	 *
+	 * @return void
+	 */
 	$('.modify').on('click', function (event) {
 		event.preventDefault();
 
@@ -42,39 +81,59 @@
 		$('nav.steps .active').removeClass('active').prev('li').addClass('active');	
 	});
 
+	/**
+	 * EVENT: Trigger when change the value on .details select children.
+	 * Produce a JSON request with AJAX and appends each the response in
+	 * next select.
+	 *
+	 * @return void
+	 */
 	$('.details select').on('change', function () {
-		if (!($('select[name=product_id]').val() in budgetables)) {
-			$('.next_step').val('Presupuestar');
+		// Check if the selected product_id is non-budgetable
+		if ($.inArray($('select[name=product_id]').val(), budgetables) === -1) {
+			// Show the text of the next_step button as non-budgetable
+			$('.next_step').text('Siguiente');
+			// Show the non-budgetable form
 			$('.budgetable').hide();
 			$('.no-budgetable').show();
+			// Stop propagation
 			return false;
 		} else {
-			$('.next_step').val('Siguiente');
+			// Show the text of the next_step button as budgetable
+			$('.next_step').text('Presupuestar');
+			// Show the budgetable form
 			$('.budgetable').show();
 			$('.no-budgetable').hide();
 		}
 		
-		data = $('.details').serialize();
+		// Serialize the form data
+		data = $('form select').serialize();
+
+		// Get the next select box
 		nextSelect = $(this).parent('div').next('div').children('select');
 		
-		if (nextSelect[0] === []) {
-			data = data.split($(this).attr('name'))[0];
-		} else {
+		// Check if there is not a next select box
+		if (nextSelect[0] !== undefined) {
+			// Split the form and get the first until the next select box name
 			data = data.split(nextSelect.attr('name'))[0];
-		}
-		data+= '&select=' + (nextSelect.attr('name') || 'cost');
-		
-		$.getJSON('order/getDetail', data, function (res) {
-			html = '';
-			next = nextSelect.attr('name');
-			if (res.cost !== undefined) {
-				$('#cost').text(res.cost);
-			} else {
+			// Check if the data dosn't ends with '&' and append it
+			if (data[data.length - 1] !== '&')
+				data+= '&';
+			
+			// Append the required select name for the query, if it's the last
+			// query the price
+			data+= 'select=' + (nextSelect.attr('name') || 'price');
+			
+			// Request the json response with ajax of the matching data
+			$.getJSON('budget/getDetail', data, function (res) {
+				html = '';
+				nextName = nextSelect.attr('name');
 				$.each(res, function (index, value) {
-					html += '<option>' + value[next] + '</option>';
+					html += '<option>' + value[nextName] + '</option>';
 				});
 				nextSelect.html('').append(html).trigger('change');
-			}
-		});
+			});
+		}
 	});
+
 }(jQuery));

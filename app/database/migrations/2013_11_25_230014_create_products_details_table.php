@@ -21,7 +21,7 @@ class CreateProductsDetailsTable extends Migration {
 			$table->string('paper')->nullable();
 			$table->string('weight')->nullable();
 			$table->string('laminate')->nullable();
-			$table->integer('cost')->unsigned()->default(0);
+			$table->integer('price')->unsigned()->default(0);
 			$table->softDeletes();
 		});
 	}

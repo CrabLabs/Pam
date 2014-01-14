@@ -20,9 +20,9 @@ class ProductsTableSeeder extends Seeder {
 
 		DB::table('products')->insert(array(
 			'id' 	=> 3,
-			'name' 	=> 'Otro producto',
+			'name' 	=> 'Volantes',
 			'image' => 'lorem_ipsum_3',
-			'budgetable' => false,
+			'budgetable' => true,
 		));
 
 		DB::table('products')->insert(array(

@@ -72,22 +72,21 @@ class BudgetController extends BaseController {
 	public function getDetail()
 	{
 		$rules = array(
-			'product_id' => 'numeric',
+			'product_id' => 'required|numeric',
 			'amount' 	 => 'numeric',
-			'size' 		 => 'string',
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->passes() and Request::ajax())
 		{
 			$query = DB::table('products_details')->select(Input::get('select'));
-			
-			foreach(Input::except('_token', 'select', 'budgetables', 'detail', 'email') as $column => $value)
+			$inputs = Input::except('_token', 'select', 'budgetables', 'detail', 'email');
+			foreach($inputs as $column => $value)
 			{
 				$query->where($column, '=', $value);
 			}
 
-			return Response::json($query->distinct()->get());
+			return (Input::get('select') == 'price') ? Response::json($query->first()) : Response::json($query->distinct()->get());
 		}
 	}
 

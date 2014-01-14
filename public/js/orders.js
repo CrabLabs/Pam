@@ -67,7 +67,7 @@
 	});
 
 	$('.details select').on('change', function () {
-		if (!($('select[name=product_id]').val() in budgetables)) {
+		if ($.inArray($('select[name=product_id]').val(), budgetables) === -1) {
 			$('.next_step').val('Presupuestar');
 			$('.budgetable').hide();
 			$('.no-budgetable').show();
@@ -86,13 +86,13 @@
 		} else {
 			data = data.split(nextSelect.attr('name'))[0];
 		}
-		data+= '&select=' + (nextSelect.attr('name') || 'cost');
+		data+= '&select=' + (nextSelect.attr('name') || 'price');
 		
 		$.getJSON('order/getDetail', data, function (res) {
 			html = '';
 			next = nextSelect.attr('name');
-			if (res.cost !== undefined) {
-				$('#cost').text(res.cost);
+			if (res.price !== undefined) {
+				$('#cost').text(res.price);
 			} else {
 				$.each(res, function (index, value) {
 					html += '<option>' + value[next] + '</option>';

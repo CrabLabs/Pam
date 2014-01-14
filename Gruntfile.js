@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     },
     watch: {
       txt: {
-        files: 'app/**/*.php',
+        files: 'app/views/**/*.php',
         options: {
           livereload: true
         }

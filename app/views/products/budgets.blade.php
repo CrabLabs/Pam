@@ -112,7 +112,7 @@
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<span id='cost' class='budgetable'>$ 2873</span>
+				<span id='cost' class='budgetable'></span>
 			</div>
 			{{ Form::submit() }}
 		</section>
