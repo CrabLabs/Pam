@@ -93,19 +93,17 @@ class OrderController extends BaseController {
 	public function getDetail()
 	{
 		$rules = array(
-			'product_id' => 'numeric',
+			'product_id' => 'required|numeric',
 			'amount' 	 => 'numeric',
-			'size' 		 => 'string',
 		);
 		$validator = Validator::make(Input::all(), $rules);
-
-		// $input = Input::only('product_id', 'amount', 'size', 'inks', 'cost');
 
 		if ($validator->passes() and Request::ajax())
 		{
 			$query = DB::table('products_details')->select(Input::get('select'));
-			
-			foreach(Input::except('_token', 'select', 'budgetables', 'detail', 'email') as $column => $value)
+			$input = Input::except('_token', 'select', 'budgetables', 'detail', 'email',
+				'shipping_time_from', 'shipping_time_to', 'shipping_address', 'billing_address');
+			foreach($input as $column => $value)
 			{
 				$query->where($column, '=', $value);
 			}
