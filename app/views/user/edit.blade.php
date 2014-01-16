@@ -17,7 +17,7 @@
 				@endforeach
 			</ul>
 		@endif
-		{{ Form::open(array('route' => 'user.store')) }}
+		{{ Form::open(array('route' => array('user.update', $user->id), 'files' => true)) }}
 			<div class='section'>
 				<h3>Tipo de cuenta</h3>
 				<div class='row account_type'>
@@ -49,11 +49,11 @@
 						{{ Form::label('phone', 'Phone') }}
 						{{ Form::text('phone', $user->phone) }}
 					</div>
-					<div>
+					<div class='empresarial_only'>
 						{{ Form::label('company_name', 'Razón social') }}
 						{{ Form::text('company_name', $user->company_name) }}
 					</div>
-					<div>
+					<div class='empresarial_only'>
 						{{ Form::label('rut', 'RUT') }}
 						{{ Form::text('rut', $user->rut) }}
 					</div>
@@ -66,6 +66,12 @@
 					<div>
 						{{ Form::label('password_confirmation', 'Repetir contraseña') }}
 						{{ Form::password('password_confirmation') }}
+					</div>
+				</div>
+				<div class='row'>
+					<div class='attach_file'>
+						<p>Foto de perfil: </p>
+						{{ Form::file('image') }}
 					</div>
 				</div>
 			</div>
@@ -90,7 +96,7 @@
 			</div>
 
 			{{ Form::button('Cancelar', array('class' => 'btn grey cancel')) }}
-			{{ Form::submit('Registrarme') }}
+			{{ Form::submit('Guardar') }}
 		{{ Form::close() }}
 	</div>
 	<div class='edit-main'>

@@ -31,7 +31,7 @@
 						{{ HTML::liActive('contact', HTML::link('contact', 'Contacto')) }}
 						@if (Auth::user())
 							<li class='user'>
-								<a href='#'><img src='' width='25' height='25'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a>
+								<a href='#'><img src='{{ Auth::user()->getImage() }}' width='25' height='25'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a>
 								<div>
 									<a href='edit'>Mi cuenta</a>
 									<a href='logout'>Cerrar sesión</a>

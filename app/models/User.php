@@ -76,4 +76,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->hasMany('Budget');
 	}
 
+	/**
+	 * Get the user profile picture.
+	 *
+	 * @return string
+	 */
+	public function getImage()
+	{
+		return URL::to('img/uploads/originals/'.$this->image);
+	}
+
 }

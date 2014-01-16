@@ -64,6 +64,12 @@
 					{{ Form::text('rut') }}
 				</div>
 			</div>
+			<div class='row'>
+				<div class='attach_file'>
+					<p>Foto de perfil: </p>
+					{{ Form::file('image') }}
+				</div>
+			</div>
 		</div>
 		<div class='section'>
 			<div class='row-2'>
