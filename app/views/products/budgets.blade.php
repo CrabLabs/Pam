@@ -124,4 +124,16 @@
 	@parent
 
 	{{ HTML::script('js/budgets.js') }}
+	
+	@if (Input::has('product'))
+	<script type='text/javascript'>
+	(function ($) {
+		'use strict';
+
+		$(document).on('ready', function () {
+			$('.product_photo[data-id={{ Input::get('product') }}]').trigger('click');
+		});
+	}(jQuery));
+	</script>
+	@endif
 @stop

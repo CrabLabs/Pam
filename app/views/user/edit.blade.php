@@ -160,6 +160,7 @@
 	@parent
 
 	{{ HTML::script('js/edit.js') }}
+	
 	@if (Input::has('view') and Input::get('view') == 'orders')
 	<script type='text/javascript'>
 	(function ($) {

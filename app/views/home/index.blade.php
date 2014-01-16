@@ -19,10 +19,10 @@
 		</div>
 	</div>
 	<div class='container'>
-		<h3>Elegí tu presupuesto y manda imprimir hoy mismo!</h3>	
-		{{ Form::open(array('method' => 'get')) }}
-			{{ Form::select('index_product', $list) }}
-			{{ Form::submit() }}
+		<h3>Elegí tu presupuesto, arma tu presupuesto y manda imprimir hoy mismo!</h3>	
+		{{ Form::open(['method' => 'get', 'route' => 'budget']) }}
+			{{ Form::select('product', $list) }}
+			{{ Form::submit('Cotizar') }}
 		{{ Form::close() }}
 		<div class='index_slider'>
 			<ul>
