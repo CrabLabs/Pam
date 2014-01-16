@@ -160,4 +160,15 @@
 	@parent
 
 	{{ HTML::script('js/edit.js') }}
+	@if (Input::has('view') and Input::get('view') == 'orders')
+	<script type='text/javascript'>
+	(function ($) {
+		'use strict';
+
+		$(document).on('ready', function () {
+			$('aside ul li:last a').trigger('click');
+		});
+	}(jQuery));
+	</script>
+	@endif
 @stop
