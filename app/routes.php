@@ -26,6 +26,29 @@ Route::get('/', function()
 });
 Route::post('/', 'ContactController@sendContact');
 
+Route::post('upload', function () {
+	$rules = array(
+		'file' => 'required|mimes:jpeg,bmp,png',
+		'location' => 'required',
+	);
+	$validator = Validator::make(Input::all(), $rules);
+	$response = array();
+	
+	if ($validator->passes()) {
+		$location = public_path().'/'.Input::get('location');
+		$file = Input::file('file');
+		$response['file'] = Str::random(16).'.'.$file->getClientOriginalExtension();
+		$file->move($location, $response['file']);
+		// $response['status'] = 200;
+		$response['success'] = true;
+	} else {
+		// $response['status'] = 505;
+		$response['success'] = false;
+		$response['error'] = $validator->messages();
+	}
+	return Response::json($response);
+});
+
 Route::resource('services', 'ServicesController');
 
 Route::resource('works', 'WorksController');
