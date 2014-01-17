@@ -1,6 +1,13 @@
 (function ($) {
 	'use strict';
 
+	$('.attach_file input').fileUpload({
+		location: 'img/uploads/users/originals',
+		onSuccess: function (res) {
+			$('#image_name').val(res.file);
+		}
+	});
+
 	$(document).on('ready', function () {
 		$('.empresarial_only, input[name=billing_address]').hide();
 		$('.edit-main:last').hide();

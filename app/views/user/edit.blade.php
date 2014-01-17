@@ -9,15 +9,15 @@
 <section id='edit' class='container whiteBackground'>
 	<div class='edit-main'>
 		<h3 class='title'>Datos personales</h3>
-		@if(isset($messages))
+		@if(count($errors) > 0)
 			<h3>Hay errores en el formulario</h3>
 			<ul class='register_errors'>
-				@foreach($messages->all() as $message)
-					<li>{{ $message }}</li>
+				@foreach($errors->all() as $error)
+					<li>{{ $error }}</li>
 				@endforeach
 			</ul>
 		@endif
-		{{ Form::open(array('route' => array('user.update', $user->id), 'files' => true)) }}
+		{{ Form::model($user, array('route' => array('user.update', $user->id), 'files' => true)) }}
 			<div class='section'>
 				<h3>Tipo de cuenta</h3>
 				<div class='row account_type'>
@@ -72,6 +72,8 @@
 					<div class='attach_file'>
 						<p>Foto de perfil: </p>
 						{{ Form::file('image') }}
+						<input type='hidden' name='image_name' id='image_name'>
+						{{ Form::hidden('image_name', $user->image) }}
 					</div>
 				</div>
 			</div>
@@ -164,7 +166,8 @@
 
 @section('scripts')
 	@parent
-
+	
+	{{ HTML::script('js/fileupload.js') }}
 	{{ HTML::script('js/edit.js') }}
 	
 	@if (Input::has('view') and Input::get('view') == 'orders')
