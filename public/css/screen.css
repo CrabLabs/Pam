@@ -439,7 +439,7 @@ header .header_wrapper .section a span:first-of-type {
 
 /* line 2, ../sass/sections/_index.scss */
 #main #index .index_wrapper {
-  border-bottom: 1px solid #f0f0f1;
+  border-bottom: 1px solid #f0f0f0;
   font-size: 0;
   padding: 40px 0;
   position: relative;
@@ -623,15 +623,17 @@ header .header_wrapper .section a span:first-of-type {
 /* line 2, ../sass/sections/_register.scss */
 #main #register .title {
   color: #2f66b5;
-  font-weight: 300;
+  font-size: 1em;
+  font-weight: normal;
   margin: 15px 0;
+  text-transform: uppercase;
 }
-/* line 7, ../sass/sections/_register.scss */
+/* line 9, ../sass/sections/_register.scss */
 #main #register .section {
   border-bottom: 1px solid #e1e1e1;
   margin: 25px 0 30px 0;
 }
-/* line 10, ../sass/sections/_register.scss */
+/* line 12, ../sass/sections/_register.scss */
 #main #register .section h3 {
   color: #2f66b5;
   font-size: 12px;
@@ -639,51 +641,51 @@ header .header_wrapper .section a span:first-of-type {
   margin: 15px 0;
   text-transform: uppercase;
 }
-/* line 17, ../sass/sections/_register.scss */
+/* line 19, ../sass/sections/_register.scss */
 #main #register .section .account_type label {
   padding: 0 15px 0 10px;
 }
-/* line 20, ../sass/sections/_register.scss */
+/* line 22, ../sass/sections/_register.scss */
 #main #register .section .row, #main #register .section .row-2 {
   padding-bottom: 20px;
 }
-/* line 22, ../sass/sections/_register.scss */
+/* line 24, ../sass/sections/_register.scss */
 #main #register .section .row div, #main #register .section .row-2 div {
   display: inline-block;
   padding-right: 30px;
   vertical-align: top;
   width: 25%;
 }
-/* line 26, ../sass/sections/_register.scss */
+/* line 28, ../sass/sections/_register.scss */
 #main #register .section .row div label, #main #register .section .row div input, #main #register .section .row-2 div label, #main #register .section .row-2 div input {
   width: 100%;
 }
-/* line 28, ../sass/sections/_register.scss */
+/* line 30, ../sass/sections/_register.scss */
 #main #register .section .row div label[type='checkbox'], #main #register .section .row div input[type='checkbox'], #main #register .section .row-2 div label[type='checkbox'], #main #register .section .row-2 div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
-/* line 34, ../sass/sections/_register.scss */
+/* line 36, ../sass/sections/_register.scss */
 #main #register .section .row div span, #main #register .section .row-2 div span {
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 42, ../sass/sections/_register.scss */
+/* line 44, ../sass/sections/_register.scss */
 #main #register .section .row-2 div {
   display: block;
   padding-bottom: 20px;
   width: 50%;
 }
-/* line 46, ../sass/sections/_register.scss */
+/* line 48, ../sass/sections/_register.scss */
 #main #register .section .row-2 div input {
   margin-bottom: 20px;
 }
 /* line 2, ../sass/sections/_login.scss */
 #main #login h3 {
   color: #2f66b5;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: normal;
   margin: 15px 0;
   text-transform: uppercase;
 }
@@ -1204,19 +1206,47 @@ header .header_wrapper .section a span:first-of-type {
   padding: 0 0 0 20px;
 }
 /* line 2, ../sass/sections/_contact.scss */
+#main #contact h3 {
+  color: #2f66b5;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+/* line 9, ../sass/sections/_contact.scss */
+#main #contact .subtitle {
+  color: #999;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+/* line 14, ../sass/sections/_contact.scss */
 #main #contact div {
   display: inline-block;
   padding: 10px;
   vertical-align: top;
+  width: 25%;
 }
-/* line 6, ../sass/sections/_contact.scss */
+/* line 19, ../sass/sections/_contact.scss */
 #main #contact div.submit {
+  border-top: 1px solid #eaeaea;
   display: block;
+  width: 100%;
 }
-/* line 9, ../sass/sections/_contact.scss */
+/* line 23, ../sass/sections/_contact.scss */
+#main #contact div.submit input {
+  width: calc(25% - 20px);
+}
+/* line 27, ../sass/sections/_contact.scss */
 #main #contact div label, #main #contact div input, #main #contact div textarea, #main #contact div select {
   display: block;
   margin: 10px 0;
+  width: 100%;
+}
+/* line 32, ../sass/sections/_contact.scss */
+#main #contact div textarea {
+  height: 80px;
+  resize: none;
+  width: calc(200% + 20px);
 }
 
 /* line 1, ../sass/_footer.scss */

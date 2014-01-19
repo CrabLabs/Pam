@@ -1,14 +1,38 @@
 #contact{
+	h3{
+		color: $blue;
+		font-size: 1em;
+		font-weight: normal;
+		margin: 15px 0;
+		text-transform: uppercase;
+	}
+	.subtitle{
+		color: #999;
+		font-size: 0.8em;
+		font-weight: normal;
+	}
 	div{
 		display: inline-block;
 		padding: 10px;
 		vertical-align: top;
+		width: 25%;
 		&.submit{
+			border-top: 1px solid rgb(234, 234, 234);
 			display: block;
+			width: 100%;
+			input{
+				width: calc(25% - 20px);
+			}
 		}
 		label, input, textarea, select{
 			display: block;
 			margin: 10px 0;
+			width: 100%;
+		}
+		textarea{
+			height: 80px;
+			resize: none;
+			width: calc(200% + 20px);
 		}
 	}
 }
