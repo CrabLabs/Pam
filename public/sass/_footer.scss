@@ -11,7 +11,8 @@ footer{
 			padding: 0 22px 0 0;
 			a{
 				color: inherit;
-				font-weight: bold;
+				font-size: 0.8em;
+				font-weight: normal;
 				text-transform: uppercase;
 				text-decoration: none;
 				&.active, &:hover{
@@ -19,5 +20,8 @@ footer{
 				}
 			}
 		}
+	}
+	span{
+		font-size: 0.8em;
 	}
 }

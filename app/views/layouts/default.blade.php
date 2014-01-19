@@ -25,10 +25,10 @@
 					<span class='phone_support'><strong>Atención al cliente:</strong> 02 702 545</span>
 					<ul>
 						<li class='home'><a href='{{ URL::to('/') }}'></a></li>
-						{{ HTML::liActive('services', HTML::link('services', 'Servicios')) }}
-						{{ HTML::liActive('about-us', HTML::link('about-us', 'Nosotros')) }}
-						{{ HTML::liActive('works', HTML::link('works', 'Trabajos')) }}
-						{{ HTML::liActive('contact', HTML::link('contact', 'Contacto')) }}
+						{{ HTML::liActive('services', HTML::link('services', 'SERVICIOS')) }}
+						{{ HTML::liActive('about-us', HTML::link('about-us', 'NOSOTROS')) }}
+						{{ HTML::liActive('works', HTML::link('works', 'TRABAJOS')) }}
+						{{ HTML::liActive('contact', HTML::link('contact', 'CONTACTO')) }}
 						@if (Auth::user())
 							<li class='user'>
 								<a href='#'><img src='{{ Auth::user()->getImage() }}' width='25' height='25'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a>
@@ -82,7 +82,7 @@
 					<li>{{ HTML::linkActive('contact', 'Contacto') }}</li>
 					<li>{{ HTML::linkActive('login', 'Login / Registro') }}</a></li>
 				</ul>
-				<span>Imprenta pam 2013. info&#64;imprentapam.com.uy</span>
+				<span>Imprenta pam © 2013. info&#64;imprentapam.com.uy</span>
 			</div>
 		</footer>
 

@@ -3,104 +3,151 @@
 		border-bottom: 1px solid rgb(240, 240, 241);
 		font-size: 0;
 		padding: 40px 0;
-		.index_highlight{
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-			vertical-align: top;
-			width: (100% / 3);
-			img{
-				display: block;
-				height: 250px;
-				margin: 0 auto 10px auto;
-				width: 250px;
-			}
-			span{
-				color: rgb(134, 134, 136);
-				display: block;
-				font-size: $fontSizeSmall;
-				text-align: center;
-			}
-		}
-	}
-	h3{
-		color: $blue;
-		font-weight: bold;
-		margin: 40px 0 20px 0;
-		text-align: center;
-	}
-	h4{
-		color: #999;
-		text-align: center;
-	}
-	form{
-		margin: 0;
-		padding: 10px;
-		text-align: center;
-	}
-	.index_slider{
-		ul{
-			margin: 0;
-			padding: 0;
-			li{
+		position: relative;
+		.container-small{
+			.index_highlight{
 				display: inline-block;
-				height: 160px;
 				margin: 0;
-				padding: 10px;
+				padding: 0;
 				vertical-align: top;
-				width: 160px;
+				width: (100% / 3);
 				img{
-					height: 100%;
-					width: 100%;		
+					display: block;
+					height: 250px;
+					margin: 0 auto 10px auto;
+					width: 250px;
 				}
 				span{
+					color: rgb(134, 134, 136);
 					display: block;
-					font-size: 0.8em;
+					font-size: $fontSizeSmall;
 					text-align: center;
-					width: 100%;
 				}
-			}	
+			}
+			#index_slider_arrow{
+				background: image-url("arrow.png") no-repeat;
+				bottom: -51px;
+				display: block;
+				height: 11px;
+				left: calc(50% - 11px);
+				position: absolute;
+				width: 22px;
+			}
 		}
 	}
-	.clients{
-		text-align: center;
-	}
-	.contact{
-		section{
-			background: image-url("img_18.png") no-repeat;
-			background-position: center bottom;
-			display: inline-block;
-			min-height: 480px;
-			vertical-align: top;
-			width: (200% / 3);
+	.container_fullwidth{
+		h3{
+			color: $blue;
+			font-weight: normal;
+			margin: 40px 0 20px 0;
+			text-align: center;
+		}
+		h4{
+			color: #999;
+			font-weight: normal;
+			text-align: center;
 		}
 		form{
-			display: inline-block;
-			vertical-align: top;
-			width: (100% / 3);
-			div{
-				margin-bottom: 10px;
-				input, textarea{
+			margin: 0;
+			padding: 10px;
+			text-align: center;
+			input[type=submit]{
+				background: $blue;
+			}
+		}
+		.index_slider{
+			ul{
+				margin: 0;
+				padding: 0;
+				li{
+					display: inline-block;
+					height: 160px;
+					margin: 0;
+					padding: 10px;
+					vertical-align: top;
+					width: 160px;
+					img{
+						height: 100%;
+						width: 100%;		
+					}
+					span{
+						color: #333;
+						display: block;
+						font-size: 0.55em;
+						font-weight: bold;
+						text-align: center;
+						text-transform: uppercase;
+						width: 100%;
+					}
+				}	
+			}
+		}
+		.clients{
+			margin-top: 30px;
+			padding: 10px 0;
+			text-align: center;
+		}
+		.contact{
+			background: #f6f6f6;
+			border-bottom: 1px solid rgb(234, 234, 234);
+			border-top: 1px solid rgb(234, 234, 234);
+			h4{
+				border-bottom: 1px solid rgb(234, 234, 234);
+				padding-bottom: 20px;
+			}
+			section{
+				background: image-url("img_18.png") no-repeat;
+				background-position: center bottom;
+				display: inline-block;
+				min-height: 480px;
+				padding-top: 20px;
+				vertical-align: top;
+				width: (200% / 3);
+			}
+			form{
+				display: inline-block;
+				vertical-align: top;
+				width: (100% / 3);
+				div{
+					margin-bottom: 10px;
+					input, textarea{
+						background: white;
+						width: 100%;
+					}
+					textarea{
+						resize: none;
+					}
+				}
+				input[type=submit]{
 					width: 100%;
 				}
 			}
-		}
-		.info{
-			display: inline-block;
-			min-height: 60px;
-			padding-left: 80px;
-			vertical-align: top;
-			width: 50%;
-			&.home{ background: image-url("img_15.png") no-repeat; }
-			&.phone{ background: image-url("img_16.png") no-repeat; }
-			&.digital{ background: image-url("img_17.png") no-repeat; width: 100%; }
-			span{
-				display: block;
-				font-size: $fontSizeSmall;
-				&:first-of-type{
-					color: $blue;
-					text-transform: uppercase;
-					margin-bottom: 20px;
+			.info{
+				display: inline-block;
+				min-height: 60px;
+				padding-left: 80px;
+				text-align: left;
+				vertical-align: top;
+				width: 50%;
+				&.home{ background: image-url("img_15.png") no-repeat; }
+				&.phone{ background: image-url("img_16.png") no-repeat; }
+				&.digital{ background: image-url("img_17.png") no-repeat; width:100%;}
+				span{
+					color: #999;
+					display: block;
+					font-size: 0.7em;
+					a{
+						color: $blue;
+						display: block;
+						font-size: 0.8em;
+						font-weight: bold;
+						padding: 20px 0;
+					}
+					&:first-of-type{
+						color: $blue;
+						text-transform: uppercase;
+						margin-bottom: 20px;
+					}
 				}
 			}
 		}
