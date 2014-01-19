@@ -1226,17 +1226,23 @@ header .header_wrapper .section a span:first-of-type {
 }
 /* line 6, ../sass/sections/_faq.scss */
 #main #faq .faq .question {
-  color: #1a57a7;
-  font-size: 14px;
-  margin: 0 0 25px 0;
+  background: url('/img/img_04_G.png?1390137124') no-repeat center left;
+  color: #2f66b5;
+  font-size: 0.8em;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 0 10px 0;
   padding: 0 0 0 40px;
   text-transform: uppercase;
 }
-/* line 13, ../sass/sections/_faq.scss */
+/* line 16, ../sass/sections/_faq.scss */
 #main #faq .faq .answer {
-  font-size: 14px;
+  background: url('/img/enter-arrow.png?1390137338') no-repeat top left;
+  color: #666;
+  font-size: 0.75em;
+  line-height: 1.5em;
   margin: 0 0 0 40px;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 25px;
 }
 /* line 2, ../sass/sections/_contact.scss */
 #main #contact h3 {
