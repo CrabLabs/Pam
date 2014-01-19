@@ -46,6 +46,9 @@
 			<div class='header_wrapper'>
 				<div class='container'>
 					<div class='section logo'></div>
+					<div class='index_mobile'>
+						<img src="img/main_img.jpg">
+					</div>
 					<div class='section print_now'>
 						<a href='{{ URL::to('order') }}'>
 							<span>Imprimir ahora</span>

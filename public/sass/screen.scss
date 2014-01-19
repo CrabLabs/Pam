@@ -13,6 +13,10 @@ body{
 	background-image: image-url("banner.jpg");
 	background-repeat: no-repeat;
 	background-size: container;
+	@media #{$mobile}{
+		background: none;
+		height: 100%;
+	}
 }
 
 @import "containers";

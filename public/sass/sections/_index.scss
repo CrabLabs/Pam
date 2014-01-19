@@ -1,4 +1,7 @@
 #index{
+	@media #{$mobile}{
+		display: none;
+	}
 	.index_wrapper{
 		border-bottom: 1px solid rgb(240, 240, 240);
 		font-size: 0;
