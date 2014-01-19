@@ -671,7 +671,42 @@ header .header_wrapper .section a span:first-of-type {
 }
 /* line 42, ../sass/sections/_register.scss */
 #main #register .section .row-2 div {
+  display: block;
+  padding-bottom: 20px;
   width: 50%;
+}
+/* line 46, ../sass/sections/_register.scss */
+#main #register .section .row-2 div input {
+  margin-bottom: 20px;
+}
+/* line 2, ../sass/sections/_login.scss */
+#main #login h3 {
+  color: #2f66b5;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+/* line 9, ../sass/sections/_login.scss */
+#main #login form {
+  width: 250px;
+}
+/* line 11, ../sass/sections/_login.scss */
+#main #login form label {
+  color: #999;
+  font-weight: normal;
+}
+/* line 15, ../sass/sections/_login.scss */
+#main #login form input {
+  display: block;
+  width: 100%;
+}
+/* line 23, ../sass/sections/_login.scss */
+#main #login a {
+  color: #999;
+  font-size: 0.55em;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 /* line 1, ../sass/sections/_edit.scss */
 #main #edit {
