@@ -821,43 +821,47 @@ header .header_wrapper .section a span:first-of-type {
 }
 /* line 2, ../sass/sections/_services.scss */
 #main #services .service {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #eaeaea;
   margin: 0 0 30px 0;
+  padding: 0 0 30px 0;
 }
-/* line 5, ../sass/sections/_services.scss */
+/* line 6, ../sass/sections/_services.scss */
 #main #services .service:last-of-type {
   margin: 0;
 }
-/* line 8, ../sass/sections/_services.scss */
+/* line 9, ../sass/sections/_services.scss */
 #main #services .service div {
   display: inline-block;
   vertical-align: top;
 }
-/* line 11, ../sass/sections/_services.scss */
+/* line 12, ../sass/sections/_services.scss */
 #main #services .service div:nth-of-type(1) {
   padding-right: 30px;
 }
-/* line 14, ../sass/sections/_services.scss */
+/* line 15, ../sass/sections/_services.scss */
 #main #services .service div:nth-of-type(2) {
   width: -webkit-calc(100% - 250px);
   width: -moz-calc(100% - 250px);
   width: -o-calc(100% - 250px);
   width: calc(100% - 250px);
 }
-/* line 17, ../sass/sections/_services.scss */
+/* line 18, ../sass/sections/_services.scss */
 #main #services .service div h3 {
   color: #2f66b5;
+  font-size: 1em;
   font-weight: 300;
   margin: 2px 0;
   text-transform: uppercase;
 }
-/* line 23, ../sass/sections/_services.scss */
+/* line 25, ../sass/sections/_services.scss */
 #main #services .service div p {
-  font-size: 14px;
+  color: #666;
+  font-size: 0.75em;
+  line-height: 1.5em;
 }
-/* line 26, ../sass/sections/_services.scss */
+/* line 30, ../sass/sections/_services.scss */
 #main #services .service div .similar_link {
-  background: #2f66b5;
+  background: #bbb;
   border-radius: 2px;
   color: white;
   display: block;
@@ -867,6 +871,11 @@ header .header_wrapper .section a span:first-of-type {
   text-decoration: none;
   text-transform: uppercase;
   width: 190px;
+}
+/* line 41, ../sass/sections/_services.scss */
+#main #services .service div .similar_link:hover {
+  background: #2f66b5;
+  cursor: pointer;
 }
 /* line 1, ../sass/sections/_orders.scss */
 #main #orders {

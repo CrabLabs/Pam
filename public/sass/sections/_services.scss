@@ -1,7 +1,8 @@
 #services{
 	.service{
-		border-bottom: 1px solid #999;
+		border-bottom: 1px solid rgb(234, 234, 234);
 		margin: 0 0 30px 0;
+		padding: 0 0 30px 0;
 		&:last-of-type{
 			margin: 0;
 		}
@@ -16,15 +17,18 @@
 			}
 			h3{
 				color: $blue;
+				font-size: 1em;
 				font-weight: 300;
 				margin: 2px 0;
 				text-transform: uppercase;
 			}
 			p{
-				font-size: $fontSizeSmall;
+				color: #666;
+				font-size: 0.75em;
+				line-height: 1.5em;
 			}
 			.similar_link{
-				background: $blue;
+				background: #bbb;
 				border-radius: 2px;
 				color: white;
 				display: block;
@@ -34,6 +38,10 @@
 				text-decoration: none;
 				text-transform: uppercase;
 				width: 190px;
+				&:hover{
+					background: $blue;
+					cursor: pointer;
+				}
 			}
 		}
 	}
