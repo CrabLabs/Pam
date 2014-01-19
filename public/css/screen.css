@@ -1177,22 +1177,46 @@ header .header_wrapper .section a span:first-of-type {
   margin: 15px 0;
 }
 /* line 2, ../sass/sections/_about-us.scss */
-#main #about-us h2 {
-  color: #2f66b5;
-  font-weight: 300;
-  margin: 2px 0;
+#main #about-us div {
+  display: inline-block;
 }
-/* line 7, ../sass/sections/_about-us.scss */
-#main #about-us h3 {
+/* line 4, ../sass/sections/_about-us.scss */
+#main #about-us div#left {
+  width: calc(100% - 250px);
+}
+/* line 6, ../sass/sections/_about-us.scss */
+#main #about-us div#left h2 {
   color: #2f66b5;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+/* line 13, ../sass/sections/_about-us.scss */
+#main #about-us div#left h3 {
+  color: #2f66b5;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 2em;
   margin: 2px 0;
   text-transform: uppercase;
 }
-/* line 14, ../sass/sections/_about-us.scss */
-#main #about-us p {
-  font-size: 12px;
+/* line 21, ../sass/sections/_about-us.scss */
+#main #about-us div#left p {
+  color: #666;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  margin: 0 0 20px 0;
+}
+/* line 28, ../sass/sections/_about-us.scss */
+#main #about-us div#right {
+  padding: 50px 0 0 0;
+  vertical-align: top;
+  width: 250px;
+}
+/* line 32, ../sass/sections/_about-us.scss */
+#main #about-us div#right img {
+  margin: 0 0 20px 35px;
 }
 /* line 2, ../sass/sections/_faq.scss */
 #main #faq .faq {

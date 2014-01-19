@@ -1,17 +1,37 @@
 #about-us{
-	h2{
-		color: $blue;
-		font-weight: 300;
-		margin: 2px 0;
-	}
-	h3{
-		color: $blue;
-		font-size: $fontSizeSmall;
-		font-weight: 300;
-		margin: 2px 0;
-		text-transform: uppercase;
-	}
-	p{
-		font-size: $fontSizeXSmall;
+	div{
+		display: inline-block;
+		&#left{
+			width: calc(100% - 250px);
+			h2{
+				color: $blue;
+				font-size: 1em;
+				font-weight: normal;
+				margin: 15px 0;
+				text-transform: uppercase;
+			}
+			h3{
+				color: $blue;
+				font-size: 0.8em;
+				font-weight: bold;
+				line-height: 2em;
+				margin: 2px 0;
+				text-transform: uppercase;
+			}
+			p{
+				color: #666;
+				font-size: 0.75em;
+				line-height: 1.5em;
+				margin: 0 0 20px 0;
+			}
+		}
+		&#right{
+			padding: 50px 0 0 0;
+			vertical-align: top;
+			width: 250px;
+			img{
+				margin: 0 0 20px 35px;
+			}
+		}
 	}
 }
