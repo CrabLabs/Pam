@@ -23,7 +23,8 @@
 			<nav>
 				<div class='container'>
 					<span class='phone_support'><strong>Atención al cliente:</strong> 02 702 545</span>
-					<ul>
+					<div id='menu_nav_mobile'></div>
+					<ul class='menu_nav'>
 						<li class='home'><a href='{{ URL::to('/') }}'></a></li>
 						{{ HTML::liActive('services', HTML::link('services', 'SERVICIOS')) }}
 						{{ HTML::liActive('about-us', HTML::link('about-us', 'NOSOTROS')) }}
@@ -94,6 +95,7 @@
 			{{ HTML::script('js/vendor/jquery-2.0.3.min.js') }}
 		@stop
 		@yield('scripts')
+		<script src='js/main.js'></script>
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

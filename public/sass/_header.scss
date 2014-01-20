@@ -15,6 +15,19 @@ header{
 				margin: 0 0 0 5px;
 			}
 		}
+		#menu_nav_mobile{
+			background: image-url("menu_mob.png") no-repeat;
+			background-size: cover;
+			display: none;
+			height: 24px;
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			width: 24px;
+			@media #{$mobile}{
+				display: block;
+			}
+		}
 		ul{
 			display: inline-block;
 			margin: 0;
@@ -23,7 +36,15 @@ header{
 			right: 0;
 			z-index: 1;
 			@media #{$mobile}{
+				background: rgb(65, 74, 81);
+				color: #ccc;
 				display: none;
+				height: 90px;
+			}
+			&.visible{
+				@media #{$mobile}{
+				display: block;
+				}
 			}
 			li{
 				display: inline-block;
@@ -40,6 +61,9 @@ header{
 					height: 34px;
 					padding: 0 22px 0 0;
 					width: 35px;
+					@media #{$mobile}{
+					display: none;
+					}
 				}
 				&.user{
 					padding-left: 20px;

@@ -28,37 +28,54 @@ body {
   position: relative;
 }
 
-/* line 8, ../sass/_containers.scss */
+@media only screen and (max-width: 640px) {
+  /* line 7, ../sass/_containers.scss */
+  .container {
+    width: 100%;
+  }
+}
+
+/* line 13, ../sass/_containers.scss */
 .container-small {
   max-width: 900px;
 }
 
-/* line 12, ../sass/_containers.scss */
+/* line 17, ../sass/_containers.scss */
 .upper {
   margin: 20px auto;
 }
-/* line 14, ../sass/_containers.scss */
+/* line 19, ../sass/_containers.scss */
 .upper h3 {
   margin: 15 auto;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 19, ../sass/_containers.scss */
+/* line 24, ../sass/_containers.scss */
 .upper p {
   font-size: 12px;
   margin: 0 auto 10px 0;
   text-align: center;
 }
 
-/* line 26, ../sass/_containers.scss */
+/* line 31, ../sass/_containers.scss */
 .whiteBackground {
   background: white;
   border: 1px solid #d0d0d0;
   border-radius: 4px 4px 0 0;
   padding: 42px;
 }
+@media only screen and (max-width: 640px) {
+  /* line 31, ../sass/_containers.scss */
+  .whiteBackground {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    width: 100%;
+  }
+}
 
-/* line 33, ../sass/_containers.scss */
+/* line 46, ../sass/_containers.scss */
 .bigBlue, #main #orders form h3, #main #budgets form h3 {
   color: #2f66b5;
   font-weight: 300;
@@ -66,7 +83,7 @@ body {
   text-transform: uppercase;
 }
 
-/* line 40, ../sass/_containers.scss */
+/* line 53, ../sass/_containers.scss */
 .greyBackground {
   background: whitesmoke;
   border: 1px solid #d0d0d0;
@@ -74,7 +91,7 @@ body {
   box-shadow: inset 0 1px 2px #d1d1d1;
   padding: 42px;
 }
-/* line 46, ../sass/_containers.scss */
+/* line 59, ../sass/_containers.scss */
 .greyBackground h3 {
   color: #2f66b5;
   font-weight: 300;
@@ -82,13 +99,13 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 53, ../sass/_containers.scss */
+/* line 66, ../sass/_containers.scss */
 .greyBackground p {
   color: #191919;
   font-size: 12px;
   text-align: center;
 }
-/* line 57, ../sass/_containers.scss */
+/* line 70, ../sass/_containers.scss */
 .greyBackground p a {
   color: #487fcf;
   text-decoration: none;
@@ -306,6 +323,23 @@ header nav .phone_support {
   }
 }
 /* line 18, ../sass/_header.scss */
+header nav #menu_nav_mobile {
+  background: url('/img/menu_mob.png?1384552088') no-repeat;
+  background-size: cover;
+  display: none;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 24px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 18, ../sass/_header.scss */
+  header nav #menu_nav_mobile {
+    display: block;
+  }
+}
+/* line 31, ../sass/_header.scss */
 header nav ul {
   display: inline-block;
   margin: 0;
@@ -315,12 +349,21 @@ header nav ul {
   z-index: 1;
 }
 @media only screen and (max-width: 640px) {
-  /* line 18, ../sass/_header.scss */
+  /* line 31, ../sass/_header.scss */
   header nav ul {
+    background: #414a51;
+    color: #ccc;
     display: none;
+    height: 90px;
   }
 }
-/* line 28, ../sass/_header.scss */
+@media only screen and (max-width: 640px) {
+  /* line 44, ../sass/_header.scss */
+  header nav ul.visible {
+    display: block;
+  }
+}
+/* line 49, ../sass/_header.scss */
 header nav ul li {
   display: inline-block;
   -webkit-transition: all 250ms;
@@ -329,7 +372,7 @@ header nav ul li {
   transition: all 250ms;
   vertical-align: top;
 }
-/* line 35, ../sass/_header.scss */
+/* line 56, ../sass/_header.scss */
 header nav ul li.home {
   background: url('/img/img_02.png?1387050038') no-repeat;
   background-position: 6px 6px;
@@ -339,12 +382,18 @@ header nav ul li.home {
   padding: 0 22px 0 0;
   width: 35px;
 }
-/* line 44, ../sass/_header.scss */
+@media only screen and (max-width: 640px) {
+  /* line 56, ../sass/_header.scss */
+  header nav ul li.home {
+    display: none;
+  }
+}
+/* line 68, ../sass/_header.scss */
 header nav ul li.user {
   padding-left: 20px;
   position: relative;
 }
-/* line 47, ../sass/_header.scss */
+/* line 71, ../sass/_header.scss */
 header nav ul li.user img {
   border-radius: 50%;
   left: 0;
@@ -352,34 +401,34 @@ header nav ul li.user img {
   position: absolute;
   top: 5px;
 }
-/* line 54, ../sass/_header.scss */
+/* line 78, ../sass/_header.scss */
 header nav ul li.user div {
   display: none;
 }
-/* line 57, ../sass/_header.scss */
+/* line 81, ../sass/_header.scss */
 header nav ul li.user.active {
   background: #1d1f23;
   box-shadow: 0 0 10px #1b1f22;
 }
-/* line 60, ../sass/_header.scss */
+/* line 84, ../sass/_header.scss */
 header nav ul li.user.active div {
   display: block;
   text-align: left;
 }
-/* line 63, ../sass/_header.scss */
+/* line 87, ../sass/_header.scss */
 header nav ul li.user.active div a {
   outline: 1px #1b1f22;
 }
-/* line 65, ../sass/_header.scss */
+/* line 89, ../sass/_header.scss */
 header nav ul li.user.active div a:hover {
   background: #212528;
 }
-/* line 72, ../sass/_header.scss */
+/* line 96, ../sass/_header.scss */
 header nav ul li.active, header nav ul li:hover {
   box-shadow: inset 0 2px 0 #2f66b5;
   color: white;
 }
-/* line 76, ../sass/_header.scss */
+/* line 100, ../sass/_header.scss */
 header nav ul li a {
   color: inherit;
   display: block;
@@ -387,7 +436,7 @@ header nav ul li a {
   text-align: center;
   text-decoration: none;
 }
-/* line 86, ../sass/_header.scss */
+/* line 110, ../sass/_header.scss */
 header .header_wrapper {
   background-color: #feffff;
   *zoom: 1;
@@ -403,12 +452,12 @@ header .header_wrapper {
   width: 100%;
 }
 @media only screen and (max-width: 640px) {
-  /* line 86, ../sass/_header.scss */
+  /* line 110, ../sass/_header.scss */
   header .header_wrapper {
     display: block;
   }
 }
-/* line 95, ../sass/_header.scss */
+/* line 119, ../sass/_header.scss */
 header .header_wrapper .section {
   box-shadow: inset -1px 0 0 #e1e1e1;
   display: inline-block;
@@ -418,34 +467,34 @@ header .header_wrapper .section {
   width: 25%;
 }
 @media only screen and (max-width: 640px) {
-  /* line 95, ../sass/_header.scss */
+  /* line 119, ../sass/_header.scss */
   header .header_wrapper .section {
     display: block;
     box-shadow: inset 0 -1px 0 #e1e1e1;
     width: 100%;
   }
 }
-/* line 107, ../sass/_header.scss */
+/* line 131, ../sass/_header.scss */
 header .header_wrapper .section.logo {
   background: url('/img/logo.png?1387050038') no-repeat;
   background-position: center center;
 }
-/* line 111, ../sass/_header.scss */
+/* line 135, ../sass/_header.scss */
 header .header_wrapper .section.print_now {
   background: url('/img/img_05.png?1387050038') no-repeat;
   background-position: 4px center;
 }
-/* line 115, ../sass/_header.scss */
+/* line 139, ../sass/_header.scss */
 header .header_wrapper .section.create_budget {
   background: url('/img/img_03.png?1387050038') no-repeat;
   background-position: 4px center;
 }
-/* line 119, ../sass/_header.scss */
+/* line 143, ../sass/_header.scss */
 header .header_wrapper .section.faq {
   background: url('/img/img_04.png?1387050038') no-repeat;
   background-position: 4px center;
 }
-/* line 123, ../sass/_header.scss */
+/* line 147, ../sass/_header.scss */
 header .header_wrapper .section a {
   color: inherit;
   display: block;
@@ -460,26 +509,26 @@ header .header_wrapper .section a {
   bottom: 0;
   left: 0;
 }
-/* line 133, ../sass/_header.scss */
+/* line 157, ../sass/_header.scss */
 header .header_wrapper .section a span {
   display: block;
   text-align: left;
 }
-/* line 136, ../sass/_header.scss */
+/* line 160, ../sass/_header.scss */
 header .header_wrapper .section a span:first-of-type {
   font-weight: bold;
 }
-/* line 142, ../sass/_header.scss */
+/* line 166, ../sass/_header.scss */
 header .header_wrapper .index_mobile {
   display: none;
 }
 @media only screen and (max-width: 640px) {
-  /* line 142, ../sass/_header.scss */
+  /* line 166, ../sass/_header.scss */
   header .header_wrapper .index_mobile {
     display: block;
   }
 }
-/* line 147, ../sass/_header.scss */
+/* line 171, ../sass/_header.scss */
 header .header_wrapper .index_mobile img {
   width: 100%;
 }
@@ -737,11 +786,11 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 640px) {
   /* line 1, ../sass/sections/_login.scss */
   #main #login {
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    padding: 10px;
-    width: 100%;
+    height: calc(100% - 122px);
+    position: absolute;
+    text-align: center;
+    top: 122px;
+    z-index: 10000;
   }
 }
 /* line 9, ../sass/sections/_login.scss */
@@ -756,17 +805,25 @@ header .header_wrapper .index_mobile img {
 #main #login form {
   width: 250px;
 }
-/* line 18, ../sass/sections/_login.scss */
+@media only screen and (max-width: 640px) {
+  /* line 16, ../sass/sections/_login.scss */
+  #main #login form {
+    margin: 0 auto;
+    text-align: left;
+    width: 80%;
+  }
+}
+/* line 23, ../sass/sections/_login.scss */
 #main #login form label {
   color: #999;
   font-weight: normal;
 }
-/* line 22, ../sass/sections/_login.scss */
+/* line 27, ../sass/sections/_login.scss */
 #main #login form input {
   display: block;
   width: 100%;
 }
-/* line 30, ../sass/sections/_login.scss */
+/* line 35, ../sass/sections/_login.scss */
 #main #login a {
   color: #999;
   font-size: 0.55em;
@@ -1108,7 +1165,15 @@ header .header_wrapper .index_mobile img {
 #main #budgets {
   padding: 0;
 }
-/* line 6, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 640px) {
+  /* line 1, ../sass/sections/_budgets.scss */
+  #main #budgets {
+    min-height: calc(100% - 122px);
+    position: absolute;
+    top: 122px;
+  }
+}
+/* line 11, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo {
   color: inherit;
   display: inline-block;
@@ -1119,92 +1184,92 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 170px;
 }
-/* line 15, ../sass/sections/_budgets.scss */
+/* line 20, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo img, #main #budgets .product_photo span {
   display: block;
 }
-/* line 18, ../sass/sections/_budgets.scss */
+/* line 23, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo span {
   font-size: 12px;
 }
-/* line 21, ../sass/sections/_budgets.scss */
+/* line 26, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo img {
   min-height: 120px;
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 27, ../sass/sections/_budgets.scss */
+/* line 32, ../sass/sections/_budgets.scss */
 #main #budgets form {
   padding: 42px;
 }
-/* line 29, ../sass/sections/_budgets.scss */
+/* line 34, ../sass/sections/_budgets.scss */
 #main #budgets form h3 {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 35, ../sass/sections/_budgets.scss */
+/* line 40, ../sass/sections/_budgets.scss */
 #main #budgets form .graphic_design, #main #budgets form .attach_file {
   border-bottom: 1px solid #ececec;
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
-/* line 39, ../sass/sections/_budgets.scss */
+/* line 44, ../sass/sections/_budgets.scss */
 #main #budgets form .graphic_design div, #main #budgets form .attach_file div {
   display: inline-block;
   vertical-align: top;
   width: 50%;
 }
-/* line 43, ../sass/sections/_budgets.scss */
+/* line 48, ../sass/sections/_budgets.scss */
 #main #budgets form .graphic_design div label, #main #budgets form .attach_file div label {
   padding: 0 20px 0 10px;
 }
-/* line 49, ../sass/sections/_budgets.scss */
+/* line 54, ../sass/sections/_budgets.scss */
 #main #budgets form .attach_file p {
   display: inline;
   font-size: 12px;
   padding-right: 20px;
 }
-/* line 56, ../sass/sections/_budgets.scss */
+/* line 61, ../sass/sections/_budgets.scss */
 #main #budgets form .details div {
   display: inline-block;
   padding-right: 25px;
   width: 33.33333%;
 }
-/* line 60, ../sass/sections/_budgets.scss */
+/* line 65, ../sass/sections/_budgets.scss */
 #main #budgets form .details div select, #main #budgets form .details div label {
   display: block;
   width: 100%;
 }
-/* line 65, ../sass/sections/_budgets.scss */
+/* line 70, ../sass/sections/_budgets.scss */
 #main #budgets form .details .no-budgetable {
   display: block;
   padding: 10px 0;
   width: 100%;
 }
-/* line 69, ../sass/sections/_budgets.scss */
+/* line 74, ../sass/sections/_budgets.scss */
 #main #budgets form .details .no-budgetable input, #main #budgets form .details .no-budgetable textarea {
   width: 100%;
 }
-/* line 76, ../sass/sections/_budgets.scss */
+/* line 81, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list {
   display: inline-block;
   padding-right: 40px;
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 81, ../sass/sections/_budgets.scss */
+/* line 86, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl {
   font-size: 12px;
 }
-/* line 83, ../sass/sections/_budgets.scss */
+/* line 88, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl dt {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 14px;
   width: 80px;
 }
-/* line 89, ../sass/sections/_budgets.scss */
+/* line 94, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl dd {
   display: inline-block;
   padding-bottom: 14px;
@@ -1214,7 +1279,7 @@ header .header_wrapper .index_mobile img {
   width: -o-calc(100% - 80px);
   width: calc(100% - 80px);
 }
-/* line 96, ../sass/sections/_budgets.scss */
+/* line 101, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list .modify {
   border-bottom: 1px dotted #34ad65;
   color: #34ad65;
@@ -1222,17 +1287,17 @@ header .header_wrapper .index_mobile img {
   margin: 6px 0 0 0;
   text-decoration: none;
 }
-/* line 104, ../sass/sections/_budgets.scss */
+/* line 109, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget {
   display: inline-block;
   vertical-align: top;
   width: 66.66667%;
 }
-/* line 108, ../sass/sections/_budgets.scss */
+/* line 113, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget p {
   font-size: 12px;
 }
-/* line 111, ../sass/sections/_budgets.scss */
+/* line 116, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget #cost {
   color: #2f66b5;
   display: block;
@@ -1281,13 +1346,22 @@ header .header_wrapper .index_mobile img {
 #main #about-us div#right img {
   margin: 0 0 20px 35px;
 }
-/* line 2, ../sass/sections/_faq.scss */
+@media only screen and (max-width: 640px) {
+  /* line 1, ../sass/sections/_faq.scss */
+  #main #faq {
+    min-height: calc(100% - 122px);
+    position: absolute;
+    top: 122px;
+    z-index: 10000;
+  }
+}
+/* line 8, ../sass/sections/_faq.scss */
 #main #faq .faq {
   border-bottom: 1px solid #e2e2e2;
   margin: 0 0 20px 0;
   padding: 0 0 20px 0;
 }
-/* line 6, ../sass/sections/_faq.scss */
+/* line 12, ../sass/sections/_faq.scss */
 #main #faq .faq .question {
   background: url('/img/img_04_G.png?1390137124') no-repeat center left;
   color: #2f66b5;
@@ -1298,7 +1372,7 @@ header .header_wrapper .index_mobile img {
   padding: 0 0 0 40px;
   text-transform: uppercase;
 }
-/* line 16, ../sass/sections/_faq.scss */
+/* line 22, ../sass/sections/_faq.scss */
 #main #faq .faq .answer {
   background: url('/img/enter-arrow.png?1390137338') no-repeat top left;
   color: #666;
@@ -1306,6 +1380,12 @@ header .header_wrapper .index_mobile img {
   line-height: 1.5em;
   margin: 0 0 0 40px;
   padding: 0 0 0 25px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 22, ../sass/sections/_faq.scss */
+  #main #faq .faq .answer {
+    padding: 0 25px;
+  }
 }
 /* line 2, ../sass/sections/_contact.scss */
 #main #contact h3 {

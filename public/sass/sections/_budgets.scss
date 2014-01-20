@@ -1,5 +1,10 @@
 #budgets{
 	padding: 0;
+	@media #{$mobile}{
+		min-height: calc(100% - 122px);
+		position: absolute;
+		top: 122px;
+	}
 	nav.steps{
 		@extend .tabSteps; // _ui.scss
 	}
