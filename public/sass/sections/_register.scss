@@ -1,4 +1,10 @@
 #register{
+	@media #{$mobile}{
+		min-height: calc(100% - 122px);
+		position: absolute;
+		text-align: center;
+		top: 122px;
+	}
 	.title{
 		color: $blue;
 		font-size: 1em;
@@ -25,6 +31,12 @@
 				display: inline-block;
 				padding-right: 30px;
 				vertical-align: top;
+				width: 25%;
+				@media #{$mobile}{
+					margin: 0 auto;
+					text-align: left;
+					width: 80%;
+				}
 				label, input{
 					width: 100%;
 					&[type='checkbox']{
@@ -37,7 +49,6 @@
 					font-size: $fontSizeXSmall;
 					padding: 0 10px;
 				}
-				width: 25%;
 			}
 		}
 		.row-2{
@@ -45,6 +56,11 @@
 				display: block;
 				padding-bottom: 20px;
 				width: 50%;
+				@media #{$mobile}{
+					margin: 0 auto;
+					text-align: left;
+					width: 80%;
+				}
 				input{
 					margin-bottom: 20px;
 				}

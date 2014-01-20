@@ -46,7 +46,7 @@
 			</nav>
 			<div class='header_wrapper'>
 				<div class='container'>
-					<div class='section logo'></div>
+					<div class='section logo'><a href='{{ URL::to('/') }}'></a></div>
 					<div class='index_mobile'>
 						<img src="img/main_img.jpg">
 					</div>

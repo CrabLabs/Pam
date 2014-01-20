@@ -1,8 +1,16 @@
 #about-us{
+	@media #{$mobile}{
+		min-height: calc(100% - 122px);
+		position: absolute;
+		top: 122px;
+	}
 	div{
 		display: inline-block;
 		&#left{
 			width: calc(100% - 250px);
+			@media #{$mobile}{
+				width: 100%;
+			}
 			h2{
 				color: $blue;
 				font-size: 1em;
@@ -29,6 +37,9 @@
 			padding: 50px 0 0 0;
 			vertical-align: top;
 			width: 250px;
+			@media #{$mobile}{
+				display: none;
+			}
 			img{
 				margin: 0 0 20px 35px;
 			}

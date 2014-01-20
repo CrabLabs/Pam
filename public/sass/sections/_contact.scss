@@ -1,4 +1,10 @@
 #contact{
+	@media #{$mobile}{
+		min-height: calc(100% - 122px);
+		position: absolute;
+		text-align: center;
+		top: 122px;
+	}
 	h3{
 		color: $blue;
 		font-size: 1em;
@@ -16,12 +22,25 @@
 		padding: 10px;
 		vertical-align: top;
 		width: 25%;
+		@media #{$mobile}{
+			display: block;
+			margin: 0 auto;
+			text-align: left;
+			width: 80%;
+		}
 		&.submit{
 			border-top: 1px solid rgb(234, 234, 234);
 			display: block;
 			width: 100%;
+			@media #{$mobile}{
+				border-top: 0;
+			}
 			input{
 				width: calc(25% - 20px);
+				@media #{$mobile}{
+					margin: 0 auto;
+					width: 80%;
+				}
 			}
 		}
 		label, input, textarea, select{
@@ -33,6 +52,9 @@
 			height: 80px;
 			resize: none;
 			width: calc(200% + 20px);
+			@media #{$mobile}{
+				width: 100%;
+			}
 		}
 	}
 }

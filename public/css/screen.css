@@ -722,7 +722,16 @@ header .header_wrapper .index_mobile img {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-/* line 2, ../sass/sections/_register.scss */
+@media only screen and (max-width: 640px) {
+  /* line 1, ../sass/sections/_register.scss */
+  #main #register {
+    min-height: calc(100% - 122px);
+    position: absolute;
+    text-align: center;
+    top: 122px;
+  }
+}
+/* line 8, ../sass/sections/_register.scss */
 #main #register .title {
   color: #2f66b5;
   font-size: 1em;
@@ -730,12 +739,12 @@ header .header_wrapper .index_mobile img {
   margin: 15px 0;
   text-transform: uppercase;
 }
-/* line 9, ../sass/sections/_register.scss */
+/* line 15, ../sass/sections/_register.scss */
 #main #register .section {
   border-bottom: 1px solid #e1e1e1;
   margin: 25px 0 30px 0;
 }
-/* line 12, ../sass/sections/_register.scss */
+/* line 18, ../sass/sections/_register.scss */
 #main #register .section h3 {
   color: #2f66b5;
   font-size: 12px;
@@ -743,43 +752,59 @@ header .header_wrapper .index_mobile img {
   margin: 15px 0;
   text-transform: uppercase;
 }
-/* line 19, ../sass/sections/_register.scss */
+/* line 25, ../sass/sections/_register.scss */
 #main #register .section .account_type label {
   padding: 0 15px 0 10px;
 }
-/* line 22, ../sass/sections/_register.scss */
+/* line 28, ../sass/sections/_register.scss */
 #main #register .section .row, #main #register .section .row-2 {
   padding-bottom: 20px;
 }
-/* line 24, ../sass/sections/_register.scss */
+/* line 30, ../sass/sections/_register.scss */
 #main #register .section .row div, #main #register .section .row-2 div {
   display: inline-block;
   padding-right: 30px;
   vertical-align: top;
   width: 25%;
 }
-/* line 28, ../sass/sections/_register.scss */
+@media only screen and (max-width: 640px) {
+  /* line 30, ../sass/sections/_register.scss */
+  #main #register .section .row div, #main #register .section .row-2 div {
+    margin: 0 auto;
+    text-align: left;
+    width: 80%;
+  }
+}
+/* line 40, ../sass/sections/_register.scss */
 #main #register .section .row div label, #main #register .section .row div input, #main #register .section .row-2 div label, #main #register .section .row-2 div input {
   width: 100%;
 }
-/* line 30, ../sass/sections/_register.scss */
+/* line 42, ../sass/sections/_register.scss */
 #main #register .section .row div label[type='checkbox'], #main #register .section .row div input[type='checkbox'], #main #register .section .row-2 div label[type='checkbox'], #main #register .section .row-2 div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
-/* line 36, ../sass/sections/_register.scss */
+/* line 48, ../sass/sections/_register.scss */
 #main #register .section .row div span, #main #register .section .row-2 div span {
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 44, ../sass/sections/_register.scss */
+/* line 55, ../sass/sections/_register.scss */
 #main #register .section .row-2 div {
   display: block;
   padding-bottom: 20px;
   width: 50%;
 }
-/* line 48, ../sass/sections/_register.scss */
+@media only screen and (max-width: 640px) {
+  /* line 55, ../sass/sections/_register.scss */
+  #main #register .section .row-2 div {
+    margin: 0 auto;
+    text-align: left;
+    width: 80%;
+  }
+}
+/* line 64, ../sass/sections/_register.scss */
 #main #register .section .row-2 div input {
   margin-bottom: 20px;
 }
@@ -939,33 +964,47 @@ header .header_wrapper .index_mobile img {
 #main #edit aside ul li.active a {
   color: #2259a6;
 }
-/* line 2, ../sass/sections/_services.scss */
+@media only screen and (max-width: 640px) {
+  /* line 1, ../sass/sections/_services.scss */
+  #main #services {
+    min-height: calc(100% - 122px);
+    position: absolute;
+    top: 122px;
+  }
+}
+/* line 7, ../sass/sections/_services.scss */
 #main #services .service {
   border-bottom: 1px solid #eaeaea;
   margin: 0 0 30px 0;
   padding: 0 0 30px 0;
 }
-/* line 6, ../sass/sections/_services.scss */
+/* line 11, ../sass/sections/_services.scss */
 #main #services .service:last-of-type {
   margin: 0;
 }
-/* line 9, ../sass/sections/_services.scss */
+/* line 14, ../sass/sections/_services.scss */
 #main #services .service div {
   display: inline-block;
   vertical-align: top;
 }
-/* line 12, ../sass/sections/_services.scss */
+/* line 17, ../sass/sections/_services.scss */
 #main #services .service div:nth-of-type(1) {
   padding-right: 30px;
 }
-/* line 15, ../sass/sections/_services.scss */
+/* line 20, ../sass/sections/_services.scss */
 #main #services .service div:nth-of-type(2) {
   width: -webkit-calc(100% - 250px);
   width: -moz-calc(100% - 250px);
   width: -o-calc(100% - 250px);
   width: calc(100% - 250px);
 }
-/* line 18, ../sass/sections/_services.scss */
+@media only screen and (max-width: 640px) {
+  /* line 20, ../sass/sections/_services.scss */
+  #main #services .service div:nth-of-type(2) {
+    width: 100%;
+  }
+}
+/* line 26, ../sass/sections/_services.scss */
 #main #services .service div h3 {
   color: #2f66b5;
   font-size: 1em;
@@ -973,13 +1012,13 @@ header .header_wrapper .index_mobile img {
   margin: 2px 0;
   text-transform: uppercase;
 }
-/* line 25, ../sass/sections/_services.scss */
+/* line 33, ../sass/sections/_services.scss */
 #main #services .service div p {
   color: #666;
   font-size: 0.75em;
   line-height: 1.5em;
 }
-/* line 30, ../sass/sections/_services.scss */
+/* line 38, ../sass/sections/_services.scss */
 #main #services .service div .similar_link {
   background: #bbb;
   border-radius: 2px;
@@ -992,10 +1031,16 @@ header .header_wrapper .index_mobile img {
   text-transform: uppercase;
   width: 190px;
 }
-/* line 41, ../sass/sections/_services.scss */
+/* line 49, ../sass/sections/_services.scss */
 #main #services .service div .similar_link:hover {
   background: #2f66b5;
   cursor: pointer;
+}
+@media only screen and (max-width: 640px) {
+  /* line 57, ../sass/sections/_services.scss */
+  #main .greyBackground {
+    display: none;
+  }
 }
 /* line 1, ../sass/sections/_orders.scss */
 #main #orders {
@@ -1304,15 +1349,29 @@ header .header_wrapper .index_mobile img {
   font-size: 3em;
   margin: 15px 0;
 }
-/* line 2, ../sass/sections/_about-us.scss */
+@media only screen and (max-width: 640px) {
+  /* line 1, ../sass/sections/_about-us.scss */
+  #main #about-us {
+    min-height: calc(100% - 122px);
+    position: absolute;
+    top: 122px;
+  }
+}
+/* line 7, ../sass/sections/_about-us.scss */
 #main #about-us div {
   display: inline-block;
 }
-/* line 4, ../sass/sections/_about-us.scss */
+/* line 9, ../sass/sections/_about-us.scss */
 #main #about-us div#left {
   width: calc(100% - 250px);
 }
-/* line 6, ../sass/sections/_about-us.scss */
+@media only screen and (max-width: 640px) {
+  /* line 9, ../sass/sections/_about-us.scss */
+  #main #about-us div#left {
+    width: 100%;
+  }
+}
+/* line 14, ../sass/sections/_about-us.scss */
 #main #about-us div#left h2 {
   color: #2f66b5;
   font-size: 1em;
@@ -1320,7 +1379,7 @@ header .header_wrapper .index_mobile img {
   margin: 15px 0;
   text-transform: uppercase;
 }
-/* line 13, ../sass/sections/_about-us.scss */
+/* line 21, ../sass/sections/_about-us.scss */
 #main #about-us div#left h3 {
   color: #2f66b5;
   font-size: 0.8em;
@@ -1329,20 +1388,26 @@ header .header_wrapper .index_mobile img {
   margin: 2px 0;
   text-transform: uppercase;
 }
-/* line 21, ../sass/sections/_about-us.scss */
+/* line 29, ../sass/sections/_about-us.scss */
 #main #about-us div#left p {
   color: #666;
   font-size: 0.75em;
   line-height: 1.5em;
   margin: 0 0 20px 0;
 }
-/* line 28, ../sass/sections/_about-us.scss */
+/* line 36, ../sass/sections/_about-us.scss */
 #main #about-us div#right {
   padding: 50px 0 0 0;
   vertical-align: top;
   width: 250px;
 }
-/* line 32, ../sass/sections/_about-us.scss */
+@media only screen and (max-width: 640px) {
+  /* line 36, ../sass/sections/_about-us.scss */
+  #main #about-us div#right {
+    display: none;
+  }
+}
+/* line 43, ../sass/sections/_about-us.scss */
 #main #about-us div#right img {
   margin: 0 0 20px 35px;
 }
@@ -1387,7 +1452,16 @@ header .header_wrapper .index_mobile img {
     padding: 0 25px;
   }
 }
-/* line 2, ../sass/sections/_contact.scss */
+@media only screen and (max-width: 640px) {
+  /* line 1, ../sass/sections/_contact.scss */
+  #main #contact {
+    min-height: calc(100% - 122px);
+    position: absolute;
+    text-align: center;
+    top: 122px;
+  }
+}
+/* line 8, ../sass/sections/_contact.scss */
 #main #contact h3 {
   color: #2f66b5;
   font-size: 1em;
@@ -1395,40 +1469,68 @@ header .header_wrapper .index_mobile img {
   margin: 15px 0;
   text-transform: uppercase;
 }
-/* line 9, ../sass/sections/_contact.scss */
+/* line 15, ../sass/sections/_contact.scss */
 #main #contact .subtitle {
   color: #999;
   font-size: 0.8em;
   font-weight: normal;
 }
-/* line 14, ../sass/sections/_contact.scss */
+/* line 20, ../sass/sections/_contact.scss */
 #main #contact div {
   display: inline-block;
   padding: 10px;
   vertical-align: top;
   width: 25%;
 }
-/* line 19, ../sass/sections/_contact.scss */
+@media only screen and (max-width: 640px) {
+  /* line 20, ../sass/sections/_contact.scss */
+  #main #contact div {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    width: 80%;
+  }
+}
+/* line 31, ../sass/sections/_contact.scss */
 #main #contact div.submit {
   border-top: 1px solid #eaeaea;
   display: block;
   width: 100%;
 }
-/* line 23, ../sass/sections/_contact.scss */
+@media only screen and (max-width: 640px) {
+  /* line 31, ../sass/sections/_contact.scss */
+  #main #contact div.submit {
+    border-top: 0;
+  }
+}
+/* line 38, ../sass/sections/_contact.scss */
 #main #contact div.submit input {
   width: calc(25% - 20px);
 }
-/* line 27, ../sass/sections/_contact.scss */
+@media only screen and (max-width: 640px) {
+  /* line 38, ../sass/sections/_contact.scss */
+  #main #contact div.submit input {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+/* line 46, ../sass/sections/_contact.scss */
 #main #contact div label, #main #contact div input, #main #contact div textarea, #main #contact div select {
   display: block;
   margin: 10px 0;
   width: 100%;
 }
-/* line 32, ../sass/sections/_contact.scss */
+/* line 51, ../sass/sections/_contact.scss */
 #main #contact div textarea {
   height: 80px;
   resize: none;
   width: calc(200% + 20px);
+}
+@media only screen and (max-width: 640px) {
+  /* line 51, ../sass/sections/_contact.scss */
+  #main #contact div textarea {
+    width: 100%;
+  }
 }
 
 /* line 1, ../sass/_footer.scss */
