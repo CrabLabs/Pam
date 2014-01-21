@@ -9,38 +9,18 @@
 	<div id='left'>
 		<h2>Acerca de nosotros</h2>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Con más de 25 años dedicados a la gráfica, estamos preparados para brindarle un excelente producto complementado con un gran servicio. 
+			Le ofrecemos todo en cuanto a impresión offset y digital.
 		</p>
+		<h3>Impresión offset</h3>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Folletos y brochures, volantes, afiches, invitaciones, sobres especiales, cartas y comunicados. 
+			Stationary (papelería comercial: hojas carta, sobres, carpetas, carpetines, tarjetas de presentación.
+			Packaging, estuches, envases, stickers, etiquetas, autoadhesivos. Libros de texto, memorias y balances anuales. Programas, revistas, libros, libros de arte y catálogos. Terminaciones con laminado mate o brillo y barniz UV.
 		</p>
-		<h3>Calidad</h3>
+		<h3>Impresión digital</h3>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-		<h3>Experiencia</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Folletos, volantes, tarjetas personales, diplomas y menús. Banners y roll ups. Gigantografías: posters, banners, afiches y fotografías en grandes tamaños. Soportes rígidos. Autoadhesivos. Calidad fotográfica en papeles especiales. Asistencia especializada en diseño grafico a nuestros clientes.
 		</p>
 	</div>
 	<div id='right'>
