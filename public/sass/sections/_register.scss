@@ -1,6 +1,6 @@
 #register{
 	@media #{$mobile}{
-		min-height: calc(100% - 122px);
+		min-height: 200%;
 		position: absolute;
 		text-align: center;
 		top: 122px;
@@ -34,8 +34,9 @@
 				width: 25%;
 				@media #{$mobile}{
 					margin: 0 auto;
+					padding-right: 0;
 					text-align: left;
-					width: 80%;
+					width: 100%;
 				}
 				label, input{
 					width: 100%;
@@ -59,10 +60,15 @@
 				@media #{$mobile}{
 					margin: 0 auto;
 					text-align: left;
-					width: 80%;
+					width: 100%;
 				}
 				input{
 					margin-bottom: 20px;
+				}
+				select{
+					@media #{$mobile}{
+						width: 40%;
+					}
 				}
 			}
 		}

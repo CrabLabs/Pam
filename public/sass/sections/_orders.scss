@@ -1,7 +1,7 @@
 #orders{
 	padding: 0;
 	@media #{$mobile}{
-		min-height: calc(100% - 122px);
+		min-height: 200%;
 		position: absolute;
 		top: 122px;
 	}
@@ -97,7 +97,7 @@
 				padding-right: 25px;
 				width: (100% / 4);
 				@media #{$mobile}{
-					width: (100% / 3);
+					width: 50%;
 				}
 				select, label{
 					display: block;
@@ -118,6 +118,7 @@
 				}
 				div{
 					@media #{$mobile}{
+						padding-right: 0;
 						width: 100%;
 					}
 					input{
@@ -135,6 +136,7 @@
 				vertical-align: top;
 				width: 50%;
 				@media #{$mobile}{
+					padding-right: 0;
 					width: 100%;
 				}
 				label, input{

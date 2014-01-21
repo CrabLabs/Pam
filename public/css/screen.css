@@ -725,7 +725,7 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_register.scss */
   #main #register {
-    min-height: calc(100% - 122px);
+    min-height: 200%;
     position: absolute;
     text-align: center;
     top: 122px;
@@ -771,47 +771,54 @@ header .header_wrapper .index_mobile img {
   /* line 30, ../sass/sections/_register.scss */
   #main #register .section .row div, #main #register .section .row-2 div {
     margin: 0 auto;
+    padding-right: 0;
     text-align: left;
-    width: 80%;
+    width: 100%;
   }
 }
-/* line 40, ../sass/sections/_register.scss */
+/* line 41, ../sass/sections/_register.scss */
 #main #register .section .row div label, #main #register .section .row div input, #main #register .section .row-2 div label, #main #register .section .row-2 div input {
   width: 100%;
 }
-/* line 42, ../sass/sections/_register.scss */
+/* line 43, ../sass/sections/_register.scss */
 #main #register .section .row div label[type='checkbox'], #main #register .section .row div input[type='checkbox'], #main #register .section .row-2 div label[type='checkbox'], #main #register .section .row-2 div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
-/* line 48, ../sass/sections/_register.scss */
+/* line 49, ../sass/sections/_register.scss */
 #main #register .section .row div span, #main #register .section .row-2 div span {
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 55, ../sass/sections/_register.scss */
+/* line 56, ../sass/sections/_register.scss */
 #main #register .section .row-2 div {
   display: block;
   padding-bottom: 20px;
   width: 50%;
 }
 @media only screen and (max-width: 760px) {
-  /* line 55, ../sass/sections/_register.scss */
+  /* line 56, ../sass/sections/_register.scss */
   #main #register .section .row-2 div {
     margin: 0 auto;
     text-align: left;
-    width: 80%;
+    width: 100%;
   }
 }
-/* line 64, ../sass/sections/_register.scss */
+/* line 65, ../sass/sections/_register.scss */
 #main #register .section .row-2 div input {
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 760px) {
+  /* line 68, ../sass/sections/_register.scss */
+  #main #register .section .row-2 div select {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_login.scss */
   #main #login {
-    height: calc(100% - 122px);
+    height: 200%;
     position: absolute;
     text-align: center;
     top: 122px;
@@ -1015,7 +1022,7 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_services.scss */
   #main #services {
-    min-height: calc(100% - 122px);
+    min-height: 200%;
     position: absolute;
     top: 122px;
   }
@@ -1097,7 +1104,7 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_orders.scss */
   #main #orders {
-    min-height: calc(100% - 122px);
+    min-height: 200%;
     position: absolute;
     top: 122px;
   }
@@ -1215,7 +1222,7 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 95, ../sass/sections/_orders.scss */
   #main #orders form .details div {
-    width: 33.33333%;
+    width: 50%;
   }
 }
 /* line 102, ../sass/sections/_orders.scss */
@@ -1242,19 +1249,20 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 119, ../sass/sections/_orders.scss */
   #main #orders form .details.personal_details div {
+    padding-right: 0;
     width: 100%;
   }
 }
-/* line 123, ../sass/sections/_orders.scss */
+/* line 124, ../sass/sections/_orders.scss */
 #main #orders form .details.personal_details div input {
   display: block;
   width: 100%;
 }
-/* line 130, ../sass/sections/_orders.scss */
+/* line 131, ../sass/sections/_orders.scss */
 #main #orders form .shipping {
   padding: 20px 0;
 }
-/* line 132, ../sass/sections/_orders.scss */
+/* line 133, ../sass/sections/_orders.scss */
 #main #orders form .shipping div {
   display: inline-block;
   padding-right: 30px;
@@ -1262,51 +1270,52 @@ header .header_wrapper .index_mobile img {
   width: 50%;
 }
 @media only screen and (max-width: 760px) {
-  /* line 132, ../sass/sections/_orders.scss */
+  /* line 133, ../sass/sections/_orders.scss */
   #main #orders form .shipping div {
+    padding-right: 0;
     width: 100%;
   }
 }
-/* line 140, ../sass/sections/_orders.scss */
+/* line 142, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label, #main #orders form .shipping div input {
   width: 100%;
 }
-/* line 142, ../sass/sections/_orders.scss */
+/* line 144, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label[type='checkbox'], #main #orders form .shipping div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
 @media only screen and (max-width: 760px) {
-  /* line 148, ../sass/sections/_orders.scss */
+  /* line 150, ../sass/sections/_orders.scss */
   #main #orders form .shipping div select {
     margin-bottom: 20px;
     padding-right: 10px;
     width: 40%;
   }
 }
-/* line 155, ../sass/sections/_orders.scss */
+/* line 157, ../sass/sections/_orders.scss */
 #main #orders form .shipping div input[name=billing_address] {
   margin-top: 10px;
 }
-/* line 158, ../sass/sections/_orders.scss */
+/* line 160, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label {
   display: block;
 }
-/* line 160, ../sass/sections/_orders.scss */
+/* line 162, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label[for=shipping_time_from] {
   margin-bottom: 10px;
 }
-/* line 163, ../sass/sections/_orders.scss */
+/* line 165, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label[for=same_billing_address] {
   display: inline;
 }
-/* line 167, ../sass/sections/_orders.scss */
+/* line 169, ../sass/sections/_orders.scss */
 #main #orders form .shipping div span {
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 175, ../sass/sections/_orders.scss */
+/* line 177, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div {
   display: inline-block;
   padding-right: 40px;
@@ -1314,23 +1323,23 @@ header .header_wrapper .index_mobile img {
   width: 33.33333%;
 }
 @media only screen and (max-width: 760px) {
-  /* line 175, ../sass/sections/_orders.scss */
+  /* line 177, ../sass/sections/_orders.scss */
   #main #orders .orders_step_4 .summary div {
     width: 100%;
   }
 }
-/* line 183, ../sass/sections/_orders.scss */
+/* line 185, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div dl {
   font-size: 12px;
 }
-/* line 185, ../sass/sections/_orders.scss */
+/* line 187, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div dl dt {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 14px;
   width: 80px;
 }
-/* line 191, ../sass/sections/_orders.scss */
+/* line 193, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div dl dd {
   display: inline-block;
   padding-bottom: 14px;
@@ -1340,7 +1349,7 @@ header .header_wrapper .index_mobile img {
   width: -o-calc(100% - 80px);
   width: calc(100% - 80px);
 }
-/* line 198, ../sass/sections/_orders.scss */
+/* line 200, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div .modify {
   border-bottom: 1px dotted #34ad65;
   color: #34ad65;
@@ -1355,7 +1364,7 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_budgets.scss */
   #main #budgets {
-    min-height: calc(100% - 122px);
+    min-height: 200%;
     position: absolute;
     top: 122px;
   }
@@ -1466,41 +1475,47 @@ header .header_wrapper .index_mobile img {
   padding-right: 25px;
   width: 33.33333%;
 }
-/* line 96, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 760px) {
+  /* line 92, ../sass/sections/_budgets.scss */
+  #main #budgets form .details div {
+    width: 50%;
+  }
+}
+/* line 99, ../sass/sections/_budgets.scss */
 #main #budgets form .details div select, #main #budgets form .details div label {
   display: block;
   width: 100%;
 }
-/* line 101, ../sass/sections/_budgets.scss */
+/* line 104, ../sass/sections/_budgets.scss */
 #main #budgets form .details .no-budgetable {
   display: block;
   padding: 10px 0;
   width: 100%;
 }
-/* line 105, ../sass/sections/_budgets.scss */
+/* line 108, ../sass/sections/_budgets.scss */
 #main #budgets form .details .no-budgetable input, #main #budgets form .details .no-budgetable textarea {
   resize: none;
   width: 100%;
 }
-/* line 113, ../sass/sections/_budgets.scss */
+/* line 116, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list {
   display: inline-block;
   padding-right: 40px;
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 118, ../sass/sections/_budgets.scss */
+/* line 121, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl {
   font-size: 12px;
 }
-/* line 120, ../sass/sections/_budgets.scss */
+/* line 123, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl dt {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 14px;
   width: 80px;
 }
-/* line 126, ../sass/sections/_budgets.scss */
+/* line 129, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl dd {
   display: inline-block;
   padding-bottom: 14px;
@@ -1510,7 +1525,7 @@ header .header_wrapper .index_mobile img {
   width: -o-calc(100% - 80px);
   width: calc(100% - 80px);
 }
-/* line 133, ../sass/sections/_budgets.scss */
+/* line 136, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list .modify {
   border-bottom: 1px dotted #34ad65;
   color: #34ad65;
@@ -1518,17 +1533,17 @@ header .header_wrapper .index_mobile img {
   margin: 6px 0 0 0;
   text-decoration: none;
 }
-/* line 141, ../sass/sections/_budgets.scss */
+/* line 144, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget {
   display: inline-block;
   vertical-align: top;
   width: 66.66667%;
 }
-/* line 145, ../sass/sections/_budgets.scss */
+/* line 148, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget p {
   font-size: 12px;
 }
-/* line 148, ../sass/sections/_budgets.scss */
+/* line 151, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget #cost {
   color: #2f66b5;
   display: block;
@@ -1641,7 +1656,7 @@ header .header_wrapper .index_mobile img {
 @media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_contact.scss */
   #main #contact {
-    min-height: calc(100% - 122px);
+    min-height: 200%;
     position: absolute;
     text-align: center;
     top: 122px;
