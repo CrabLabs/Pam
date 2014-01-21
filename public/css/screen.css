@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: container;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 12, ../sass/screen.scss */
   body {
     background: none;
@@ -28,7 +28,7 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 7, ../sass/_containers.scss */
   .container {
     width: 100%;
@@ -64,7 +64,7 @@ body {
   border-radius: 4px 4px 0 0;
   padding: 42px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 31, ../sass/_containers.scss */
   .whiteBackground {
     background: #fff;
@@ -316,7 +316,7 @@ header nav .phone_support {
   display: inline-block;
   padding: 10px 25px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 8, ../sass/_header.scss */
   header nav .phone_support {
     margin: 0 0 0 5px;
@@ -333,7 +333,7 @@ header nav #menu_nav_mobile {
   top: 5px;
   width: 24px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 18, ../sass/_header.scss */
   header nav #menu_nav_mobile {
     display: block;
@@ -348,7 +348,7 @@ header nav ul {
   right: 0;
   z-index: 1;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 31, ../sass/_header.scss */
   header nav ul {
     background: #414a51;
@@ -357,7 +357,7 @@ header nav ul {
     height: 90px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 44, ../sass/_header.scss */
   header nav ul.visible {
     display: block;
@@ -382,7 +382,7 @@ header nav ul li.home {
   padding: 0 22px 0 0;
   width: 35px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 56, ../sass/_header.scss */
   header nav ul li.home {
     display: none;
@@ -451,7 +451,7 @@ header .header_wrapper {
   height: 90px;
   width: 100%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 110, ../sass/_header.scss */
   header .header_wrapper {
     display: block;
@@ -466,7 +466,7 @@ header .header_wrapper .section {
   position: relative;
   width: 25%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 119, ../sass/_header.scss */
   header .header_wrapper .section {
     display: block;
@@ -522,7 +522,7 @@ header .header_wrapper .section a span:first-of-type {
 header .header_wrapper .index_mobile {
   display: none;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 166, ../sass/_header.scss */
   header .header_wrapper .index_mobile {
     display: block;
@@ -533,7 +533,7 @@ header .header_wrapper .index_mobile img {
   width: 100%;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_index.scss */
   #main #index {
     display: none;
@@ -722,7 +722,7 @@ header .header_wrapper .index_mobile img {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_register.scss */
   #main #register {
     min-height: calc(100% - 122px);
@@ -767,7 +767,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 25%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 30, ../sass/sections/_register.scss */
   #main #register .section .row div, #main #register .section .row-2 div {
     margin: 0 auto;
@@ -796,7 +796,7 @@ header .header_wrapper .index_mobile img {
   padding-bottom: 20px;
   width: 50%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 55, ../sass/sections/_register.scss */
   #main #register .section .row-2 div {
     margin: 0 auto;
@@ -808,7 +808,7 @@ header .header_wrapper .index_mobile img {
 #main #register .section .row-2 div input {
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_login.scss */
   #main #login {
     height: calc(100% - 122px);
@@ -830,7 +830,7 @@ header .header_wrapper .index_mobile img {
 #main #login form {
   width: 250px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 16, ../sass/sections/_login.scss */
   #main #login form {
     margin: 0 auto;
@@ -860,7 +860,7 @@ header .header_wrapper .index_mobile img {
   background: whitesmoke;
   padding: 0;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_edit.scss */
   #main #edit {
     min-height: calc(100% - 122px);
@@ -878,7 +878,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: -webkit-calc(100% - 180px);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 10, ../sass/sections/_edit.scss */
   #main #edit .edit-main {
     padding: 0;
@@ -927,7 +927,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 33.33333%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 48, ../sass/sections/_edit.scss */
   #main #edit .edit-main .section .row div, #main #edit .edit-main .section .row-2 div {
     margin: 10px 0;
@@ -955,7 +955,7 @@ header .header_wrapper .index_mobile img {
 #main #edit .edit-main .section .row-2 div {
   width: 50%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 74, ../sass/sections/_edit.scss */
   #main #edit .edit-main .section .row-2 div {
     width: 80%;
@@ -968,7 +968,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 180px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 83, ../sass/sections/_edit.scss */
   #main #edit aside {
     height: auto;
@@ -988,7 +988,7 @@ header .header_wrapper .index_mobile img {
   display: block;
   padding: 20px 15px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 97, ../sass/sections/_edit.scss */
   #main #edit aside ul li {
     border-bottom: none;
@@ -1012,7 +1012,7 @@ header .header_wrapper .index_mobile img {
 #main #edit aside ul li.active a {
   color: #2259a6;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_services.scss */
   #main #services {
     min-height: calc(100% - 122px);
@@ -1046,7 +1046,7 @@ header .header_wrapper .index_mobile img {
   width: -o-calc(100% - 250px);
   width: calc(100% - 250px);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 20, ../sass/sections/_services.scss */
   #main #services .service div:nth-of-type(2) {
     width: 100%;
@@ -1084,7 +1084,7 @@ header .header_wrapper .index_mobile img {
   background: #2f66b5;
   cursor: pointer;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 57, ../sass/sections/_services.scss */
   #main .greyBackground {
     display: none;
@@ -1094,7 +1094,7 @@ header .header_wrapper .index_mobile img {
 #main #orders {
   padding: 0;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_orders.scss */
   #main #orders {
     min-height: calc(100% - 122px);
@@ -1102,14 +1102,14 @@ header .header_wrapper .index_mobile img {
     top: 122px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 11, ../sass/sections/_orders.scss */
   #main #orders nav.steps ul li {
     font-size: 0.7em;
     height: 90px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 16, ../sass/sections/_orders.scss */
   #main #orders nav.steps ul li span {
     display: block;
@@ -1127,7 +1127,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 170px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 25, ../sass/sections/_orders.scss */
   #main #orders .product_photo {
     padding: 10px;
@@ -1152,7 +1152,7 @@ header .header_wrapper .index_mobile img {
 #main #orders form {
   padding: 42px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 50, ../sass/sections/_orders.scss */
   #main #orders form {
     margin: 0 auto;
@@ -1178,7 +1178,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 50%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 67, ../sass/sections/_orders.scss */
   #main #orders form .payment_options div, #main #orders form .graphic_design div, #main #orders form .attach_file div {
     display: block;
@@ -1196,7 +1196,7 @@ header .header_wrapper .index_mobile img {
   font-size: 12px;
   padding-right: 20px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 82, ../sass/sections/_orders.scss */
   #main #orders form .attach_file p {
     display: block;
@@ -1212,7 +1212,7 @@ header .header_wrapper .index_mobile img {
   padding-right: 25px;
   width: 25%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 95, ../sass/sections/_orders.scss */
   #main #orders form .details div {
     width: 33.33333%;
@@ -1233,13 +1233,13 @@ header .header_wrapper .index_mobile img {
 #main #orders form .details .no-budgetable input, #main #orders form .details .no-budgetable textarea {
   width: 100%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 115, ../sass/sections/_orders.scss */
   #main #orders form .details.personal_details {
     margin-bottom: 20px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 119, ../sass/sections/_orders.scss */
   #main #orders form .details.personal_details div {
     width: 100%;
@@ -1261,7 +1261,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 50%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 132, ../sass/sections/_orders.scss */
   #main #orders form .shipping div {
     width: 100%;
@@ -1277,7 +1277,7 @@ header .header_wrapper .index_mobile img {
   margin-right: 10px;
   width: auto;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 148, ../sass/sections/_orders.scss */
   #main #orders form .shipping div select {
     margin-bottom: 20px;
@@ -1313,7 +1313,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 33.33333%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 175, ../sass/sections/_orders.scss */
   #main #orders .orders_step_4 .summary div {
     width: 100%;
@@ -1352,7 +1352,7 @@ header .header_wrapper .index_mobile img {
 #main #budgets {
   padding: 0;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_budgets.scss */
   #main #budgets {
     min-height: calc(100% - 122px);
@@ -1360,14 +1360,14 @@ header .header_wrapper .index_mobile img {
     top: 122px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 11, ../sass/sections/_budgets.scss */
   #main #budgets nav.steps ul li {
     font-size: 0.7em;
     height: 90px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 16, ../sass/sections/_budgets.scss */
   #main #budgets nav.steps ul li span {
     display: block;
@@ -1385,7 +1385,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 170px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 25, ../sass/sections/_budgets.scss */
   #main #budgets .product_photo {
     padding: 10px;
@@ -1410,7 +1410,7 @@ header .header_wrapper .index_mobile img {
 #main #budgets form {
   padding: 42px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 50, ../sass/sections/_budgets.scss */
   #main #budgets form {
     margin: 0 auto;
@@ -1436,7 +1436,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 50%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 67, ../sass/sections/_budgets.scss */
   #main #budgets form .graphic_design div, #main #budgets form .attach_file div {
     display: block;
@@ -1454,7 +1454,7 @@ header .header_wrapper .index_mobile img {
   font-size: 12px;
   padding-right: 20px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 82, ../sass/sections/_budgets.scss */
   #main #budgets form .attach_file p {
     display: block;
@@ -1535,7 +1535,7 @@ header .header_wrapper .index_mobile img {
   font-size: 3em;
   margin: 15px 0;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_about-us.scss */
   #main #about-us {
     min-height: calc(100% - 122px);
@@ -1551,7 +1551,7 @@ header .header_wrapper .index_mobile img {
 #main #about-us div#left {
   width: calc(100% - 250px);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 9, ../sass/sections/_about-us.scss */
   #main #about-us div#left {
     width: 100%;
@@ -1587,7 +1587,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 250px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 36, ../sass/sections/_about-us.scss */
   #main #about-us div#right {
     display: none;
@@ -1597,7 +1597,7 @@ header .header_wrapper .index_mobile img {
 #main #about-us div#right img {
   margin: 0 0 20px 35px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_faq.scss */
   #main #faq {
     min-height: calc(100% - 122px);
@@ -1632,13 +1632,13 @@ header .header_wrapper .index_mobile img {
   margin: 0 0 0 40px;
   padding: 0 0 0 25px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 22, ../sass/sections/_faq.scss */
   #main #faq .faq .answer {
     padding: 0 25px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/sections/_contact.scss */
   #main #contact {
     min-height: calc(100% - 122px);
@@ -1668,7 +1668,7 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 25%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 20, ../sass/sections/_contact.scss */
   #main #contact div {
     display: block;
@@ -1683,7 +1683,7 @@ header .header_wrapper .index_mobile img {
   display: block;
   width: 100%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 31, ../sass/sections/_contact.scss */
   #main #contact div.submit {
     border-top: 0;
@@ -1693,7 +1693,7 @@ header .header_wrapper .index_mobile img {
 #main #contact div.submit input {
   width: calc(25% - 20px);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 38, ../sass/sections/_contact.scss */
   #main #contact div.submit input {
     margin: 0 auto;
@@ -1712,7 +1712,7 @@ header .header_wrapper .index_mobile img {
   resize: none;
   width: calc(200% + 20px);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 51, ../sass/sections/_contact.scss */
   #main #contact div textarea {
     width: 100%;
@@ -1725,7 +1725,7 @@ footer {
   font-size: 12px;
   padding-bottom: 40px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
   /* line 1, ../sass/_footer.scss */
   footer {
     display: none;
