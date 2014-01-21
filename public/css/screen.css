@@ -1209,85 +1209,128 @@ header .header_wrapper .index_mobile img {
 /* line 95, ../sass/sections/_orders.scss */
 #main #orders form .details div {
   display: inline-block;
-  padding: 4px 25px 0 0;
+  padding-right: 25px;
   width: 25%;
 }
-/* line 99, ../sass/sections/_orders.scss */
+@media only screen and (max-width: 640px) {
+  /* line 95, ../sass/sections/_orders.scss */
+  #main #orders form .details div {
+    width: 33.33333%;
+  }
+}
+/* line 102, ../sass/sections/_orders.scss */
 #main #orders form .details div select, #main #orders form .details div label {
   display: block;
   width: 100%;
 }
-/* line 104, ../sass/sections/_orders.scss */
+/* line 107, ../sass/sections/_orders.scss */
 #main #orders form .details .no-budgetable {
   display: block;
   padding: 10px 0;
   width: 100%;
 }
-/* line 108, ../sass/sections/_orders.scss */
+/* line 111, ../sass/sections/_orders.scss */
 #main #orders form .details .no-budgetable input, #main #orders form .details .no-budgetable textarea {
   width: 100%;
 }
-/* line 113, ../sass/sections/_orders.scss */
+@media only screen and (max-width: 640px) {
+  /* line 115, ../sass/sections/_orders.scss */
+  #main #orders form .details.personal_details {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 119, ../sass/sections/_orders.scss */
+  #main #orders form .details.personal_details div {
+    width: 100%;
+  }
+}
+/* line 123, ../sass/sections/_orders.scss */
+#main #orders form .details.personal_details div input {
+  display: block;
+  width: 100%;
+}
+/* line 130, ../sass/sections/_orders.scss */
 #main #orders form .shipping {
   padding: 20px 0;
 }
-/* line 115, ../sass/sections/_orders.scss */
+/* line 132, ../sass/sections/_orders.scss */
 #main #orders form .shipping div {
   display: inline-block;
   padding-right: 30px;
   vertical-align: top;
   width: 50%;
 }
-/* line 120, ../sass/sections/_orders.scss */
+@media only screen and (max-width: 640px) {
+  /* line 132, ../sass/sections/_orders.scss */
+  #main #orders form .shipping div {
+    width: 100%;
+  }
+}
+/* line 140, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label, #main #orders form .shipping div input {
   width: 100%;
 }
-/* line 122, ../sass/sections/_orders.scss */
+/* line 142, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label[type='checkbox'], #main #orders form .shipping div input[type='checkbox'] {
   display: inline;
   margin-right: 10px;
   width: auto;
 }
-/* line 128, ../sass/sections/_orders.scss */
+@media only screen and (max-width: 640px) {
+  /* line 148, ../sass/sections/_orders.scss */
+  #main #orders form .shipping div select {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    width: 40%;
+  }
+}
+/* line 155, ../sass/sections/_orders.scss */
 #main #orders form .shipping div input[name=billing_address] {
   margin-top: 10px;
 }
-/* line 131, ../sass/sections/_orders.scss */
+/* line 158, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label {
   display: block;
 }
-/* line 133, ../sass/sections/_orders.scss */
+/* line 160, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label[for=shipping_time_from] {
   margin-bottom: 10px;
 }
-/* line 136, ../sass/sections/_orders.scss */
+/* line 163, ../sass/sections/_orders.scss */
 #main #orders form .shipping div label[for=same_billing_address] {
   display: inline;
 }
-/* line 140, ../sass/sections/_orders.scss */
+/* line 167, ../sass/sections/_orders.scss */
 #main #orders form .shipping div span {
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 148, ../sass/sections/_orders.scss */
+/* line 175, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div {
   display: inline-block;
   padding-right: 40px;
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 153, ../sass/sections/_orders.scss */
+@media only screen and (max-width: 640px) {
+  /* line 175, ../sass/sections/_orders.scss */
+  #main #orders .orders_step_4 .summary div {
+    width: 100%;
+  }
+}
+/* line 183, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div dl {
   font-size: 12px;
 }
-/* line 155, ../sass/sections/_orders.scss */
+/* line 185, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div dl dt {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 14px;
   width: 80px;
 }
-/* line 161, ../sass/sections/_orders.scss */
+/* line 191, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div dl dd {
   display: inline-block;
   padding-bottom: 14px;
@@ -1297,7 +1340,7 @@ header .header_wrapper .index_mobile img {
   width: -o-calc(100% - 80px);
   width: calc(100% - 80px);
 }
-/* line 168, ../sass/sections/_orders.scss */
+/* line 198, ../sass/sections/_orders.scss */
 #main #orders .orders_step_4 .summary div .modify {
   border-bottom: 1px dotted #34ad65;
   color: #34ad65;

@@ -105,7 +105,7 @@
 					{{ Form::label('payment_option_credit_card', 'Tarjeta de crédito')}}
 				</div>
 			</div>
-			<div class='details'>
+			<div class='personal_details details'>
 				<h3>Persona responsable</h3>
 				<div>
 					{{ Form::label('name', 'Nombre:') }}
