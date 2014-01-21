@@ -7,6 +7,20 @@
 	}
 	nav.steps{
 		@extend .tabSteps; // _ui.scss
+		ul{
+			li{
+				@media #{$mobile}{
+					font-size: 0.7em;
+					height: 90px;
+				}
+				span{
+					@media #{$mobile}{
+						display: block;
+						margin: 0 auto 10px auto;
+					}
+				}
+			}
+		}
 	}
 	.product_photo{
 		color: inherit;
@@ -17,6 +31,10 @@
 		text-transform: uppercase;
 		vertical-align: top;
 		width: 170px;
+		@media #{$mobile}{
+			padding: 10px;
+			width: 50%;
+		}
 		img, span{
 			display: block;
 		}
@@ -31,6 +49,11 @@
 	}
 	form{
 		padding: 42px;
+		@media #{$mobile}{
+			margin: 0 auto;
+			padding: 0;
+			width: 80%;
+		}
 		h3{
 			@extend .bigBlue;
 			font-size: $fontSizeSmall;
@@ -45,6 +68,11 @@
 				display: inline-block;
 				vertical-align: top;
 				width: 50%;
+				@media #{$mobile}{
+					display: block;
+					margin: 20px 0;
+					width: 100%;
+				}
 				label{
 					padding: 0 20px 0 10px;
 				}
@@ -55,6 +83,9 @@
 				display: inline;
 				font-size: $fontSizeXSmall;
 				padding-right: 20px;
+				@media #{$mobile}{
+					display: block;
+				}
 			}
 		}
 		.details{
@@ -72,6 +103,7 @@
 				padding: 10px 0;
 				width: 100%;
 				input, textarea{
+					resize: none;
 					width: 100%;
 				}
 			}

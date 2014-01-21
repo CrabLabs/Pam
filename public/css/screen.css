@@ -1218,7 +1218,21 @@ header .header_wrapper .index_mobile img {
     top: 122px;
   }
 }
-/* line 11, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 640px) {
+  /* line 11, ../sass/sections/_budgets.scss */
+  #main #budgets nav.steps ul li {
+    font-size: 0.7em;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 16, ../sass/sections/_budgets.scss */
+  #main #budgets nav.steps ul li span {
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+}
+/* line 25, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo {
   color: inherit;
   display: inline-block;
@@ -1229,92 +1243,122 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 170px;
 }
-/* line 20, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 640px) {
+  /* line 25, ../sass/sections/_budgets.scss */
+  #main #budgets .product_photo {
+    padding: 10px;
+    width: 50%;
+  }
+}
+/* line 38, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo img, #main #budgets .product_photo span {
   display: block;
 }
-/* line 23, ../sass/sections/_budgets.scss */
+/* line 41, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo span {
   font-size: 12px;
 }
-/* line 26, ../sass/sections/_budgets.scss */
+/* line 44, ../sass/sections/_budgets.scss */
 #main #budgets .product_photo img {
   min-height: 120px;
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 32, ../sass/sections/_budgets.scss */
+/* line 50, ../sass/sections/_budgets.scss */
 #main #budgets form {
   padding: 42px;
 }
-/* line 34, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 640px) {
+  /* line 50, ../sass/sections/_budgets.scss */
+  #main #budgets form {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+}
+/* line 57, ../sass/sections/_budgets.scss */
 #main #budgets form h3 {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 40, ../sass/sections/_budgets.scss */
+/* line 63, ../sass/sections/_budgets.scss */
 #main #budgets form .graphic_design, #main #budgets form .attach_file {
   border-bottom: 1px solid #ececec;
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
-/* line 44, ../sass/sections/_budgets.scss */
+/* line 67, ../sass/sections/_budgets.scss */
 #main #budgets form .graphic_design div, #main #budgets form .attach_file div {
   display: inline-block;
   vertical-align: top;
   width: 50%;
 }
-/* line 48, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 640px) {
+  /* line 67, ../sass/sections/_budgets.scss */
+  #main #budgets form .graphic_design div, #main #budgets form .attach_file div {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+/* line 76, ../sass/sections/_budgets.scss */
 #main #budgets form .graphic_design div label, #main #budgets form .attach_file div label {
   padding: 0 20px 0 10px;
 }
-/* line 54, ../sass/sections/_budgets.scss */
+/* line 82, ../sass/sections/_budgets.scss */
 #main #budgets form .attach_file p {
   display: inline;
   font-size: 12px;
   padding-right: 20px;
 }
-/* line 61, ../sass/sections/_budgets.scss */
+@media only screen and (max-width: 640px) {
+  /* line 82, ../sass/sections/_budgets.scss */
+  #main #budgets form .attach_file p {
+    display: block;
+  }
+}
+/* line 92, ../sass/sections/_budgets.scss */
 #main #budgets form .details div {
   display: inline-block;
   padding-right: 25px;
   width: 33.33333%;
 }
-/* line 65, ../sass/sections/_budgets.scss */
+/* line 96, ../sass/sections/_budgets.scss */
 #main #budgets form .details div select, #main #budgets form .details div label {
   display: block;
   width: 100%;
 }
-/* line 70, ../sass/sections/_budgets.scss */
+/* line 101, ../sass/sections/_budgets.scss */
 #main #budgets form .details .no-budgetable {
   display: block;
   padding: 10px 0;
   width: 100%;
 }
-/* line 74, ../sass/sections/_budgets.scss */
+/* line 105, ../sass/sections/_budgets.scss */
 #main #budgets form .details .no-budgetable input, #main #budgets form .details .no-budgetable textarea {
+  resize: none;
   width: 100%;
 }
-/* line 81, ../sass/sections/_budgets.scss */
+/* line 113, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list {
   display: inline-block;
   padding-right: 40px;
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 86, ../sass/sections/_budgets.scss */
+/* line 118, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl {
   font-size: 12px;
 }
-/* line 88, ../sass/sections/_budgets.scss */
+/* line 120, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl dt {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 14px;
   width: 80px;
 }
-/* line 94, ../sass/sections/_budgets.scss */
+/* line 126, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list dl dd {
   display: inline-block;
   padding-bottom: 14px;
@@ -1324,7 +1368,7 @@ header .header_wrapper .index_mobile img {
   width: -o-calc(100% - 80px);
   width: calc(100% - 80px);
 }
-/* line 101, ../sass/sections/_budgets.scss */
+/* line 133, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .details_list .modify {
   border-bottom: 1px dotted #34ad65;
   color: #34ad65;
@@ -1332,17 +1376,17 @@ header .header_wrapper .index_mobile img {
   margin: 6px 0 0 0;
   text-decoration: none;
 }
-/* line 109, ../sass/sections/_budgets.scss */
+/* line 141, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget {
   display: inline-block;
   vertical-align: top;
   width: 66.66667%;
 }
-/* line 113, ../sass/sections/_budgets.scss */
+/* line 145, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget p {
   font-size: 12px;
 }
-/* line 116, ../sass/sections/_budgets.scss */
+/* line 148, ../sass/sections/_budgets.scss */
 #main #budgets .orders_step_3 .budget #cost {
   color: #2f66b5;
   display: block;
