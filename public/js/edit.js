@@ -37,6 +37,14 @@
 		}
 	});
 
+	$('input[name=password]').on('change', function () {
+		if ($.trim($(this).val()) === '') {
+			$('input[name=password_confirmation]').attr('disabled', true)
+		} else {
+			$('input[name=password_confirmation]').attr('disabled', false)
+		}
+	})
+
 	$('aside a').on('click', function (event) {
 		event.preventDefault();
 		$('.edit-main').hide().eq($(this).parent('li').index()).show();

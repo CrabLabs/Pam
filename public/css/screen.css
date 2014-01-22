@@ -8,7 +8,7 @@
 
 /* line 12, ../sass/screen.scss */
 body {
-  background-image: url('/img/banner.jpg?1389901162');
+  background-image: url('/img/banner.jpg');
   background-repeat: no-repeat;
   background-size: container;
 }
@@ -133,7 +133,7 @@ body {
   background: #c0c4c8;
 }
 /* line 21, ../sass/_ui.scss */
-.btn.green, input[type='submit'], textarea[type='submit'], input.green[type='file']:after, input[type='file'][type='submit']:after, textarea.green[type='file']:after, textarea[type='file'][type='submit']:after {
+.btn.green, input[type='submit'], textarea[type='submit'], input.green[type='file']:after, textarea.green[type='file']:after {
   background: #34ad65;
 }
 
@@ -310,7 +310,7 @@ header nav {
 }
 /* line 8, ../sass/_header.scss */
 header nav .phone_support {
-  background: url('/img/img_01.png?1387050038') no-repeat;
+  background: url('/img/img_01.png') no-repeat;
   background-position: 0 6px;
   color: white;
   display: inline-block;
@@ -324,7 +324,7 @@ header nav .phone_support {
 }
 /* line 18, ../sass/_header.scss */
 header nav #menu_nav_mobile {
-  background: url('/img/menu_mob.png?1384552088') no-repeat;
+  background: url('/img/menu_mob.png') no-repeat;
   background-size: cover;
   display: none;
   height: 24px;
@@ -374,7 +374,7 @@ header nav ul li {
 }
 /* line 56, ../sass/_header.scss */
 header nav ul li.home {
-  background: url('/img/img_02.png?1387050038') no-repeat;
+  background: url('/img/img_02.png') no-repeat;
   background-position: 6px 6px;
   border-right: 1px solid #1d2024;
   box-shadow: 0 1px 0 #2d3237;
@@ -476,22 +476,22 @@ header .header_wrapper .section {
 }
 /* line 131, ../sass/_header.scss */
 header .header_wrapper .section.logo {
-  background: url('/img/logo.png?1387050038') no-repeat;
+  background: url('/img/logo.png') no-repeat;
   background-position: center center;
 }
 /* line 135, ../sass/_header.scss */
 header .header_wrapper .section.print_now {
-  background: url('/img/img_05.png?1387050038') no-repeat;
+  background: url('/img/img_05.png') no-repeat;
   background-position: 4px center;
 }
 /* line 139, ../sass/_header.scss */
 header .header_wrapper .section.create_budget {
-  background: url('/img/img_03.png?1387050038') no-repeat;
+  background: url('/img/img_03.png') no-repeat;
   background-position: 4px center;
 }
 /* line 143, ../sass/_header.scss */
 header .header_wrapper .section.faq {
-  background: url('/img/img_04.png?1387050038') no-repeat;
+  background: url('/img/img_04.png') no-repeat;
   background-position: 4px center;
 }
 /* line 147, ../sass/_header.scss */
@@ -570,7 +570,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 30, ../sass/sections/_index.scss */
 #main #index .index_wrapper .container-small #index_slider_arrow {
-  background: url('/img/arrow.png?1390129427') no-repeat;
+  background: url('/img/arrow.png') no-repeat;
   bottom: -51px;
   display: block;
   height: 11px;
@@ -649,7 +649,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 101, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact section {
-  background: url('/img/img_18.png?1387050038') no-repeat;
+  background: url('/img/img_18.png') no-repeat;
   background-position: center bottom;
   display: inline-block;
   min-height: 480px;
@@ -691,15 +691,15 @@ header .header_wrapper .index_mobile img {
 }
 /* line 135, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.home {
-  background: url('/img/img_15.png?1387050038') no-repeat;
+  background: url('/img/img_15.png') no-repeat;
 }
 /* line 136, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.phone {
-  background: url('/img/img_16.png?1387050038') no-repeat;
+  background: url('/img/img_16.png') no-repeat;
 }
 /* line 137, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.digital {
-  background: url('/img/img_17.png?1387050038') no-repeat;
+  background: url('/img/img_17.png') no-repeat;
   width: 100%;
 }
 /* line 138, ../sass/sections/_index.scss */
@@ -958,17 +958,45 @@ header .header_wrapper .index_mobile img {
   font-size: 12px;
   padding: 0 10px;
 }
+/* line 72, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row .attach_file, #main #edit .edit-main .section .row-2 .attach_file {
+  width: 100%;
+}
 /* line 74, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row .attach_file p, #main #edit .edit-main .section .row-2 .attach_file p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+/* line 79, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row .attach_file img, #main #edit .edit-main .section .row-2 .attach_file img {
+  display: inline-block;
+  width: 100px;
+}
+/* line 83, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row .attach_file .uploader, #main #edit .edit-main .section .row-2 .attach_file .uploader {
+  display: inline-block;
+  padding: 10px;
+  width: -webkit-calc(100% - 100px);
+  width: -moz-calc(100% - 100px);
+  width: -o-calc(100% - 100px);
+  width: calc(100% - 100px);
+}
+/* line 87, ../sass/sections/_edit.scss */
+#main #edit .edit-main .section .row .attach_file .uploader input, #main #edit .edit-main .section .row-2 .attach_file .uploader input {
+  width: auto;
+}
+/* line 94, ../sass/sections/_edit.scss */
 #main #edit .edit-main .section .row-2 div {
   width: 50%;
 }
 @media only screen and (max-width: 760px) {
-  /* line 74, ../sass/sections/_edit.scss */
+  /* line 94, ../sass/sections/_edit.scss */
   #main #edit .edit-main .section .row-2 div {
     width: 80%;
   }
 }
-/* line 83, ../sass/sections/_edit.scss */
+/* line 103, ../sass/sections/_edit.scss */
 #main #edit aside {
   display: inline-block;
   height: 100%;
@@ -976,27 +1004,27 @@ header .header_wrapper .index_mobile img {
   width: 180px;
 }
 @media only screen and (max-width: 760px) {
-  /* line 83, ../sass/sections/_edit.scss */
+  /* line 103, ../sass/sections/_edit.scss */
   #main #edit aside {
     height: auto;
     margin-top: 20px;
     width: 100%;
   }
 }
-/* line 93, ../sass/sections/_edit.scss */
+/* line 113, ../sass/sections/_edit.scss */
 #main #edit aside ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 97, ../sass/sections/_edit.scss */
+/* line 117, ../sass/sections/_edit.scss */
 #main #edit aside ul li {
   border-bottom: 1px solid #e1e1e1;
   display: block;
   padding: 20px 15px;
 }
 @media only screen and (max-width: 760px) {
-  /* line 97, ../sass/sections/_edit.scss */
+  /* line 117, ../sass/sections/_edit.scss */
   #main #edit aside ul li {
     border-bottom: none;
     border-top: 1px solid #e1e1e1;
@@ -1004,18 +1032,18 @@ header .header_wrapper .index_mobile img {
     width: 50%;
   }
 }
-/* line 107, ../sass/sections/_edit.scss */
+/* line 127, ../sass/sections/_edit.scss */
 #main #edit aside ul li a {
   color: #7d878e;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 113, ../sass/sections/_edit.scss */
+/* line 133, ../sass/sections/_edit.scss */
 #main #edit aside ul li.active {
   background: #ecf0f7;
 }
-/* line 115, ../sass/sections/_edit.scss */
+/* line 135, ../sass/sections/_edit.scss */
 #main #edit aside ul li.active a {
   color: #2259a6;
 }
@@ -1629,7 +1657,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 12, ../sass/sections/_faq.scss */
 #main #faq .faq .question {
-  background: url('/img/img_04_G.png?1390137124') no-repeat center left;
+  background: url('/img/img_04_G.png') no-repeat center left;
   color: #2f66b5;
   font-size: 0.8em;
   height: 30px;
@@ -1640,7 +1668,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 22, ../sass/sections/_faq.scss */
 #main #faq .faq .answer {
-  background: url('/img/enter-arrow.png?1390137338') no-repeat top left;
+  background: url('/img/enter-arrow.png') no-repeat top left;
   color: #666;
   font-size: 0.75em;
   line-height: 1.5em;

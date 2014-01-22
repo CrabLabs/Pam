@@ -60,21 +60,23 @@
 				<div class='row'>
 					<div>
 						{{ Form::label('password', 'Contraseña') }}
-						{{ Form::password('password') }}
+						{{ Form::password('password', array('placeholder' => 'Deja en blanco para mantener la misma')) }}
 					</div>
 					<div>
 						{{ Form::label('password_confirmation', 'Repetir contraseña') }}
-						{{ Form::password('password_confirmation') }}
+						{{ Form::password('password_confirmation', array('disabled' => true)) }}
 					</div>
 				</div>
 				<div class='row'>
 					<div class='attach_file'>
-						<p>Foto de perfil: </p>
+						<p>Foto de perfil</p>
 						{{ HTML::image(URL::to($user->getImage()), 'Foto de perfil', array('width' => '100', 'height' => '100')) }}
-						{{ Form::file('image') }}
-						{{ Form::hidden('image_name', $user->image, array('id' => 'image_name')) }}
-						<div class='uploading' style='width: 100%; background: #DDD; height: 3px; padding: 0; margin: 4px 0;'>
-							<div class='complete' style='width: 0; background: #0EF; height: 3px; padding: 0;'></div>
+						<div class='uploader'>
+							{{ Form::file('image') }}
+							{{ Form::hidden('image_name', $user->image, array('id' => 'image_name')) }}
+							<div class='uploading' style='width: 100%; background: #DDD; height: 3px; padding: 0; margin: 4px 0;'>
+								<div class='complete' style='width: 0; background: #0EF; height: 3px; padding: 0;'></div>
+							</div>
 						</div>
 					</div>
 				</div>
