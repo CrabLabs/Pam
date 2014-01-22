@@ -69,7 +69,7 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return Auth::check() and Auth::user()->role === 'Admin';
+		return Auth::check() and (Auth::user()->role == 'Admin');
 	},
 
 	/**
@@ -99,7 +99,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'login_path' => 'user/login',
+	'login_path' => 'login',
 
 	/**
 	 * The logout path is the path where Administrator will send the user when they click the logout link
