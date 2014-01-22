@@ -2,7 +2,7 @@
 
 @section('main')
 <section class='upper'>
-	<h3>Contact</h3>
+	<h3>Contacto</h3>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 </section>
 <section id='contact' class='container whiteBackground'>
@@ -32,7 +32,7 @@
 			)) }}
 		</div>
 		<div>
-			{{ Form::label('message', 'Mensage: *') }}
+			{{ Form::label('message', 'Mensaje: *') }}
 			{{ Form::textarea('message', null, array('required' => true)) }}
 		</div>
 		<div class='submit'>

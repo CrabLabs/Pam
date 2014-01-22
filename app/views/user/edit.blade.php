@@ -12,16 +12,15 @@
 		@if(count($errors) > 0)
 			<h3>Hay errores en el formulario</h3>
 			<ul class='register_errors'>
-				@foreach($errors->all() as $error)
+				@foreach($errors->messages()->all() as $error)
 					<li>{{ $error }}</li>
 				@endforeach
 			</ul>
 		@endif
-		{{ Form::model($user, array('route' => array('user.update', $user->id), 'files' => true)) }}
+		{{ Form::model($user, array('method' => 'PUT', 'route' => array('user.update', $user->id), 'files' => true)) }}
 			<div class='section'>
 				<h3>Tipo de cuenta</h3>
 				<div class='row account_type'>
-				<h4>{{ $user->role }}</h4>
 					{{ Form::radio('role', 'Persona', $user->role == 'Persona', array('id' => 'role_persona')) }}
 					{{ Form::label('role_persona', 'Persona') }}
 					{{ Form::radio('role', 'Empresa', $user->role == 'Empresa', array('id' => 'role_empresa')) }}
@@ -71,9 +70,12 @@
 				<div class='row'>
 					<div class='attach_file'>
 						<p>Foto de perfil: </p>
+						{{ HTML::image(URL::to($user->getImage()), 'Foto de perfil', array('width' => '100', 'height' => '100')) }}
 						{{ Form::file('image') }}
-						<input type='hidden' name='image_name' id='image_name'>
-						{{ Form::hidden('image_name', $user->image) }}
+						{{ Form::hidden('image_name', $user->image, array('id' => 'image_name')) }}
+						<div class='uploading' style='width: 100%; background: #DDD; height: 3px; padding: 0; margin: 4px 0;'>
+							<div class='complete' style='width: 0; background: #0EF; height: 3px; padding: 0;'></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -81,8 +83,8 @@
 				<div class='row-2'>
 					<div>
 						<h3>Dirección de envio</h3>
-						{{ Form::label('shiping_address', 'Dirección') }}
-						{{ Form::text('shiping_address', $user->shiping_address) }}
+						{{ Form::label('shipping_address', 'Dirección') }}
+						{{ Form::text('shipping_address', $user->shipping_address) }}
 						{{ Form::label('shipping_time_from', 'Horario preferencial') }}<br>
 						{{ Form::select('shipping_time_from', $times) }}
 						<!-- <span>a</span> -->
@@ -90,7 +92,7 @@
 					</div>
 					<div>
 						<h3>Dirección de facturación</h3>
-						{{ Form::checkbox('same_billing_address', null, ($user->billing_address == $user->shiping_address) ? true : false) }}
+						{{ Form::checkbox('same_billing_address', null, $user->billing_address == $user->shiping_address) }}
 						{{ Form::label('same_billing_address', 'Igual que la dirección de envio') }}
 						{{ Form::text('billing_address', $user->billing_address) }}
 					</div>

@@ -83,7 +83,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	public function getImage()
 	{
-		return URL::to('img/uploads/originals/'.$this->image);
+		return URL::to('img/uploads/users/originals/'.$this->image);
 	}
 
 }

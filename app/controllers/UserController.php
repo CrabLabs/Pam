@@ -29,9 +29,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('user.register', array(
-			'times' => ['1600' => '16:00hs', '1630' => '16:30hs', '1900' => '19:00hs']
-		));
+		return View::make('user.register');
 	}
 
 	/**
@@ -90,7 +88,7 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return Response::json(User::find($id));
+		return Response::json($this->user->find($id));
 	}
 
 	/**
@@ -101,7 +99,9 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('user.edit')->with('user', $this->user->find($id));
+		if (Auth::user()->id == $id or Auth::user()->role == 'admin')
+			return View::make('user.edit')->with('user', $this->user->find($id));
+		return Redirect::to('/');
 	}
 
 	/**
@@ -117,22 +117,24 @@ class UserController extends \BaseController {
 			'name' => 'required|min:2',
 			'lastname' => 'required|min:3',
 			'shipping_address' => 'required|min:2',
-			'password' => 'required|confirmed|min:8',
-			'email' => 'required|email|unique:users',
+			'email' => 'required|email|unique:users,email,'.$id,
 			'rut' => 'required_if:role,Empresa|numeric',
 			'billing_address' => 'required_if:same_billing_address,false',
 		);
 		
+		if (Input::get('password') != '')
+			$rules['password'] = 'required|confirmed|min:8';
+
 		$validator = Validator::make(Input::all(), $rules);
 
-		if ($validator->passes()) {
-			$user = User::find($id);
+		if (Auth::user()->id == $id and $validator->passes()) {
+			$user = $this->user->find($id);
 			$user->name = Input::get('name');
 			$user->lastname = Input::get('lastname');
 			$user->email = Input::get('email');
 			$user->password = Hash::make(Input::get('password'));
-			$user->confirmed = false;
-			$user->image = Input::get('image_name');
+			if (Input::get('image_name') != '')
+				$user->image = Input::get('image_name');
 			$user->role = Input::get('role');
 			$user->phone = Input::get('phone');
 			$user->company_name = Input::get('company_name');
@@ -140,9 +142,10 @@ class UserController extends \BaseController {
 			$user->shipping_address = Input::get('shipping_address');
 			$user->shipping_time_from = Input::get('shipping_time_from');
 			$user->shipping_time_to = Input::get('shipping_time_to');
-			$user->billing_address = (Input::get('same_billing_address')) ? Input::get('shiping_address') : Input::get('billing_address');
+			$user->billing_address = (Input::has('same_billing_address')) ? Input::get('shiping_address') : Input::get('billing_address');
 			
 			$user->save();
+			return Redirect::to('edit');
 		} else {
 			return View::make('user.edit')->with('user', Auth::user())->withErrors($validator);
 		}

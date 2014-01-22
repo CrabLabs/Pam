@@ -5,6 +5,14 @@
 		location: 'img/uploads/users/originals',
 		onSuccess: function (res) {
 			$('#image_name').val(res.file);
+			$('.uploading .complete').css('width', '100%');
+			var src = $('.attach_file img').attr('src').split('/')
+			src[src.length - 1] = res.file;
+			src = src.join('/');
+			$('.attach_file img').attr('src', src);
+		},
+		onProgress: function (percent) {
+			$('.uploading .complete').css('width', percent + '%');
 		}
 	});
 
