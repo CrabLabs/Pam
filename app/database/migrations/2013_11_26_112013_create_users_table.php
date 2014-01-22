@@ -31,6 +31,24 @@ class CreateUsersTable extends Migration {
 			$table->timestamps();
 			$table->softDeletes();
 		});
+
+		DB::table('users')->insert(array(
+			'name' => 'Admin',
+			'lastname' => '',
+			'email' => 'admin@pam.com.uy',
+			'password' => Hash::make('admin'),
+			'confirmed' => true,
+			'role' => 'Admin',
+		));
+
+		DB::table('users')->insert(array(
+			'name' => 'John',
+			'lastname' => 'Doe',
+			'email' => 'user@pam.com.uy',
+			'password' => Hash::make('user'),
+			'confirmed' => true,
+			'role' => 'Persona',
+		));
 	}
 
 	/**
