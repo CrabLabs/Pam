@@ -31,7 +31,7 @@
 					@foreach($products as $product)
 						<li>
 							<div>
-								{{ HTML::image(URL::to($product->image)) }}
+								{{ HTML::image(URL::to('img/uploads/products/originals'.$product->image)) }}
 								<span>{{ $product->name }}</span>
 							</div>
 						</li>
