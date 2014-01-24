@@ -58,6 +58,12 @@ class BudgetController extends BaseController {
 			} else {
 				$budget->description = Input::get('detail');
 				$budget->email = Input::get('email');
+
+				/*
+				Mail::send('template', data, function ($mail) {
+					$mail->to('contacto.pam.settings');
+				});
+				*/
 			}
 
 			$budget->save();

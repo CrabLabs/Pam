@@ -77,6 +77,12 @@ class OrderController extends BaseController {
 				$order->description = Input::get('detail');
 			}
 
+			/*
+			Mail::send('template', data, function ($mail) {
+				$mail->to('contacto.pam.settings');
+			}); 
+			*/
+
 			$order->save();
 			
 			return View::make('products.reference')->with('order', $order);
