@@ -58,6 +58,8 @@ return array(
 		'services',
 		'works',
 		'faq',
+		'orders',
+		
 		'settings.site',
 	),
 
