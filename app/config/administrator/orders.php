@@ -20,10 +20,12 @@ return array(
 		'graphic_design' => array(
 			'title' => 'Diseño gráfico',
 			'type' => 'bool',
+			'select' => "IF((:table).graphic_design, 'Si', 'No')",
 		),
 		'collect_personally' => array(
 			'title' => 'Recoge personalmente',
 			'type' => 'bool',
+			'select' => "IF((:table).collect_personally, 'Si', 'No')",
 		),
 		'cost' => array(
 			'title' => 'Costo',
@@ -33,13 +35,13 @@ return array(
 
 	'filters' => array(
 		'id',
+		'reference' => array(
+			'title' => 'Número de referencia',
+		),
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',
 			'options' => array('Activo', 'Enviado', 'Rechazado'),
-		),
-		'reference' => array(
-			'title' => 'Número de referencia',
 		),
 		'payment_option' => array(
 			'title' => 'Modo de pago',
@@ -58,6 +60,10 @@ return array(
 
 	'edit_fields' => array(
 		'id',
+		'reference' => array(
+			'title' => 'Número de referencia',
+			'editable' => false
+		),
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',
@@ -82,16 +88,12 @@ return array(
 		'graphic_design' => array(
 			'title' => 'Diseño gráfico',
 			'type' => 'bool',
-			'editable' => false
+			'editable' => true,
 		),
 		'collect_personally' => array(
 			'title' => 'Recoge personalmente',
 			'type' => 'bool',
-			'editable' => false
-		),
-		'reference' => array(
-			'title' => 'Número de referencia',
-			'editable' => false
+			'editable' => true
 		),
 		'description' => array(
 			'title' => 'Descripción',
