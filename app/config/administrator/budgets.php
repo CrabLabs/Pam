@@ -2,13 +2,11 @@
 
 return array(
 	'title'  => 'Presupuestos',
-	'single' => 'presupuestp',
+	'single' => 'presupuesto',
 	'model'  => 'Budget',
 	
 	'columns' => array(
-		'reference' => array(
-			'title' => 'Número de referencia',
-		),
+		'id',
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',
@@ -17,6 +15,16 @@ return array(
 		'email' => array(
 			'title' => 'Email',
 			'editable' => false
+		),
+		'graphic_design' => array(
+			'title' => 'Diseño gráfico',
+			'type' => 'bool',
+			'select' => 'IF((:table).graphic_design, "Si", "No")',
+		),
+		'collect_personally' => array(
+			'title' => 'Recoge personalmente',
+			'type' => 'bool',
+			'select' => 'IF((:table).collect_personally, "Si", "No")',
 		),
 		'cost' => array(
 			'title' => 'Costo',
