@@ -8,6 +8,12 @@ return array(
 	'columns' => array(
 		'reference' => array(
 			'title' => 'Número de referencia',
+			'output' => '<strong>(:value)</strong>',
+		),
+		'product_id' => array(
+			'title' => 'Producto',
+			'relationship' => 'product',
+			'select' => 'IF((:table).budgetable, (:table).name, CONCAT("<strong>", (:table).name, "</strong>"))',
 		),
 		'status' => array(
 			'title' => 'Estado',

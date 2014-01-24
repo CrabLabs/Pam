@@ -7,6 +7,15 @@ return array(
 	
 	'columns' => array(
 		'id',
+		'product_id' => array(
+			'relationship' => 'Product',
+			'name' => 'name',
+		),
+		'product_id' => array(
+			'title' => 'Producto',
+			'relationship' => 'product',
+			'select' => 'IF((:table).budgetable, (:table).name, CONCAT("<strong>", (:table).name, "</strong>"))',
+		),
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',

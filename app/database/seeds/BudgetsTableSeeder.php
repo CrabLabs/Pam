@@ -1,6 +1,6 @@
 <?php
 
-class OrdersTableSeeder extends Seeder {
+class BudgetsTableSeeder extends Seeder {
 	
 	public function run()
 	{
@@ -8,19 +8,17 @@ class OrdersTableSeeder extends Seeder {
 		$productDetailCount = ProductDetail::count();
 		foreach(User::all() as $user) {
 			$status = ['Activo', 'Enviado', 'Rechazado'];
-			$paymentOption = ['En persona', 'Tarjeta de crédito'];
 
 			for($i=1; $i<11; $i++) {
-				$order = new Order(array(
+				$budget = new Budget(array(
 					'user_id' => $user->id,
 					'product_id' => ($i % $productsCount) + 1,
 					'product_detail_id' => ($i % $productDetailCount),
 					'status' => $status[array_rand($status)],
-					'payment_option' => $paymentOption[array_rand($paymentOption)],
 					'created_at' => new DateTime,
 					'updated_at' => new DateTime,
 				));
-				$order->save();
+				$budget->save();
 			}
 		}
 	}
