@@ -59,7 +59,7 @@ return array(
 		'works',
 		'faq',
 		'orders',
-		
+		'budgets',
 		'settings.site',
 	),
 
