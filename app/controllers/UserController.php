@@ -75,9 +75,12 @@ class UserController extends \BaseController {
 			$user->billing_address = (Input::get('same_billing_address')) ? Input::get('shiping_address') : Input::get('billing_address');
 			
 			$user->save();
-		} else {
-			return View::make('user.register')->withErrors($validator);
+
+			Auth::login($user);
+			return Redirect::to('/');
 		}
+		
+		return View::make('user.register')->withErrors($validator);
 	}
 
 	/**
