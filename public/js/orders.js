@@ -10,13 +10,29 @@
 		budgetables;
 
 	/**
+	 * 	EVENT: Trigger when user clicks on input type file.
+	 *
+	 * @return void
+	 */
+	$('.attach_file input').fileUpload({
+		location: 'img/uploads/orders/originals',
+		onSuccess: function (res) {
+			$('#image_name').val(res.file);
+			$('.uploading .complete').css('width', '100%');
+		},
+		onProgress: function (percent) {
+			$('.uploading .complete').css('width', percent + '%');
+		}
+	});
+
+	/**
 	 * EVENT: Trigger when document is ready.
 	 *
 	 * @return void
 	 */
 	$(document).on('ready', function () {
 		budgetables = $('input[name=budgetables').val().split(',');
-		$('form select:first').trigger('change');
+		// $('form select:first').trigger('change');
 		$('.orders_step').hide();
 		$('.orders_step_1').show();
 
