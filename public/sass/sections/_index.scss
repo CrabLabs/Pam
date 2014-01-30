@@ -23,8 +23,10 @@
 				span{
 					color: rgb(134, 134, 136);
 					display: block;
-					font-size: $fontSizeSmall;
+					font-size: 12px;
+					margin: 0 auto;
 					text-align: center;
+					width: 240px;
 				}
 			}
 			#index_slider_arrow{
@@ -42,7 +44,8 @@
 		h3{
 			color: $blue;
 			font-weight: normal;
-			margin: 40px 0 20px 0;
+			font-size: 22px;
+			margin: 40px 0 10px 0;
 			text-align: center;
 		}
 		h4{
@@ -54,11 +57,16 @@
 			margin: 0;
 			padding: 10px;
 			text-align: center;
+			select{
+				width: 250px;
+			}
 			input[type=submit]{
 				background: $blue;
 			}
 		}
 		.index_slider{
+			border-bottom: 1px solid #e9e9e9;
+			padding-bottom: 120px;
 			ul{
 				margin: 0;
 				padding: 0;
@@ -68,7 +76,7 @@
 					margin: 0;
 					padding: 10px;
 					vertical-align: top;
-					width: 160px;
+					width: calc(100% / 5);
 					img{
 						height: 100%;
 						width: 100%;		
@@ -76,7 +84,7 @@
 					span{
 						color: #333;
 						display: block;
-						font-size: 0.55em;
+						font-size: 10px;
 						font-weight: bold;
 						text-align: center;
 						text-transform: uppercase;
@@ -86,14 +94,21 @@
 			}
 		}
 		.clients{
-			margin-top: 30px;
-			padding: 10px 0;
+			padding-bottom: 50px;
 			text-align: center;
+			h3{
+				font-size: 22px;
+				text-transform: uppercase;
+			}
 		}
 		.contact{
 			background: #f6f6f6;
 			border-bottom: 1px solid rgb(234, 234, 234);
 			border-top: 1px solid rgb(234, 234, 234);
+			h3{
+				font-size: 22px;
+				text-transform: uppercase;
+			}
 			h4{
 				border-bottom: 1px solid rgb(234, 234, 234);
 				padding-bottom: 20px;
@@ -118,6 +133,7 @@
 						width: 100%;
 					}
 					textarea{
+						height: 80px;
 						resize: none;
 					}
 				}
@@ -148,6 +164,7 @@
 					}
 					&:first-of-type{
 						color: $blue;
+						font-weight: bold;
 						text-transform: uppercase;
 						margin-bottom: 20px;
 					}

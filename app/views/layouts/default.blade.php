@@ -86,6 +86,7 @@
 					<li>{{ HTML::linkActive('contact', 'Contacto') }}</li>
 					<li>{{ HTML::linkActive('login', 'Login / Registro') }}</a></li>
 				</ul>
+				<div class='footer-logo'><a href='{{ URL::to('/') }}'></a></div>
 				<span>Imprenta pam © 2013. info&#64;imprentapam.com.uy</span>
 			</div>
 		</footer>

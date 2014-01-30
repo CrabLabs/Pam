@@ -10,7 +10,10 @@ header{
 			background-position: 0 6px;
 			color: rgb(255, 255, 255);
 			display: inline-block;
+			font-size: 10px;
+			line-height: 15px;
 			padding: 10px 25px;
+			text-transform: uppercase;
 			@media #{$mobile}{
 				margin: 0 0 0 5px;
 			}
@@ -48,6 +51,8 @@ header{
 			}
 			li{
 				display: inline-block;
+				font-size: 10px;
+				line-height: 15px;
 				-webkit-transition: all 250ms;
 				   -moz-transition: all 250ms;
 				     -o-transition: all 250ms;
@@ -55,7 +60,7 @@ header{
 				vertical-align: top;
 				&.home{
 					background: image-url("img_02.png") no-repeat;
-					background-position: 6px 6px;
+					background-position: 6px 8px;
 					border-right: 1px solid rgb(29, 32, 36);
 					box-shadow: 0 1px 0 rgb(45, 50, 55);
 					height: 34px;
@@ -155,10 +160,14 @@ header{
 				text-decoration: none;
 				top: 0; right: 0; bottom: 0; left: 0;
 				span{
+					color: #555;
 					display: block;
 					text-align: left;
 					&:first-of-type{
 						font-weight: bold;
+					}
+					&:last-of-type{
+						font-size: 10px;
 					}
 				}
 			}
