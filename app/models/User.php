@@ -27,6 +27,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password');
 
 	/**
+	 * Default profile picture.
+	 *
+	 * @var string
+	 */
+	static public $defaultImage = 'img/logo.png';
+
+	/**
 	 * Get the unique identifier for the user.
 	 *
 	 * @return mixed
