@@ -44,7 +44,7 @@
     };
 
     $.fn.fileUpload.defaults = {
-        url: './upload',
+        url: document.location.protocol + '//' + document.location.host + '/upload',
         location: 'img/uploads',
         method: 'POST',
         onProgress: function (percent) {
