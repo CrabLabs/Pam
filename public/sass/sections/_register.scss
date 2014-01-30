@@ -74,7 +74,7 @@
 		}
 		.row-2{
 			div{
-				display: block;
+				display: inline-block;
 				padding-bottom: 20px;
 				width: 50%;
 				@media #{$mobile}{
