@@ -66,8 +66,15 @@
 			</div>
 			<div class='row'>
 				<div class='attach_file'>
-					<p>Foto de perfil: </p>
-					{{ Form::file('image') }}
+					<p>Foto de perfil</p>
+					{{ HTML::image(URL::to(User::$defaultImage), 'Foto de perfil', array('width' => '100', 'height' => '100')) }}
+					<div class='uploader'>
+						{{ Form::file('image') }}
+						{{ Form::hidden('image_name', null, array('id' => 'image_name')) }}
+						<div class='uploading' style='width: 100%; background: #DDD; height: 3px; padding: 0; margin: 4px 0;'>
+							<div class='complete' style='width: 0; background: #0EF; height: 3px; padding: 0;'></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -101,5 +108,6 @@
 @section('scripts')
 	@parent
 
+	{{ HTML::script('js/fileupload.js') }}
 	{{ HTML::script('js/register.js') }}
 @stop
