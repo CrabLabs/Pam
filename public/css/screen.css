@@ -8,7 +8,7 @@
 
 /* line 12, ../sass/screen.scss */
 body {
-  background-image: url('/img/banner.jpg?1389901162');
+  background-image: url('/img/banner.jpg');
   background-repeat: no-repeat;
   background-size: container;
 }
@@ -133,7 +133,7 @@ body {
   background: #c0c4c8;
 }
 /* line 21, ../sass/_ui.scss */
-.btn.green, input[type='submit'], textarea[type='submit'], input.green[type='file']:after, input[type='file'][type='submit']:after, textarea.green[type='file']:after, textarea[type='file'][type='submit']:after {
+.btn.green, input[type='submit'], textarea[type='submit'], input.green[type='file']:after, textarea.green[type='file']:after {
   background: #34ad65;
 }
 
@@ -187,6 +187,12 @@ select {
   -moz-appearance: none;
   appearance: none;
   background: #f9f9f9;
+  background-image: url('/img/select_arrow.png');
+  background-repeat: no-repeat;
+  background-position: -webkit-calc(100% - 10px);
+  background-position: -moz-calc(100% - 10px);
+  background-position: -o-calc(100% - 10px);
+  background-position: calc(100% - 10px);
   border: 1px solid #d5d5d5;
   border-radius: 2px;
   display: inline-block;
@@ -199,28 +205,28 @@ select {
 /*
  * TABLES
  */
-/* line 82, ../sass/_ui.scss */
+/* line 85, ../sass/_ui.scss */
 table {
   font-size: 12px;
   width: 100%;
 }
-/* line 85, ../sass/_ui.scss */
+/* line 88, ../sass/_ui.scss */
 table thead tr {
   background: white;
   border: 1px solid #e8e9e8;
   border-radius: 2px 2px 0 0;
   font-weight: bold;
 }
-/* line 90, ../sass/_ui.scss */
+/* line 93, ../sass/_ui.scss */
 table thead tr td {
   padding: 20px 20px 15px 20px;
 }
-/* line 94, ../sass/_ui.scss */
+/* line 97, ../sass/_ui.scss */
 table tbody tr {
   background: #f9f9f9;
   border: 1px solid #e8e9e8;
 }
-/* line 97, ../sass/_ui.scss */
+/* line 100, ../sass/_ui.scss */
 table tbody tr td {
   padding: 20px 20px 15px 20px;
 }
@@ -228,15 +234,15 @@ table tbody tr td {
 /*
  * SPANS
  */
-/* line 107, ../sass/_ui.scss */
+/* line 110, ../sass/_ui.scss */
 span.grey {
   color: #bebfc1;
 }
-/* line 110, ../sass/_ui.scss */
+/* line 113, ../sass/_ui.scss */
 span.red {
   color: #e9453e;
 }
-/* line 113, ../sass/_ui.scss */
+/* line 116, ../sass/_ui.scss */
 span.green {
   color: #208c46;
 }
@@ -244,18 +250,18 @@ span.green {
 /*
  * STEPS (Tabs)
  */
-/* line 121, ../sass/_ui.scss */
+/* line 124, ../sass/_ui.scss */
 .tabSteps, #main #orders nav.steps, #main #budgets nav.steps {
   display: block;
   width: 100%;
 }
-/* line 124, ../sass/_ui.scss */
+/* line 127, ../sass/_ui.scss */
 .tabSteps ul, #main #orders nav.steps ul, #main #budgets nav.steps ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 128, ../sass/_ui.scss */
+/* line 131, ../sass/_ui.scss */
 .tabSteps ul li, #main #orders nav.steps ul li, #main #budgets nav.steps ul li {
   background: #f6f7fa;
   display: inline-block;
@@ -267,17 +273,17 @@ span.green {
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 138, ../sass/_ui.scss */
+/* line 141, ../sass/_ui.scss */
 .tabSteps ul li.active, #main #orders nav.steps ul li.active, #main #budgets nav.steps ul li.active {
   background: white;
 }
-/* line 140, ../sass/_ui.scss */
+/* line 143, ../sass/_ui.scss */
 .tabSteps ul li.active span, #main #orders nav.steps ul li.active span, #main #budgets nav.steps ul li.active span {
   background: #215aaa;
   border: 1px solid #f6f7fa;
   color: white;
 }
-/* line 146, ../sass/_ui.scss */
+/* line 149, ../sass/_ui.scss */
 .tabSteps ul li span, #main #orders nav.steps ul li span, #main #budgets nav.steps ul li span {
   border: 1px solid #818284;
   border-radius: 50%;
@@ -310,7 +316,7 @@ header nav {
 }
 /* line 8, ../sass/_header.scss */
 header nav .phone_support {
-  background: url('/img/img_01.png?1387050038') no-repeat;
+  background: url('/img/img_01.png') no-repeat;
   background-position: 0 6px;
   color: white;
   display: inline-block;
@@ -327,7 +333,7 @@ header nav .phone_support {
 }
 /* line 21, ../sass/_header.scss */
 header nav #menu_nav_mobile {
-  background: url('/img/menu_mob.png?1384552088') no-repeat;
+  background: url('/img/menu_mob.png') no-repeat;
   background-size: cover;
   display: none;
   height: 24px;
@@ -379,7 +385,7 @@ header nav ul li {
 }
 /* line 61, ../sass/_header.scss */
 header nav ul li.home {
-  background: url('/img/img_02.png?1387050038') no-repeat;
+  background: url('/img/img_02.png') no-repeat;
   background-position: 6px 8px;
   border-right: 1px solid #1d2024;
   box-shadow: 0 1px 0 #2d3237;
@@ -518,22 +524,22 @@ header .header_wrapper .section:hover.logo {
 }
 /* line 164, ../sass/_header.scss */
 header .header_wrapper .section.logo {
-  background: url('/img/logo.png?1387050038') no-repeat;
+  background: url('/img/logo.png') no-repeat;
   background-position: center center;
 }
 /* line 168, ../sass/_header.scss */
 header .header_wrapper .section.print_now {
-  background: url('/img/img_05.png?1387050038') no-repeat;
+  background: url('/img/img_05.png') no-repeat;
   background-position: 4px center;
 }
 /* line 172, ../sass/_header.scss */
 header .header_wrapper .section.create_budget {
-  background: url('/img/img_03.png?1387050038') no-repeat;
+  background: url('/img/img_03.png') no-repeat;
   background-position: 4px center;
 }
 /* line 176, ../sass/_header.scss */
 header .header_wrapper .section.faq {
-  background: url('/img/img_04.png?1387050038') no-repeat;
+  background: url('/img/img_04.png') no-repeat;
   background-position: 4px center;
 }
 /* line 180, ../sass/_header.scss */
@@ -631,7 +637,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 32, ../sass/sections/_index.scss */
 #main #index .index_wrapper .container-small #index_slider_arrow {
-  background: url('/img/arrow.png?1390129427') no-repeat;
+  background: url('/img/arrow.png') no-repeat;
   bottom: -51px;
   display: block;
   height: 11px;
@@ -729,7 +735,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 116, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact section {
-  background: url('/img/img_18.png?1387050038') no-repeat;
+  background: url('/img/img_18.png') no-repeat;
   background-position: center bottom;
   display: inline-block;
   min-height: 480px;
@@ -772,15 +778,15 @@ header .header_wrapper .index_mobile img {
 }
 /* line 151, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.home {
-  background: url('/img/img_15.png?1387050038') no-repeat;
+  background: url('/img/img_15.png') no-repeat;
 }
 /* line 152, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.phone {
-  background: url('/img/img_16.png?1387050038') no-repeat;
+  background: url('/img/img_16.png') no-repeat;
 }
 /* line 153, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.digital {
-  background: url('/img/img_17.png?1387050038') no-repeat;
+  background: url('/img/img_17.png') no-repeat;
   width: 100%;
 }
 /* line 154, ../sass/sections/_index.scss */
@@ -1767,7 +1773,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 12, ../sass/sections/_faq.scss */
 #main #faq .faq .question {
-  background: url('/img/img_04_G.png?1390137124') no-repeat center left;
+  background: url('/img/img_04_G.png') no-repeat center left;
   color: #2f66b5;
   font-size: 0.8em;
   height: 30px;
@@ -1778,7 +1784,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 22, ../sass/sections/_faq.scss */
 #main #faq .faq .answer {
-  background: url('/img/enter-arrow.png?1390137338') no-repeat top left;
+  background: url('/img/enter-arrow.png') no-repeat top left;
   color: #666;
   font-size: 0.75em;
   line-height: 1.5em;
@@ -1913,7 +1919,7 @@ footer div ul li a.active, footer div ul li a:hover {
 }
 /* line 29, ../sass/_footer.scss */
 footer div .footer-logo {
-  background: url('/img/logo.png?1387050038') no-repeat;
+  background: url('/img/logo.png') no-repeat;
   background-position: center center;
   background-size: cover;
   display: inline-block;

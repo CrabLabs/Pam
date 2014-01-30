@@ -9,6 +9,22 @@
 		budgetables;
 
 	/**
+	 * 	EVENT: Trigger when user clicks on input type file.
+	 *
+	 * @return void
+	 */
+	$('.attach_file input').fileUpload({
+		location: 'img/uploads/budgets/originals',
+		onSuccess: function (res) {
+			$('#image_name').val(res.file);
+			$('.uploading .complete').css('width', '100%');
+		},
+		onProgress: function (percent) {
+			$('.uploading .complete').css('width', percent + '%');
+		}
+	});
+
+	/**
 	 * EVENT: Trigger when document is ready.
 	 *
 	 * @return void
