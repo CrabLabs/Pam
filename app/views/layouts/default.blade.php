@@ -53,19 +53,19 @@
 					<div class='section print_now'>
 						<a href='{{ URL::to('order') }}'>
 							<span>Imprimir ahora</span>
-							<!-- <span>Lorem ipsum dolor sit</span> -->
+							<span>Adjunte el trabajo a imprimir</span>
 						</a>
 					</div>
 					<div class='section create_budget'>
 						<a href='{{ URL::to('budget') }}'>
 							<span>Armá tu presupuesto</span>
-							<!-- <span>Lorem ipsum dolor sit</span> -->
+							<span>Personalizá tu trabajo</span>
 						</a>
 					</div>
 					<div class='section faq'>
 						<a href='{{ URL::to('faq') }}'>
 							<span>Preguntas frecuentes</span>
-							<!-- <span>Lorem ipsum dolor sit</span> -->
+							<span>Respondemos todas tus dudas</span>
 						</a>
 					</div>
 				</div>

@@ -3,7 +3,7 @@
 @section('main')
 <section class='upper'>
 	<h3>Contacto</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p>Contactate con nosotros para obtener más información acerca de nuestros servicios.</p>
 </section>
 <section id='contact' class='container whiteBackground'>
 	<h3>Formulario de contacto</h3>
