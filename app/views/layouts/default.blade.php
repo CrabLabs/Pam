@@ -32,10 +32,12 @@
 						{{ HTML::liActive('contact', HTML::link('contact', 'CONTACTO')) }}
 						@if (Auth::user())
 							<li class='user'>
-								<a href='#'><img src='{{ Auth::user()->getImage() }}' width='25' height='25'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a>
+								<a href='#' id='user-name'><img src='{{ Auth::user()->getImage() }}' width='25' height='25'>{{ Auth::user()->name.' '.Auth::user()->lastname }}</a>
 								<div>
-									<a href='edit'>Mi cuenta</a>
-									<a href='logout'>Cerrar sesión</a>
+									<a href='edit' id='edit'>Mi cuenta</a>
+								</div>
+								<div>
+									<a href='logout' id='logout'>Cerrar sesión</a>
 								</div>
 							</li>
 						@else
@@ -55,18 +57,21 @@
 							<span>Imprimir ahora</span>
 							<span>Adjunte el trabajo a imprimir</span>
 						</a>
+						<div class='section_arrow'></div>
 					</div>
 					<div class='section create_budget'>
 						<a href='{{ URL::to('budget') }}'>
 							<span>Armá tu presupuesto</span>
 							<span>Personalizá tu trabajo</span>
 						</a>
+						<div class='section_arrow'></div>
 					</div>
 					<div class='section faq'>
 						<a href='{{ URL::to('faq') }}'>
 							<span>Preguntas frecuentes</span>
 							<span>Respondemos todas tus dudas</span>
 						</a>
+						<div class='section_arrow'></div>
 					</div>
 				</div>
 			</div>
