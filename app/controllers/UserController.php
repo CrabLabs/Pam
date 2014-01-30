@@ -59,12 +59,8 @@ class UserController extends \BaseController {
 			$user->email = Input::get('email');
 			$user->password = Hash::make(Input::get('password'));
 			$user->confirmed = false;
-			if (Input::hasFile('image')) {
-				$image = Input::file('image');
-				$filename = Str::random(16).$image->getClientOriginalExtension();
-				$image->move('img/uploads/users/originals', $filename);
-				$user->image = $filename;
-			}
+			if (Input::get('image_name') != '')
+				$user->image = Input::get('image_name');
 			$user->role = Input::get('role');
 			$user->phone = Input::get('phone');
 			$user->company_name = Input::get('company_name');
