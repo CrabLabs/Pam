@@ -1,6 +1,23 @@
 (function ($) {
 	'use strict';
 
+	$('.attach_file input').fileUpload({
+		location: 'img/uploads/users/originals',
+		onSuccess: function (res) {
+			$('#image_name').val(res.file);
+			$('.uploading .complete').css('width', '100%');
+			// var src = $('.attach_file img').attr('src').split('/')
+			// src[src.length - 1] = res.file;
+			// src = src.join('/');
+			var src = document.location.protocol + '//' + document.location.host + '/';
+			src += 'img/uploads/users/originals/' + res.file;
+			$('.attach_file img').attr('src', src);
+		},
+		onProgress: function (percent) {
+			$('.uploading .complete').css('width', percent + '%');
+		}
+	});
+	
 	$(document).on('ready', function () {
 		$('.empresarial_only, input[name=billing_address]').hide();
 	});

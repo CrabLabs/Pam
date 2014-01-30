@@ -51,6 +51,26 @@
 					padding: 0 10px;
 				}
 			}
+			.attach_file{
+				width: 100%;
+				p{
+					font-size: $fontSizeXSmall;
+					font-weight: 600;
+					margin-bottom: 5px;
+				}
+				img{
+					display: inline-block;
+					width: 100px;
+				}
+				.uploader{
+					display: inline-block;
+					padding: 10px;
+					@include calc(width, '100% - 100px');
+					input {
+						width: auto;
+					}
+				}
+			}
 		}
 		.row-2{
 			div{
