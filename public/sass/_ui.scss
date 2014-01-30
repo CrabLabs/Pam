@@ -67,6 +67,9 @@ select{
 	   -moz-appearance: none;
 	    	appearance: none;
 	background: rgb(249, 249, 249);
+	background-image: image-url("select_arrow.png");
+	background-repeat: no-repeat;
+	@include calc(background-position, '100% - 10px');
 	border: 1px solid rgb(213, 213, 213);
 	border-radius: 2px;
 	display: inline-block;
