@@ -49,6 +49,10 @@
 				<h3>Adjuntar archivo de tu trabajo</h3>
 				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo. Tamaño máximo XXXmb.</p>
 				{{ Form::file('file') }}
+				{{ Form::hidden('image_name', null, array('id' => 'image_name')) }}
+				<div class='uploading' style='width: 100%; max-width: 640px; background: #DDD; height: 3px; padding: 0; margin: 6px 0;'>
+					<div class='complete' style='width: 0; background: #0EF; height: 3px; padding: 0;'></div>
+				</div>
 			</div>
 			<div class='details'>
 				<h3>Detalles de la impresión</h3>
@@ -118,6 +122,7 @@
 @section('scripts')
 	@parent
 
+	{{ HTML::script('js/fileupload.js') }}
 	{{ HTML::script('js/budgets.js') }}
 	
 	@if (Input::has('product'))

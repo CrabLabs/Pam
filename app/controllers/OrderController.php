@@ -31,7 +31,6 @@ class OrderController extends BaseController {
 	 */
 	public function sendOrder()
 	{
-		$filePath = public_path() . '/img/uploads/orders/';
 		$rules = array(
 			'product_id' => 'required|numeric',
 		);
@@ -48,11 +47,9 @@ class OrderController extends BaseController {
 			$order->shipping_time_from = Input::get('shipping_time_from');
 			$order->shipping_time_to = Input::get('shipping_time_to');
 			$order->payment_option = Input::get('payment_option');
-			if (Input::hasFile('file')) {
-				$file = Input::file('file');
-				$order->file = Str::random($length, $type).'.'.$file->getClientOriginalExtension();
-				$file->move($filePath.$order->file);
-			}
+			
+			if (Input::has('image_name') and Input::get('image_name') != '')
+				$order->file = Input::get('image_name');
 
 			if (Product::find(Input::get('product_id'))->budgetable) {
 				$specifications = [

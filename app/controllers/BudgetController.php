@@ -27,11 +27,9 @@ class BudgetController extends BaseController {
 			$budget->user_id = (Auth::user()) ? Auth::user()->id : 0;
 			$budget->graphic_design = Input::has('graphic_design');
 			$budget->collect_personally = Input::get('collect_personally');
-			if (Input::hasFile('file')) {
-				$file = Input::file('file');
-				$budget->file = Str::random($length, $type).'.'.$file->getClientOriginalExtension();
-				$file->move($filePath.$budget->file);
-			}
+			
+			if (Input::has('image_name') and Input::get('image_name') != '')
+				$budget->file = Input::get('image_name');
 
 			if (Product::find(Input::get('product_id'))->budgetable) {
 				$specifications = [
@@ -67,7 +65,9 @@ class BudgetController extends BaseController {
 			}
 
 			$budget->save();
-			return Response::json($budget);
+			return (Auth::user()) ? Redirect::to('edit?orders') : Redirect::to('/');
+			// FOR DEBUG ONLY
+			// return Response::json($budget);
 		} else {
 			return Response::json(Input::all());
 		}
