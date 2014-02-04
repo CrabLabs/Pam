@@ -1,8 +1,14 @@
 #index{
+	margin-top: -20px;
+	padding-top: 0;
 	@media #{$mobile}{
 		display: none;
 	}
 	.index_wrapper{
+		background-image: image-url("banner.jpg");
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
 		border-bottom: 1px solid rgb(240, 240, 240);
 		font-size: 0;
 		padding: 40px 0;
@@ -16,9 +22,9 @@
 				width: (100% / 3);
 				img{
 					display: block;
-					height: 250px;
+					height: 279px;
 					margin: 0 auto 10px auto;
-					width: 250px;
+					width: 279px;
 				}
 				span{
 					color: rgb(134, 134, 136);
@@ -41,6 +47,8 @@
 		}
 	}
 	.container_fullwidth{
+		background: #fff;
+		padding-top: 20px;
 		h3{
 			color: $blue;
 			font-weight: normal;

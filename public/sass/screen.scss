@@ -10,11 +10,11 @@
 }
 
 body{
-	background-image: image-url("banner.jpg");
-	background-repeat: no-repeat;
-	background-size: container;
+	-webkit-font-smoothing: antialiased;
+	   -moz-font-smoothing: antialiased;
+	     -o-font-smoothing: antialiased;
+	     	font-smoothing: antialiased;
 	@media #{$mobile}{
-		background: none;
 		height: 100%;
 	}
 }
@@ -24,6 +24,15 @@ body{
 @import "header";
 
 #main{
+	background-image: image-url("banner.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: 0px;
+	padding-top: 20px;
+	@media #{$mobile}{
+		background: none;
+	}
 	@import "sections/index";
 	@import "sections/register";
 	@import "sections/login";

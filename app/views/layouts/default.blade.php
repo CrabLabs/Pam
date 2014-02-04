@@ -25,7 +25,7 @@
 					<span class='phone_support'><strong>Atención al cliente:</strong> 02 702 545</span>
 					<div id='menu_nav_mobile'></div>
 					<ul class='menu_nav'>
-						<li class='home'><a href='{{ URL::to('/') }}'></a></li>
+						<li class='home'><a href='{{ URL::to('/') }}'>HOME</a></li>
 						{{ HTML::liActive('services', HTML::link('services', 'SERVICIOS')) }}
 						{{ HTML::liActive('about-us', HTML::link('about-us', 'NOSOTROS')) }}
 						{{ HTML::liActive('works', HTML::link('works', 'TRABAJOS')) }}
@@ -76,7 +76,6 @@
 				</div>
 			</div>
 		</header>
-		
 		<div id='main' role='main'>
 			@yield('main')
 		</div>
