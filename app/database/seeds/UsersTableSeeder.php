@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder {
 				'password' 	=> Hash::make($name),
 				'name'		=> $name,
 				'lastname'	=> $lastname,
-				'role' 		=> ($i % 2 == 0) ? 'Personal' : 'Empresarial',
+				'role' 		=> ($i % 2 == 0) ? 'Persona' : 'Empresa',
 				'created_at'=> new DateTime,
 				'updated_at'=> new DateTime
 			));

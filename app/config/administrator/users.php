@@ -24,11 +24,28 @@ return array(
 
 	'filters' => array(
 		'id',
+		'phone' => array(
+			'title' => 'Teléfono',
+			'editable' => false,
+		),
+		'company_name' => array(
+			'title' => 'Compañía',
+			'editable' => false,
+		),
+		'rut' => array(
+			'title' => 'RUT',
+			'editable' => false,
+		),
 		'name' => array(
 			'title' => 'Nombre',
 		),
 		'lastname' => array(
 			'title' => 'Apellido',
+		),
+		'role' => array(
+			'title' => 'Rol',
+			'type' => 'enum',
+			'options' => array('Persona', 'Empresa', 'Admin')
 		),
 		'confirmed' => array(
 			'title' => 'Confirmado',
@@ -38,10 +55,22 @@ return array(
 			'title' => 'Fecha de creación',
 			'type'  => 'date',
 		),
+		'shipping_address' => array(
+			'title' => 'Dirección',
+		),
 	),
 
 	'edit_fields' => array(
 		'id',
+		'phone' => array(
+			'title' => 'Teléfono',
+		),
+		'company_name' => array(
+			'title' => 'Compañía',
+		),
+		'rut' => array(
+			'title' => 'RUT',
+		),
 		'name' => array(
 			'title' => 'Nombre',
 			'type'  => 'text',
@@ -50,11 +79,21 @@ return array(
 			'title' => 'Apellido',
 			'type'  => 'text',
 		),
+		'role' => array(
+			'title' => 'Rol',
+			'type' => 'enum',
+			'options' => array('Persona', 'Empresa', 'Admin')
+		),
 		'confirmed' => array(
 			'title' => 'Confirmado',
 			'type' => 'bool',
 		),
-		
+		'shipping_address' => array(
+			'title' => 'Dirección',
+		),
+		'billing_address' => array(
+			'title' => 'Dirección de facturación',
+		),
 	),
 
 );

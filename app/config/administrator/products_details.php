@@ -30,7 +30,7 @@ return array(
 		'laminate' => array(
 			'title' => 'Laminado',
 		),
-		'cost' => array(
+		'price' => array(
 			'title'  => 'Costo',
 			'output' => '$(:value)',
 		),
@@ -56,7 +56,7 @@ return array(
 		'laminate' => array(
 			'title' => 'Laminado',
 		),
-		'cost' => array(
+		'price' => array(
 			'title'  => 'Costo',
 			'output' => '$(:value)',
 		),
@@ -64,6 +64,11 @@ return array(
 
 	'edit_fields' => array(
 		'id',
+		'product' => array(
+			'title'  => 'Producto',
+			'type' => 'relationship',
+			'name_field' => 'name',
+		),
 		'amount' => array(
 			'title' => 'Cantidad',
 			'type'  => 'number',
@@ -83,7 +88,7 @@ return array(
 		'laminate' => array(
 			'title' => 'Laminado',
 		),
-		'cost' => array(
+		'price' => array(
 			'title'  => 'Costo',
 			'type'   => 'number',
 			'symbol' => '$',
