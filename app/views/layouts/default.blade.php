@@ -22,7 +22,7 @@
 		<header>
 			<nav>
 				<div class='container'>
-					<span class='phone_support'><strong>Atención al cliente:</strong> 02 702 545</span>
+					<span class='phone_support'><strong>Atención al cliente:</strong> 2208 50 92</span>
 					<div id='menu_nav_mobile'></div>
 					<ul class='menu_nav'>
 						<li class='home'><a href='{{ URL::to('/') }}'>HOME</a></li>
@@ -91,7 +91,7 @@
 					<li>{{ HTML::linkActive('login', 'Login / Registro') }}</a></li>
 				</ul>
 				<div class='footer-logo'><a href='{{ URL::to('/') }}'></a></div>
-				<span>Imprenta pam © 2013. info&#64;imprentapam.com.uy</span>
+				<span>Imprenta pam &copy; 2013. digital&#64;pam.com.uy</span>
 			</div>
 		</footer>
 

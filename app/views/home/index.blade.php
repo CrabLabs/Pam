@@ -58,20 +58,20 @@
 				<section>
 					<div class='info home'>
 						<span>Personalmente</span>
-						<span>Imprenta Pam</span>
+						<span>Pedernal 1865</span>
 						<span>CP 12.200</span>
 						<span>Montevideo, Uruguay</span>
 					</div>
 					<div class='info phone'>
 						<span>Telefónicamente</span>
 						<span>Tel: (598) 2 208 50 92</span>
-						<span><a href='#'>DESCARGAR VCARD</a></span>
+						<!--<span><a href='#'>DESCARGAR VCARD</a></span>-->
 					</div>
 				</section>
 				{{ Form::open() }}
 					<div class='info digital'>
 						<span>Digitalmente</span>
-						<span>info&#64;pam.com.uy</span>
+						<span>digital&#64;pam.com.uy</span>
 					</div>
 					<div>{{ Form::text('name', null, ['placeholder' => 'Nombre']) }}</div>
 					<div>{{ Form::text('company', null, ['placeholder' => 'Empresa']) }}</div>
