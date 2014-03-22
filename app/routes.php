@@ -19,10 +19,10 @@ View::share('times', array(
 
 Route::get('/', function()
 {
-	return View::make('home.index', [
+	return View::make('home.index', array(
 		'list' => Product::lists('name', 'id'),
 		'products' => Product::all()
-	]);
+	));
 });
 Route::post('/', 'ContactController@sendContact');
 
@@ -33,7 +33,7 @@ Route::post('upload', function () {
 	);
 	$validator = Validator::make(Input::all(), $rules);
 	$response = array();
-	
+
 	if ($validator->passes()) {
 		$location = public_path().'/'.Input::get('location');
 		$file = Input::file('file');
@@ -67,10 +67,10 @@ Route::get('login', function()
 
 Route::post('login', function()
 {
-	$validator = Validator::make(Input::all(), [
+	$validator = Validator::make(Input::all(), array(
 		'email' => 'required|email',
 		'password' => 'required'
-	]);
+	));
 
 	if ($validator->passes()) {
 		$data = array(
@@ -107,29 +107,27 @@ Route::get('order', 'OrderController@showIndex');
 Route::post('order', 'OrderController@sendOrder');
 Route::get('order/getDetail', 'OrderController@getDetail');
 
-Route::get('budget', ['as' => 'budget', 'uses' => 'BudgetController@showIndex']);
+Route::get('budget', array('as' => 'budget', 'uses' => 'BudgetController@showIndex'));
 Route::post('budget', 'BudgetController@sendBudget');
 Route::get('budget/getDetail', 'BudgetController@getDetail');
 
 Route::get('faq', function()
 {
-	return View::make('faq.index', [
+	return View::make('faq.index', array(
 		'faqs' => FAQ::all()
-	]);
+	));
 });
 
 Route::get('about-us', function()
 {
-	return View::make('about-us.index', [
-		
-	]);
+	return View::make('about-us.index');
 });
 
 Route::get('products', function()
 {
-	return View::make('products', [
+	return View::make('products', array(
 		'products' => Product::all()
-	]);
+	));
 });
 
 Route::get('contact', 'ContactController@showContact');

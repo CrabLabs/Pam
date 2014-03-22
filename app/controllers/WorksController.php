@@ -16,9 +16,9 @@ class WorksController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('works.index', [
+		return View::make('works.index', array(
 			'works' => $this->works->all(),
-		]);
+		));
 	}
 
 	/**
