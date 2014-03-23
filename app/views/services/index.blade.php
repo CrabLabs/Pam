@@ -9,12 +9,12 @@
 	@foreach($services as $service)
 		<div class='service'>
 			<div>
-				{{ HTML::image($service->image, null, ['height' => 140, 'width' => 220]) }}
+				{{ HTML::image($service->image, null, array('height' => 140, 'width' => 220)) }}
 			</div>
 			<div class='text'>
 				<h3>{{ $service->name }}</h3>
 				<p>{{{ $service->description }}}</p>
-				{{ HTML::link(URL::to('/'), 'Presupuestar similar', ['class' => 'similar_link']) }}
+				{{ HTML::link(URL::to('/'), 'Presupuestar similar', array('class' => 'similar_link')) }}
 			</div>
 		</div>
 	@endforeach

@@ -6,23 +6,23 @@
 		<div class='container-small'>
 			<div class='index_highlight'>
 				<img src='img/img_06.png'>
-				<span>Cotizá tu trabajo online y solicita la impresión hoy mismo.</span>	
+				<span>Cotizá tu trabajo online y solicita la impresión hoy mismo.</span>
 			</div>
 			<div class='index_highlight'>
 				<img src='img/img_07.png'>
-				<span>Adjuntanos tu trabajo o solicitá nuestro servicio de diseño.</span>	
+				<span>Adjuntanos tu trabajo o solicitá nuestro servicio de diseño.</span>
 			</div>
 			<div class='index_highlight'>
 				<img src='img/img_08.png'>
-				<span>Recibí tu trabajo impreso en la dirección y el horario que indíques.</span>	
+				<span>Recibí tu trabajo impreso en la dirección y el horario que indíques.</span>
 			</div>
 			<div id="index_slider_arrow"></div>
 		</div>
 	</div>
 	<div class='container_fullwidth'>
 		<div class='container'>
-			<h3>Elíge tu producto, arma tu presupuesto y manda imprimir hoy mismo!</h3>	
-			{{ Form::open(['method' => 'get', 'route' => 'budget']) }}
+			<h3>Elíge tu producto, arma tu presupuesto y manda imprimir hoy mismo!</h3>
+			{{ Form::open(array('method' => 'get', 'route' => 'budget')) }}
 				{{ Form::select('product', $list) }}
 				{{ Form::submit('Cotizar') }}
 			{{ Form::close() }}
@@ -73,12 +73,12 @@
 						<span>Digitalmente</span>
 						<span>digital&#64;pam.com.uy</span>
 					</div>
-					<div>{{ Form::text('name', null, ['placeholder' => 'Nombre']) }}</div>
-					<div>{{ Form::text('company', null, ['placeholder' => 'Empresa']) }}</div>
-					<div>{{ Form::text('subject', null, ['placeholder' => 'Asunto']) }}</div>
-					<div>{{ Form::text('phone', null, ['placeholder' => 'Teléfono']) }}</div>
-					<div>{{ Form::email('email', null, ['placeholder' => 'Email']) }}</div>
-					<div>{{ Form::textarea('message', null, ['placeholder' => 'Mensaje']) }}</div>
+					<div>{{ Form::text('name', null, array('placeholder' => 'Nombre')) }}</div>
+					<div>{{ Form::text('company', null, array('placeholder' => 'Empresa')) }}</div>
+					<div>{{ Form::text('subject', null, array('placeholder' => 'Asunto')) }}</div>
+					<div>{{ Form::text('phone', null, array('placeholder' => 'Teléfono')) }}</div>
+					<div>{{ Form::email('email', null, array('placeholder' => 'Email')) }}</div>
+					<div>{{ Form::textarea('message', null, array('placeholder' => 'Mensaje')) }}</div>
 					{{ Form::submit('Enviar mensaje') }}
 				{{ Form::close() }}
 			</div>

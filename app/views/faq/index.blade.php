@@ -15,8 +15,12 @@
 </section>
 <section class='container greyBackground'>
 	<h3>¿No encontraste una respuesta?</h3>
-	<p>Puedes utilizar nuestra sección {{ HTML::link(URL::to('contact'), 'Contactos') }} para enviarnos tu consulta. También puede comunicarte telefónicamente con nosotros para que podamos ayudarte.<br><br>
-	Tel: 2208 50 92 o por mail a <a href='mailto:info@pam.com.uy'>info&#64;pam.com.uy</a></p>
+	<p>
+		Puedes utilizar nuestra sección {{ HTML::link(URL::to('contact'), 'Contactos') }}
+		para enviarnos tu consulta. También puede comunicarte telefónicamente con nosotros
+		para que podamos ayudarte.<br><br>
+		Tel: 2208 50 92 o por mail a <a href='mailto:info@pam.com.uy'>info&#64;pam.com.uy</a>
+	</p>
 </section>
 @stop
 
