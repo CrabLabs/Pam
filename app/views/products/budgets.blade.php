@@ -111,9 +111,7 @@
 			<div class='budget'>
 				<h3>Presupuesto</h3>
 				<p>
-					El presupuesto fue establecido de acuerdo a las características del 
-					producto. En caso de que tengas alguna duda o consulta respecto al 
-					mismo o al trabajo, no dudes en {{ HTML::link(URL::to('contact'), 'contactarnos') }}.
+					El presupuesto fue establecido de acuerdo a las características del producto. En caso de que tengas alguna duda o consulta respecto al mismo o al trabajo, no dudes en {{ HTML::link(URL::to('contact'), 'contactarnos') }}.
 				</p>
 				<span id='cost' class='budgetable'></span>
 			</div>
