@@ -12,9 +12,9 @@
 */
 View::share('title', 'Imprenta PAM');
 View::share('times', array(
-	'1600' => '16:00hs',
-	'1630' => '16:30hs',
-	'1900' => '19:00hs',
+	'0900' => '09:00hs',
+	'1300' => '13:00hs',
+	'1800' => '18:00hs',
 ));
 
 Route::get('/', function()

@@ -28,7 +28,7 @@ class CreateOrdersTable extends Migration {
 			$table->integer('shipping_time_from')->nullable()->default(NULL);
 			$table->integer('shipping_time_to')->nullable()->default(NULL);
 			$table->enum('payment_option', array('Efectivo', 'Cheque', 'Tarjeta de crédito'));
-			$table->enum('status', array('Activo', 'Enviado', 'Rechazado'))->default('Activo');
+			$table->enum('status', array('En producción', 'En revisión', 'Enviado', 'Para retirar', 'Finalizado'))->default('En producción');
 			$table->timestamps();
 			$table->softDeletes();
 		});

@@ -18,7 +18,7 @@ return array(
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',
-			'options' => array('Activo', 'Enviado', 'Rechazado'),
+			'options' => array('En producción', 'En revisión', 'Enviado', 'Para retirar', 'Finalizado'),
 		),
 		'payment_option' => array(
 			'title' => 'Modo de pago',
@@ -47,7 +47,7 @@ return array(
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',
-			'options' => array('Activo', 'Enviado', 'Rechazado'),
+			'options' => array('En producción', 'En revisión', 'Enviado', 'Para retirar', 'Finalizado'),
 		),
 		'payment_option' => array(
 			'title' => 'Modo de pago',
@@ -73,7 +73,7 @@ return array(
 		'status' => array(
 			'title' => 'Estado',
 			'type' => 'enum',
-			'options' => array('Activo', 'Enviado', 'Rechazado'),
+			'options' => array('En producción', 'En revisión', 'Enviado', 'Para retirar', 'Finalizado'),
 		),
 		'shipping_address' => array(
 			'title' => 'Dirección',
