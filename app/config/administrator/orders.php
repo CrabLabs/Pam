@@ -1,10 +1,21 @@
 <?php
 
+if (! function_exists('imageLink'))
+{
+	function imageLink($value)
+	{
+		$link = URL::to('img/uploads/orders/'.$value);
+		$image = HTML::image('img/uploads/orders/originals/'.$value, '', array('height' => 100));
+
+		return '<a href=\''.$link.'\'>'.$image.'</a>';
+	}
+}
+
 return array(
 	'title'  => 'Ordenes',
 	'single' => 'orden',
 	'model'  => 'Order',
-	
+
 	'columns' => array(
 		'reference' => array(
 			'title' => 'Número de referencia',
@@ -14,6 +25,10 @@ return array(
 			'title' => 'Producto',
 			'relationship' => 'product',
 			'select' => 'IF((:table).budgetable, (:table).name, CONCAT("<strong>", (:table).name, "</strong>"))',
+		),
+		'file' => array(
+			'title' => 'Imagen',
+			'output' => imageLink('(:value)'),
 		),
 		'status' => array(
 			'title' => 'Estado',

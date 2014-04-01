@@ -1,10 +1,21 @@
 <?php
 
+if (! function_exists('imageLink'))
+{
+	function imageLink($value)
+	{
+		$link = URL::to('img/uploads/orders/'.$value);
+		$image = HTML::image('img/uploads/orders/originals/'.$value, '', array('height' => 100));
+
+		return '<a href=\''.$link.'\'>'.$image.'</a>';
+	}
+}
+
 return array(
 	'title'  => 'Presupuestos',
 	'single' => 'presupuesto',
 	'model'  => 'Budget',
-	
+
 	'columns' => array(
 		'id',
 		'product_id' => array(
@@ -20,6 +31,10 @@ return array(
 			'title' => 'Estado',
 			'type' => 'enum',
 			'options' => array('Activo', 'Enviado', 'Rechazado'),
+		),
+		'file' => array(
+			'title' => 'Imagen',
+			'output' => imageLink('(:value)'),
 		),
 		'email' => array(
 			'title' => 'Email',

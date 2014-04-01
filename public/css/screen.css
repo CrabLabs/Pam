@@ -187,7 +187,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   background: #f9f9f9;
-  background-image: url('/img/select_arrow.png');
+  background-image: url('/img/select_arrow.png?1390352786');
   background-repeat: no-repeat;
   background-position: -webkit-calc(100% - 10px);
   background-position: -moz-calc(100% - 10px);
@@ -319,7 +319,7 @@ header nav {
 }
 /* line 9, ../sass/_header.scss */
 header nav .phone_support {
-  background: url('/img/img_01.png') no-repeat;
+  background: url('/img/img_01.png?1387050070') no-repeat;
   background-position: 0 9px;
   color: white;
   display: inline-block;
@@ -336,7 +336,7 @@ header nav .phone_support {
 }
 /* line 22, ../sass/_header.scss */
 header nav #menu_nav_mobile {
-  background: url('/img/menu_mob.png') no-repeat;
+  background: url('/img/menu_mob.png?1390319937') no-repeat;
   background-color: #212528;
   background-position: center;
   background-size: 24px;
@@ -399,7 +399,7 @@ header nav ul li {
 }
 /* line 70, ../sass/_header.scss */
 header nav ul li.home {
-  background: url('/img/img_02.png') no-repeat;
+  background: url('/img/img_02.png?1387050070') no-repeat;
   background-position: 6px 12px;
   border-right: 1px solid #1d2024;
   font-size: 0;
@@ -423,7 +423,7 @@ header nav ul li.user {
 }
 /* line 89, ../sass/_header.scss */
 header nav ul li.user #user-name {
-  background-image: url('/img/user_arrow.png');
+  background-image: url('/img/user_arrow.png?1391117964');
   background-position: -webkit-calc(100% - 10px);
   background-position: -moz-calc(100% - 10px);
   background-position: -o-calc(100% - 10px);
@@ -467,13 +467,13 @@ header nav ul li.user.active div a {
 }
 /* line 120, ../sass/_header.scss */
 header nav ul li.user.active div a#edit {
-  background: url('/img/icon_1.png');
+  background: url('/img/icon_1.png?1391117964');
   background-position: left center;
   background-repeat: no-repeat;
 }
 /* line 125, ../sass/_header.scss */
 header nav ul li.user.active div a#logout {
-  background: url('/img/icon_2.png');
+  background: url('/img/icon_2.png?1391117964');
   background-position: left center;
   background-repeat: no-repeat;
 }
@@ -543,22 +543,22 @@ header .header_wrapper .section:hover.logo {
 }
 /* line 179, ../sass/_header.scss */
 header .header_wrapper .section.logo {
-  background: url('/img/logo.png') no-repeat;
+  background: url('/img/logo.png?1387050070') no-repeat;
   background-position: center center;
 }
 /* line 183, ../sass/_header.scss */
 header .header_wrapper .section.print_now {
-  background: url('/img/img_05.png') no-repeat;
+  background: url('/img/img_05.png?1387050070') no-repeat;
   background-position: 4px center;
 }
 /* line 187, ../sass/_header.scss */
 header .header_wrapper .section.create_budget {
-  background: url('/img/img_03.png') no-repeat;
+  background: url('/img/img_03.png?1387050070') no-repeat;
   background-position: 4px center;
 }
 /* line 191, ../sass/_header.scss */
 header .header_wrapper .section.faq {
-  background: url('/img/img_04.png') no-repeat;
+  background: url('/img/img_04.png?1387050070') no-repeat;
   background-position: 4px center;
 }
 /* line 195, ../sass/_header.scss */
@@ -592,7 +592,7 @@ header .header_wrapper .section a span:last-of-type {
 }
 /* line 217, ../sass/_header.scss */
 header .header_wrapper .section .section_arrow {
-  background: url('/img/arrow_submenu.png');
+  background: url('/img/arrow_submenu.png?1391117964');
   background-repeat: no-repeat;
   display: block;
   height: 16px;
@@ -619,7 +619,7 @@ header .header_wrapper .index_mobile img {
 
 /* line 26, ../sass/screen.scss */
 #main {
-  background-image: url('/img/banner.jpg');
+  background-image: url('/img/banner.jpg?1389901456');
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -645,7 +645,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 7, ../sass/sections/_index.scss */
 #main #index .index_wrapper {
-  background-image: url('/img/banner.jpg');
+  background-image: url('/img/banner.jpg?1389901456');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -680,7 +680,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 38, ../sass/sections/_index.scss */
 #main #index .index_wrapper .container-small #index_slider_arrow {
-  background: url('/img/arrow.png') no-repeat;
+  background: url('/img/arrow.png?1390319937') no-repeat;
   bottom: -51px;
   display: block;
   height: 11px;
@@ -741,11 +741,16 @@ header .header_wrapper .index_mobile img {
   width: calc(100% / 5);
 }
 /* line 88, ../sass/sections/_index.scss */
+#main #index .container_fullwidth .index_slider ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 92, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .index_slider ul li img {
   height: 140px;
   width: 150px;
 }
-/* line 92, ../sass/sections/_index.scss */
+/* line 96, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .index_slider ul li span {
   color: #333;
   display: block;
@@ -755,35 +760,35 @@ header .header_wrapper .index_mobile img {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 104, ../sass/sections/_index.scss */
+/* line 108, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .clients {
   padding-bottom: 50px;
   text-align: center;
 }
-/* line 107, ../sass/sections/_index.scss */
+/* line 111, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .clients h3 {
   font-size: 22px;
   text-transform: uppercase;
 }
-/* line 112, ../sass/sections/_index.scss */
+/* line 116, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact {
   background: #f6f6f6;
   border-bottom: 1px solid #eaeaea;
   border-top: 1px solid #eaeaea;
 }
-/* line 116, ../sass/sections/_index.scss */
+/* line 120, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact h3 {
   font-size: 22px;
   text-transform: uppercase;
 }
-/* line 120, ../sass/sections/_index.scss */
+/* line 124, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact h4 {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 20px;
 }
-/* line 124, ../sass/sections/_index.scss */
+/* line 128, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact section {
-  background: url('/img/img_18.png') no-repeat;
+  background: url('/img/img_18.png?1387050070') no-repeat;
   background-position: center bottom;
   display: inline-block;
   min-height: 480px;
@@ -791,31 +796,31 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 66.66667%;
 }
-/* line 133, ../sass/sections/_index.scss */
+/* line 137, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact form {
   display: inline-block;
   vertical-align: top;
   width: 33.33333%;
 }
-/* line 137, ../sass/sections/_index.scss */
+/* line 141, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact form div {
   margin-bottom: 10px;
 }
-/* line 139, ../sass/sections/_index.scss */
+/* line 143, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact form div input, #main #index .container_fullwidth .contact form div textarea {
   background: white;
   width: 100%;
 }
-/* line 143, ../sass/sections/_index.scss */
+/* line 147, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact form div textarea {
   height: 80px;
   resize: none;
 }
-/* line 148, ../sass/sections/_index.scss */
+/* line 152, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact form input[type=submit] {
   width: 100%;
 }
-/* line 152, ../sass/sections/_index.scss */
+/* line 156, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info {
   display: inline-block;
   min-height: 60px;
@@ -824,26 +829,26 @@ header .header_wrapper .index_mobile img {
   vertical-align: top;
   width: 50%;
 }
-/* line 159, ../sass/sections/_index.scss */
+/* line 163, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.home {
-  background: url('/img/img_15.png') no-repeat;
+  background: url('/img/img_15.png?1387050070') no-repeat;
 }
-/* line 160, ../sass/sections/_index.scss */
+/* line 164, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.phone {
-  background: url('/img/img_16.png') no-repeat;
+  background: url('/img/img_16.png?1387050070') no-repeat;
 }
-/* line 161, ../sass/sections/_index.scss */
+/* line 165, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info.digital {
-  background: url('/img/img_17.png') no-repeat;
+  background: url('/img/img_17.png?1387050070') no-repeat;
   width: 100%;
 }
-/* line 162, ../sass/sections/_index.scss */
+/* line 166, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info span {
   color: #999;
   display: block;
   font-size: 0.7em;
 }
-/* line 166, ../sass/sections/_index.scss */
+/* line 170, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info span a {
   color: #2b70bb;
   display: block;
@@ -851,7 +856,7 @@ header .header_wrapper .index_mobile img {
   font-weight: bold;
   padding: 20px 0;
 }
-/* line 173, ../sass/sections/_index.scss */
+/* line 177, ../sass/sections/_index.scss */
 #main #index .container_fullwidth .contact .info span:first-of-type {
   color: #2b70bb;
   font-weight: bold;
@@ -1821,7 +1826,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 12, ../sass/sections/_faq.scss */
 #main #faq .faq .question {
-  background: url('/img/img_04_G.png') no-repeat center left;
+  background: url('/img/img_04_G.png?1390319937') no-repeat center left;
   color: #2b70bb;
   font-size: 0.8em;
   height: 30px;
@@ -1832,7 +1837,7 @@ header .header_wrapper .index_mobile img {
 }
 /* line 22, ../sass/sections/_faq.scss */
 #main #faq .faq .answer {
-  background: url('/img/enter-arrow.png') no-repeat top left;
+  background: url('/img/enter-arrow.png?1390319937') no-repeat top left;
   color: #666;
   font-size: 0.75em;
   line-height: 1.5em;
@@ -1967,7 +1972,7 @@ footer div ul li a.active, footer div ul li a:hover {
 }
 /* line 29, ../sass/_footer.scss */
 footer div .footer-logo {
-  background: url('/img/logo.png') no-repeat;
+  background: url('/img/logo.png?1387050070') no-repeat;
   background-position: center center;
   background-size: cover;
   display: inline-block;
@@ -1986,3 +1991,5 @@ footer div .footer-logo:hover {
 footer div span {
   font-size: 0.8em;
 }
+
+/*@ sourceMappingURL=screen.css.map */
