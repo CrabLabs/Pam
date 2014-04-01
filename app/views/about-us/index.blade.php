@@ -3,7 +3,7 @@
 @section('main')
 <section class='upper'>
 	<h3>Nosotros</h3>
-	<p>Te invitamos a conocernos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p>Estamos preparados para brindarte lo mejor en gráfica. Te invitamos a conocernos.</p>
 </section>
 <section id='about-us' class='container whiteBackground'>
 	<div id='left'>
@@ -39,11 +39,7 @@
 </section>
 <section class='container greyBackground'>
 	<h3>Esto es solo una parte de que lo PAM puede ofrecete, te invitamos a conocernos:</h3>
-	<p>
-		Puede utilizar nuestra sección {{ HTML::link(URL::to('about-us'), 'nosotros') }}
-		o {{ HTML::link(URL::to('services'), 'servicios') }} para conocer PAM un poco
-		más. También puede comunicarte telefónicamente con nosotros para que podamos ayudarte.<br><br>
-		Tel: 2208 50 92 o por mail a <a href='mailto:digital@pam.com.uy'>digital&#64;pam.com.uy</a>
-	</p>
+	<p>Puede utilizar nuestra sección {{ HTML::link(URL::to('about-us'), 'nosotros') }} o {{ HTML::link(URL::to('services'), 'servicios') }} para conocer PAM un poco más. También puede comunicarte telefónicamente  con nosotros para que podamos ayudarte.<br><br>
+	Tel: 2208 50 92 o por mail a <a href='mailto:digital@pam.com.uy'>digital&#64;pam.com.uy</a></p>
 </section>
 @stop

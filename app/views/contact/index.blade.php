@@ -3,7 +3,7 @@
 @section('main')
 <section class='upper'>
 	<h3>Contacto</h3>
-	<p>Contactate con nosotros para obtener más información acerca de nuestros servicios.</p>
+	<p>Envíanos tus comentarios y/o consultas y un miembro de nuestro equipo te contactará a la brevedad.</p>
 </section>
 <section id='contact' class='container whiteBackground'>
 	<h3>Formulario de contacto</h3>
@@ -25,12 +25,12 @@
 			{{ Form::label('phone', 'Teléfono:') }}
 			{{ Form::text('phone') }}
 		</div>
-		<div>
+		<!--<div>
 			{{ Form::label('subject', 'Razón de consulta:') }}
 			{{ Form::select('subject', array(
 				'Servicio de diseño gráfico'
 			)) }}
-		</div>
+		</div>-->
 		<div>
 			{{ Form::label('message', 'Mensaje: *') }}
 			{{ Form::textarea('message', null, array('required' => true)) }}

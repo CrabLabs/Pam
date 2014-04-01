@@ -163,12 +163,8 @@
 </section>
 <section class='container greyBackground'>
 	<h3>¿Tienes preguntas?</h3>
-	<p>
-		Puede utilizar nuestra sección {{ HTML::link(URL::to('faq'), 'Preguntas Frecuentes') }}
-		para informarte. También puede comunicarte telefónicamente con nosotros
-		para que podamos ayudarte.<br><br>
-		Tel: 2208 50 92 o por mail a <a href='mailto:digital@pam.com.uy'>digital&#64;pam.com.uy</a>
-	</p>
+		<p>Puede utilizar nuestra sección {{ HTML::link(URL::to('about-us'), 'nosotros') }} o {{ HTML::link(URL::to('services'), 'servicios') }} para conocer PAM un poco más. También puede comunicarte telefónicamente  con nosotros para que podamos ayudarte.<br><br>
+	Tel: 2208 50 92 o por mail a <a href='mailto:digital@pam.com.uy'>digital&#64;pam.com.uy</a></p>
 </section>
 @stop
 

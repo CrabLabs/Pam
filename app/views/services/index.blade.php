@@ -9,7 +9,8 @@
 	@foreach($services as $service)
 		<div class='service'>
 			<div>
-				{{ HTML::image($service->image, null, array('height' => 140, 'width' => 220)) }}
+			
+				{{ HTML::image(URL::to('img/uploads/services/originals/'.$service->image), $service->name, array('height' => 140, 'width' => 220)) }}
 			</div>
 			<div class='text'>
 				<h3>{{ $service->name }}</h3>
