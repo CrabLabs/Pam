@@ -10,7 +10,7 @@
 		<ul>
 			<li class='active'><span>1</span>Selecciona tu producto</li>
 			<li><span>2</span>Caracteristicas del trabajo</li>
-			<li><span>3</span>Costo aproximado</li>
+			<li><span>3</span>Costo</li>
 		</ul>
 	</nav>
 	{{ Form::open() }}
@@ -115,7 +115,7 @@
 				</p>
 				<span id='cost' class='budgetable'></span>
 			</div>
-			{{ Form::submit() }}
+			{{ Form::submit('Hacer pedido') }}
 		</section>
 	{{ Form::close() }}
 </section>

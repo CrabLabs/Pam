@@ -21,11 +21,8 @@ class ContactController extends BaseController {
 	{
 		$rules = array(
 			'name' => 'required',
-			// 'company' => '',
 			'email' => 'required|email',
-			// 'phone' => '',
-			'subject' => 'required',
-			'message' => 'required',	
+			'message' => 'required',
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
