@@ -30,10 +30,10 @@
 				<ul>
 					@foreach($products as $product)
 						<li>
-							<div>
+							<div><a href='{{ URL::to('budget') }}?product={{ $product->id }}'>
 								{{ HTML::image(URL::to('img/uploads/products/originals/'.$product->image)) }}
 								<span>{{ $product->name }}</span>
-							</div>
+							</a></div>
 						</li>
 					@endforeach
 				</ul>
