@@ -110,8 +110,13 @@
 			</div>
 			<div class='budget'>
 				<h3>Presupuesto</h3>
-				<p>
+				<p class='budgetable'>
 					El presupuesto fue establecido de acuerdo a las características del producto. En caso de que tengas alguna duda o consulta respecto al mismo o al trabajo, no dudes en {{ HTML::link(URL::to('contact'), 'contactarnos') }}.
+				</p>
+				<p class='no-budgetable'>
+					Debido a la complejidad del trabajo el mismo debe ser analizado por nuestros expertos para darle un presupuesto acertado.
+					<br><br>
+					<strong>El costo del trabajo le será enviado al email proporcionado lo antes posible.</strong>
 				</p>
 				<span id='cost' class='budgetable'></span>
 			</div>
