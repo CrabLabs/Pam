@@ -19,13 +19,14 @@ return array(
 	'columns' => array(
 		'id',
 		'product_id' => array(
-			'relationship' => 'Product',
-			'name' => 'name',
-		),
-		'product_id' => array(
 			'title' => 'Producto',
 			'relationship' => 'product',
 			'select' => 'IF((:table).budgetable, (:table).name, CONCAT("<strong>", (:table).name, "</strong>"))',
+		),
+		'user_id' => array(
+			'title' => 'Usuario',
+			'relationship' => 'user',
+			'select' => 'CONCAT((:table).name, " ", (:table).lastname, " (", (:table).id, ")")'
 		),
 		'status' => array(
 			'title' => 'Estado',
