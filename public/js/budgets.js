@@ -30,7 +30,7 @@
 	 * @return void
 	 */
 	$(document).on('ready', function () {
-		budgetables = $('input[name=budgetables').val().split(',');
+		budgetables = $('input[name="budgetables"]').val().split(',');
 		$('.orders_step_2, .orders_step_3').hide();
 		$('.orders_step_1').show();
 	});
@@ -45,7 +45,7 @@
 
 		$('.orders_step_1').hide();
 		$('.orders_step_2').show();
-		$('select[name=product_id]').val($(this).data('id')).trigger('change');
+		$('select[name="product_id"]').val($(this).data('id')).trigger('change');
 		$('nav.steps .active').removeClass('active').next('li').addClass('active');
 	});
 
@@ -57,19 +57,19 @@
 	 * @return void
 	 */
 	$('.next_step').on('click', function () {
-		var selection = ($.inArray($('select[name=product_id]').val(), budgetables) > -1) ? 'budgetable' : 'no-budgetable';
+		var selection = ($.inArray($('select[name="product_id"]').val(), budgetables) > -1) ? 'budgetable' : 'no-budgetable';
 
 		$('.orders_step_2').hide();
 		$('.orders_step_3').show();
 		$('nav.steps .active').removeClass('active').next('li').addClass('active');
 
-		$('.details_list dl').html('<dt>Producto:</dt><dd>' + $('select[name=product_id] :selected').text() + '</dd>');
+		$('.details_list dl').html('<dt>Producto:</dt><dd>' + $('select[name="product_id"] :selected').text() + '</dd>');
 		$('.details .' + selection).each(function () {
 			var html = '<dt>' + $(this).children('label').text() + '</dt>';
 			html += '<dd>' + $(this).children('select, input, textarea').val() + '</dd>';
 			$('.details_list dl').append(html);
 		});
-		
+
 		// Check if the selection is budgetable
 		if (selection === 'budgetable') {
 			// Serialize the form data
@@ -94,7 +94,7 @@
 
 		$('.orders_step_3').hide();
 		$('.orders_step_2').show();
-		$('nav.steps .active').removeClass('active').prev('li').addClass('active');	
+		$('nav.steps .active').removeClass('active').prev('li').addClass('active');
 	});
 
 	/**
@@ -106,7 +106,7 @@
 	 */
 	$('.details select').on('change', function () {
 		// Check if the selected product_id is non-budgetable
-		if ($.inArray($('select[name=product_id]').val(), budgetables) === -1) {
+		if ($.inArray($('select[name="product_id"]').val(), budgetables) === -1) {
 			// Show the text of the next_step button as non-budgetable
 			$('.next_step').text('Siguiente');
 			// Show the non-budgetable form
@@ -121,24 +121,24 @@
 			$('.budgetable').show();
 			$('.no-budgetable').hide();
 		}
-		
+
 		// Serialize the form data
 		data = $('form select').serialize();
 
 		// Get the next select box
 		nextSelect = $(this).parent('div').next('div').children('select');
-		
+
 		// Check if there is not a next select box
 		if (nextSelect[0] !== undefined) {
 			// Get the name attribute of the next select
 			nextName = nextSelect.attr('name');
-			
+
 			// Disable next until the operation is ready
 			nextSelect.attr('disabled', true);
-			
+
 			// Split the form and get the first until the next select box name
 			data = data.split(nextName)[0];
-			
+
 			// Check if the data dosn't ends with '&' and append it
 			if (data[data.length - 1] !== '&')
 				data+= '&';
@@ -146,7 +146,7 @@
 			// Append the required select name for the query, if it's the last
 			// query the price
 			data+= 'select=' + (nextName || 'price');
-			
+
 			// Request the json response with ajax of the matching data
 			$.getJSON('budget/getDetail', data, function (res) {
 				html = '';
