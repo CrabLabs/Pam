@@ -87,6 +87,18 @@ Route::post('login', function()
 	}
 });
 
+Route::get('password_recovery', function()
+{
+	return View::make('user.password_recovery');
+});
+
+Route::post('password_recovery', function()
+{
+    $credentials = array('email' => Input::get('email'));
+
+    return Password::remind($credentials);
+});
+
 Route::get('edit', function()
 {
 	return View::make('user.edit')->with('user', Auth::user());

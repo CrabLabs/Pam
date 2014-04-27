@@ -15,6 +15,7 @@
 		{{ Form::email('email') }}
 		{{ Form::label('password', 'Contraseña: ') }}
 		{{ Form::password('password') }}
+		{{ HTML::link(URL::to('password_recovery'), 'Olvidé mi contraseña') }}
 		{{ Form::submit() }}
 	{{ Form::close() }}
 	{{ HTML::link(URL::route('user.create'), 'Registrar nuevo usuario') }}

@@ -27,18 +27,18 @@ class BudgetController extends BaseController {
 			$budget->user_id = (Auth::user()) ? Auth::user()->id : 0;
 			$budget->graphic_design = Input::has('graphic_design');
 			$budget->collect_personally = Input::get('collect_personally');
-			
+
 			if (Input::has('image_name') and Input::get('image_name') != '')
 				$budget->file = Input::get('image_name');
 
 			if (Product::find(Input::get('product_id'))->budgetable) {
 				$specifications = [
-					'product_id'=> Input::get('product_id'),
-					'amount' 	=> Input::get('amount'),
-					'size' 		=> Input::get('size'),
-					'inks' 		=> Input::get('inks'),
-					'paper' 	=> Input::get('paper'),
-					'weight' 	=> Input::get('weight'),
+					'product_id' => Input::get('product_id'),
+					'amount' 		=> Input::get('amount'),
+					'size' 			=> Input::get('size'),
+					'inks' 			=> Input::get('inks'),
+					'paper' 	 	=> Input::get('paper'),
+					'weight' 		=> Input::get('weight'),
 					'laminate' 	=> Input::get('laminate'),
 				];
 
