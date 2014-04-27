@@ -8,7 +8,7 @@
 
 <section id='register' class='container whiteBackground'>
 	<h3 class='title'>Datos personales</h3>
-	@if(count($errors->messages()) > 0)
+	@if(count($errors) > 0 and count($errors->messages()) > 0)
 		<h3>Hay errores en el formulario</h3>
 		<ul class='register_errors'>
 			@foreach($errors->messages()->all() as $message)

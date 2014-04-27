@@ -49,7 +49,7 @@ class UserController extends \BaseController {
 			'rut' => 'required_if:role,Empresa|numeric',
 			'billing_address' => 'required_if:same_billing_address,false',
 		);
-		
+
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->passes()) {
@@ -69,13 +69,26 @@ class UserController extends \BaseController {
 			$user->shipping_time_from = Input::get('shipping_time_from');
 			$user->shipping_time_to = Input::get('shipping_time_to');
 			$user->billing_address = (Input::get('same_billing_address')) ? Input::get('shiping_address') : Input::get('billing_address');
-			
+
 			$user->save();
+
+			$data = array(
+				'name' => $user->name,
+				'email' => $user->email,
+				'phone' => $user->phone,
+				'lastname' => $user->lastname
+			);
+
+			Mail::send('emails.newuser', $data, function ($mail) use ($user) {
+				$mail->from('digital@pam.com.uy', 'Pam.com.uy');
+				$mail->to($user->email);
+				$mail->subject('Nuevo usuario en pam.com.uy');
+			});
 
 			Auth::login($user);
 			return Redirect::to('/');
 		}
-		
+
 		return View::make('user.register')->withErrors($validator);
 	}
 
@@ -120,7 +133,7 @@ class UserController extends \BaseController {
 			'rut' => 'required_if:role,Empresa|numeric',
 			'billing_address' => 'required_if:same_billing_address,false',
 		);
-		
+
 		if (Input::get('password') != '')
 			$rules['password'] = 'required|confirmed|min:8';
 
@@ -142,7 +155,7 @@ class UserController extends \BaseController {
 			$user->shipping_time_from = Input::get('shipping_time_from');
 			$user->shipping_time_to = Input::get('shipping_time_to');
 			$user->billing_address = (Input::has('same_billing_address')) ? Input::get('shiping_address') : Input::get('billing_address');
-			
+
 			$user->save();
 			return Redirect::to('edit');
 		} else {
