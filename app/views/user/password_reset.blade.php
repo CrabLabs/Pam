@@ -14,7 +14,9 @@
     <input type="hidden" name="token" value="{{ $token }}">
     {{ Form::label('email', 'Email: ') }}
     {{ Form::email('email') }}
+    {{ Form::label('password', 'Nueva contraseña: ') }}
     {{ Form::password('password') }}
+    {{ Form::label('password_confirmation', 'Repite la contraseña: ') }}
     {{ Form::password('password_confirmation') }}
     {{ Form::submit() }}
   {{ Form::close() }}
