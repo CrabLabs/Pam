@@ -57,11 +57,13 @@ class BudgetController extends BaseController {
 				$budget->description = Input::get('detail');
 				$budget->email = Input::get('email');
 
-				/*
-				Mail::send('template', data, function ($mail) {
+				$data = array('budget' => $budget);
+
+				Mail::send('email.budget_to_pam', $data, function ($mail) use ($budget) {
+					$mail->subject('Pedido de presupuesto');
 					$mail->to('contacto.pam.settings');
+					$mail->from($budget->email);
 				});
-				*/
 			}
 
 			$budget->save();
