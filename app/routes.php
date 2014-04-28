@@ -103,6 +103,27 @@ Route::post('password_recovery', function()
 		});
 });
 
+Route::get('password/reset/{token}', function($token)
+{
+    return View::make('user.password_reset')->with('token', $token);
+});
+
+Route::post('password/reset/{token}', function()
+{
+    $credentials = array(
+        'email' => Input::get('email'),
+        'password' => Input::get('password'),
+        'password_confirmation' => Input::get('password_confirmation')
+    );
+
+    return Password::reset($credentials, function($user, $password)
+    {
+        $user->password = Hash::make($password);
+        $user->save();
+        return Redirect::to('/');
+    });
+});
+
 Route::get('edit', function()
 {
 	return View::make('user.edit')->with('user', Auth::user());

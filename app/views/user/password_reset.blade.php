@@ -3,18 +3,19 @@
 @section('main')
 <section class='upper'>
   <h3>Recuperación de contraseña</h3>
-  <p>Se le enviará un email para recuperarla</p>
+  <p></p>
 </section>
 <section id='login' class='container whiteBackground'>
-  <h3>Ingrese su email</h3>
+  <h3>Confirme su nueva contraseña</h3>
   @if (Session::has('error'))
     {{ trans(Session::get('reason')) }}
-  @elseif (Session::has('success'))
-    An e-mail with the password reset has been sent.
   @endif
   {{ Form::open(array('method' => 'POST')) }}
+    <input type="hidden" name="token" value="{{ $token }}">
     {{ Form::label('email', 'Email: ') }}
     {{ Form::email('email') }}
+    {{ Form::password('password') }}
+    {{ Form::password('password_confirmation') }}
     {{ Form::submit() }}
   {{ Form::close() }}
 </section>
