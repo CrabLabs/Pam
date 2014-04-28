@@ -96,7 +96,11 @@ Route::post('password_recovery', function()
 {
     $credentials = array('email' => Input::get('email'));
 
-    return Password::remind($credentials);
+    return Password::remind($credentials, function($message, $user)
+		{
+			$message->subject('PAM - Recuperar contraseña');
+			$message->from('digital@pam.com.uy', 'PAM');
+		});
 });
 
 Route::get('edit', function()

@@ -144,7 +144,8 @@ class UserController extends \BaseController {
 			$user->name = Input::get('name');
 			$user->lastname = Input::get('lastname');
 			$user->email = Input::get('email');
-			$user->password = Hash::make(Input::get('password'));
+			if (Input::get('password') != '')
+				$user->password = Hash::make(Input::get('password'));
 			if (Input::get('image_name') != '')
 				$user->image = Input::get('image_name');
 			$user->role = Input::get('role');
