@@ -3,6 +3,16 @@
 class BudgetController extends BaseController {
 
 	/**
+	 * Requires to be authenticated
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->beforeFilter('auth');
+	}
+
+	/**
 	 * Display orders form
 	 *
 	 * @return Response
