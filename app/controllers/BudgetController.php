@@ -77,9 +77,8 @@ class BudgetController extends BaseController {
 			}
 
 			$budget->save();
-			return (Auth::user()) ? Redirect::to('edit?orders') : Redirect::to('/');
-			// FOR DEBUG ONLY
-			// return Response::json($budget);
+			return (Auth::user()) ? Redirect::to('edit?view=orders') : Redirect::to('/');
+
 		} else {
 			return Response::json(Input::all());
 		}
