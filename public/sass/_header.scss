@@ -161,6 +161,7 @@ header{
 			font-size: initial;
 			height: 100%;
 			position: relative;
+			text-align: center;
 			width: 25%;
 			@media #{$mobile}{
 				display: block;
@@ -197,7 +198,7 @@ header{
 				display: block;
 				font-size: 0.8em;
 				height: 2em;
-				margin: auto;
+				margin: auto auto;
 				position: absolute;
 				max-width: 60%;
 				text-decoration: none;
