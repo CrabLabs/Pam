@@ -33,7 +33,7 @@
 			?>
 			<div class='attach_file'>
 				<h3>Adjuntar archivo de tu trabajo</h3>
-				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo. Tamaño máximo XXXmb.</p>
+					<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo (en formato de imagen) o enviarlo a <a href="mailto:digital@pam.com.uy">digital@pam.com.uy<a/>. Tamaño máximo 5mb.</p>
 				{{ Form::file('file') }}
 				{{ Form::hidden('image_name', null, array('id' => 'image_name')) }}
 				<div class='uploading' style='width: 100%; max-width: 640px; background: #DDD; height: 3px; padding: 0; margin: 6px 0;'>

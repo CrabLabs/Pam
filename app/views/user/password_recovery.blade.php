@@ -10,7 +10,7 @@
   @if (Session::has('error'))
     {{ trans(Session::get('reason')) }}
   @elseif (Session::has('success'))
-    An e-mail with the password reset has been sent.
+    Se ha enviado un email para recuperar la clave.
   @endif
   {{ Form::open(array('method' => 'POST')) }}
     {{ Form::label('email', 'Email: ') }}

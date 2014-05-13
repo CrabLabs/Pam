@@ -4,10 +4,10 @@ if (! function_exists('imageLink'))
 {
 	function imageLink($value)
 	{
-		$link = URL::to('img/uploads/orders/'.$value);
-		$image = HTML::image('img/uploads/orders/originals/'.$value, '', array('height' => 100));
+		$link = URL::to('img/uploads/budgets/originals/'.$value);
+		$image = HTML::image('img/uploads/budgets/originals/'.$value, '', array('height' => 100));
 
-		return '<a href=\''.$link.'\'>'.$image.'</a>';
+		return '<a href=\''.$link.'\'>'.$link.'</a>';
 	}
 }
 

@@ -568,7 +568,8 @@ header .header_wrapper .section a {
   display: block;
   font-size: 0.8em;
   height: 2em;
-  margin: auto auto;
+  /*margin: auto auto;*/
+  margin: 35px 50px 10px;
   position: absolute;
   max-width: 60%;
   text-decoration: none;

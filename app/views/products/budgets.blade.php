@@ -47,7 +47,7 @@
 			</div>
 			<div class='attach_file'>
 				<h3>Adjuntar archivo de tu trabajo</h3>
-				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo. Tamaño máximo 5mb.</p>
+				<p>Para realizar un presupuesto más certero puedes adjuntar tu trabajo (en formato de imagen) o enviarlo a <a href="mailto:digital@pam.com.uy">digital@pam.com.uy<a/>. Tamaño máximo 5mb.</p>
 				{{ Form::file('file') }}
 				{{ Form::hidden('image_name', null, array('id' => 'image_name')) }}
 				<div class='uploading' style='width: 100%; max-width: 640px; background: #DDD; height: 3px; padding: 0; margin: 6px 0;'>
@@ -113,6 +113,7 @@
 				<p class='budgetable'>
 					El presupuesto fue establecido de acuerdo a las características del producto. En caso de que tengas alguna duda o consulta respecto al mismo o al trabajo, no dudes en {{ HTML::link(URL::to('contact'), 'contactarnos') }}.
 				</p>
+				<p>*Estos precios no incluyen IVA</p>
 				<p class='no-budgetable'>
 					Debido a la complejidad del trabajo el mismo debe ser analizado por nuestros expertos para darle un presupuesto acertado.
 					<br><br>
