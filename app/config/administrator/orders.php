@@ -4,7 +4,7 @@ if (! function_exists('imageLink'))
 {
 	function imageLink($value)
 	{
-		$link = URL::to('img/uploads/orders/'.$value);
+		$link = URL::to('img/uploads/orders/originals/'.$value);
 		$image = HTML::image('img/uploads/orders/originals/'.$value, '', array('height' => 100));
 
 		return '<a href=\''.$link.'\'>'.$image.'</a>';
@@ -27,7 +27,7 @@ return array(
 			'select' => 'IF((:table).budgetable, (:table).name, CONCAT("<strong>", (:table).name, "</strong>"))',
 		),
 		'file' => array(
-			'title' => 'Imagen',
+			'title' => 'Archivo',
 			'output' => imageLink('(:value)'),
 		),
 		'status' => array(
