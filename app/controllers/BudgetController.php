@@ -67,6 +67,8 @@ class BudgetController extends BaseController {
 				$budget->description = Input::get('detail');
 				$budget->email = Input::get('email');
 
+				$budget->save();
+
 				$data = array('budget' => $budget);
 
 				Mail::send('emails.budget_to_pam', $data, function ($mail) use ($budget) {
